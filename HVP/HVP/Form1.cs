@@ -31,7 +31,6 @@ namespace HVP
             InitializeComponent();
 
             cvGui = new MYGui();
-
         }
 
         private void LoadImageButton_Click(object sender, EventArgs e)
@@ -63,11 +62,10 @@ namespace HVP
 
             ProcessedImagePictureBox.Image = adaptivethresholdimage.Bitmap;
 
-            //ProcessedImagePictureBox.Image.Save(@"D:\Eighth Semester\HVP\AdaptiveThreshold", System.Drawing.Imaging.ImageFormat.Jpeg);
         }
         void wrapperimageprocessing()
         {
-            cvGui.por();
+            cvGui.process();
         }
 
         private void ProcessButton_Click(object sender, EventArgs e)
@@ -123,6 +121,26 @@ namespace HVP
 
             ProcessedImagePictureBox.ImageLocation = @"D:\Eighth Semester\HVP\RuntimeDirectory\ResultImage.jpg";
 
+            Program.filepath = @"D:\Eighth Semester\HVP\RuntimeDirectory\ResultImage.jpg";
+
+        }
+
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            MainForm mainform = new MainForm();
+
+            mainform.Show();
+
+            this.Hide();
+        }
+
+        private void InsertDatabaseButton_Click(object sender, EventArgs e)
+        {
+            DatabaseRecordForm databaserecordform = new DatabaseRecordForm();
+
+            databaserecordform.Show();
+
+            this.Hide();
         }
     }
 }
