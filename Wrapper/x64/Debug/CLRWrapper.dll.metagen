@@ -13,4 +13,3 @@ Class MYopencv.MYGui: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Methods:
     process(): PrivateScope, Public, HideBySig
-    por(): PrivateScope, Public, HideBySig
