@@ -147,7 +147,10 @@ namespace HVP
         private void InsertButton_Click(object sender, EventArgs e)
         {
             PersonInsert();
+            
             ImageInsert();
+
+            MessageBox.Show("Records Inserted", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         void cancel()
@@ -181,42 +184,10 @@ namespace HVP
 
         private void ExitButton_Click(object sender, EventArgs e)
         {
-            if (File.Exists(@"D:\Eighth Semester\HVP\RuntimeDirectory\ResultImage.jpg"))
-            {
-                try
-                {
-                    File.Delete(@"D:\Eighth Semester\HVP\RuntimeDirectory\ResultImage.jpg");
-                }
-                catch (IOException exception)
-                {
-                    MessageBox.Show(exception.Message);
-                }
-            }
+            Program.filepath = string.Empty;
 
-            if (File.Exists(@"D:\Eighth Semester\HVP\RuntimeDirectory\AdaptiveThreshold.jpg"))
-            {
-                try
-                {
-                    File.Delete(@"D:\Eighth Semester\HVP\RuntimeDirectory\AdaptiveThreshold.jpg");
-                }
-                catch (IOException exception)
-                {
-                    MessageBox.Show(exception.Message);
-                }
-            }
-
-            if (Directory.Exists(@"D:\Eighth Semester\HVP\RuntimeDirectory"))
-            {
-                try
-                {
-                    Directory.Delete(@"D:\Eighth Semester\HVP\RuntimeDirectory");
-                }
-                catch (IOException exception)
-                {
-                    MessageBox.Show(exception.Message);
-                }
-            }
-
+            Program.filepath = "";
+            
             Environment.Exit(1);
         }
         

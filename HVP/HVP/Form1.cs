@@ -31,6 +31,42 @@ namespace HVP
             InitializeComponent();
 
             cvGui = new MYGui();
+
+            if (File.Exists(@"D:\Eighth Semester\HVP\RuntimeDirectory\ResultImage.jpg"))
+            {
+                try
+                {
+                    File.Delete(@"D:\Eighth Semester\HVP\RuntimeDirectory\ResultImage.jpg");
+                }
+                catch (IOException exception)
+                {
+                    MessageBox.Show(exception.Message);
+                }
+            }
+
+            if (File.Exists(@"D:\Eighth Semester\HVP\RuntimeDirectory\AdaptiveThreshold.jpg"))
+            {
+                try
+                {
+                    File.Delete(@"D:\Eighth Semester\HVP\RuntimeDirectory\AdaptiveThreshold.jpg");
+                }
+                catch (IOException exception)
+                {
+                    MessageBox.Show(exception.Message);
+                }
+            }
+
+            if (Directory.Exists(@"D:\Eighth Semester\HVP\RuntimeDirectory"))
+            {
+                try
+                {
+                    Directory.Delete(@"D:\Eighth Semester\HVP\RuntimeDirectory");
+                }
+                catch (IOException exception)
+                {
+                    MessageBox.Show(exception.Message);
+                }
+            }
         }
 
         private void LoadImageButton_Click(object sender, EventArgs e)
@@ -75,44 +111,7 @@ namespace HVP
 
         private void ExitButton_Click(object sender, EventArgs e)
         {
-            if (File.Exists(@"D:\Eighth Semester\HVP\RuntimeDirectory\ResultImage.jpg"))
-            {
-                try
-                {
-                    File.Delete(@"D:\Eighth Semester\HVP\RuntimeDirectory\ResultImage.jpg");
-                }
-                catch (IOException exception)
-                {
-                    MessageBox.Show(exception.Message);
-                }
-            }
-
-            if (File.Exists(@"D:\Eighth Semester\HVP\RuntimeDirectory\AdaptiveThreshold.jpg"))
-            {
-                try
-                {
-                    File.Delete(@"D:\Eighth Semester\HVP\RuntimeDirectory\AdaptiveThreshold.jpg");
-                }
-                catch (IOException exception)
-                {
-                    MessageBox.Show(exception.Message);
-                }
-            }
-
-            if (Directory.Exists(@"D:\Eighth Semester\HVP\RuntimeDirectory"))
-            {
-                try
-                {
-                    Directory.Delete(@"D:\Eighth Semester\HVP\RuntimeDirectory");
-                }
-                catch (IOException exception)
-                {
-                    MessageBox.Show(exception.Message);
-                }
-            }
-
             Environment.Exit(1);
-
         }
 
         private void WrapperProcessingButton_Click(object sender, EventArgs e)
