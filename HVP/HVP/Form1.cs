@@ -97,8 +97,8 @@ namespace HVP
             CvInvoke.Imwrite(@"D:\Eighth Semester\HVP\RuntimeDirectory\AdaptiveThreshold.jpg", adaptivethresholdimage);
 
             ProcessedImagePictureBox.Image = adaptivethresholdimage.Bitmap;
-
         }
+
         void wrapperimageprocessing()
         {
             cvGui.process();

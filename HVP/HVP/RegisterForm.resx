@@ -117,20 +117,62 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="folder_PNG8773" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\folder_PNG8773.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <metadata name="PictureEditContextMenuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="FirstNameErrorProvider.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>226, 17</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="FirstNameErrorProvider.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAABILAAASCwAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAUAAAFKgAABSoAAAAVAAAABAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAwUFGUYODlm1CwuB7wgIkP4FBZL+AwOE7gAAWrUAABZIAAAABQAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAACA4OR48LC4/8AACP/wAAkv8AAJX/AACZ/wAAnP8AAKD/AACf+wAA
+        RY4AAAAKAAAAAAAAAAAAAAAAAAAAAw4OTJAFBZb/AACW/wAAmf8AAJz/AACf/wAAo/8AAKb/AACp/wAA
+        rf8AALD+AABMjgAAAAQAAAAAAAAAAAYGIUMKCp/8AACf/wQEoP8yMq//AACm/wAAqv8AAK3/AACv/zIy
+        u/8EBLX/AAC6/wAAuPsAABxEAAAAAAAAAQIODnG0AACo/wAAq/8uLrb/+Pj8/11dxf8AALT/AAC3/11d
+        yf/4+Pz/Li7G/wAAxP8AAMf/AQF4sgAAAAMAAAINCwus8wAAtP8AALf/AAC4/1ZWyv/4+Pz/XV3M/11d
+        zf/4+Pz/VlbS/wAAyv8AAM3/AADQ/wMDve0AAAARAAATJQ0Nwv8AAMH/AADD/wAAxf8AAMb/VlbR//j4
+        /P/4+Pz/VlbW/wEB0f8EBNX/BATX/wMD2f8GBtv+AAAJIwAAFiUeHtD/GBjQ/w4O0P8GBtD/AQHQ/11d
+        1//4+Pz/+Pj8/2ho3P8aGt3/Gxvg/xsb4v8bG+P/Hh7l/gAACiIAAAcLLS3T9DY23/82NuD/NTXg/3p6
+        4f/5+f3/eXnj/3l54//5+f3/enrl/zU16P82Nuv/Njbs/y8v1+4AAAEOAAAFASsrnrRVVev/VVXr/3Bw
+        5//6+v3/jIzp/1RU7v9UVO7/jIzq//r6/f9wcOv/VVXy/1VV8/8uLpevAAADAgAAAAAMDD8/b2/x/XV1
+        9P90dPD/ioru/3R09P91dfb/dXX2/3R09f+KivD/dHT0/3V1+P9ycvT7CwswPQAAAAAAAAAAAQEKATQ0
+        io2Tk/n/lJT6/5SU+v+UlPr/lJT6/5SU+v+UlPv/lJT7/5SU+/+Tk/v/MzN6hwAABgEAAAAAAAAAAAAA
+        AAACAhIDQkKOjamp+/2vr/3/r6/9/6+v/f+vr/3/r6/9/6+v/f+mpvr8OTl/hwEBCQQAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAiIkw9cHCwsqOj8/S7u/7/u7v+/6Cg8fJnZ6qvFxc/OwEBCQEAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAxMIAgIpIQICJyECAhAIAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAA+B8AAOAHAADAAwAAgAEAAIABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAQAAgAEAAMAD
+        AADwBwAA/D8AAA==
+</value>
   </data>
-  <data name="noprofile" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\noprofile.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="DeleteRed" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\DeleteRed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="keychain_access" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\keychain_access.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="paste" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\paste.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <metadata name="LastNameErrorProvider.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>405, 17</value>
+  </metadata>
+  <data name="LastNameErrorProvider.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAABILAAASCwAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAUAAAFKgAABSoAAAAVAAAABAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAwUFGUYODlm1CwuB7wgIkP4FBZL+AwOE7gAAWrUAABZIAAAABQAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAACA4OR48LC4/8AACP/wAAkv8AAJX/AACZ/wAAnP8AAKD/AACf+wAA
+        RY4AAAAKAAAAAAAAAAAAAAAAAAAAAw4OTJAFBZb/AACW/wAAmf8AAJz/AACf/wAAo/8AAKb/AACp/wAA
+        rf8AALD+AABMjgAAAAQAAAAAAAAAAAYGIUMKCp/8AACf/wQEoP8yMq//AACm/wAAqv8AAK3/AACv/zIy
+        u/8EBLX/AAC6/wAAuPsAABxEAAAAAAAAAQIODnG0AACo/wAAq/8uLrb/+Pj8/11dxf8AALT/AAC3/11d
+        yf/4+Pz/Li7G/wAAxP8AAMf/AQF4sgAAAAMAAAINCwus8wAAtP8AALf/AAC4/1ZWyv/4+Pz/XV3M/11d
+        zf/4+Pz/VlbS/wAAyv8AAM3/AADQ/wMDve0AAAARAAATJQ0Nwv8AAMH/AADD/wAAxf8AAMb/VlbR//j4
+        /P/4+Pz/VlbW/wEB0f8EBNX/BATX/wMD2f8GBtv+AAAJIwAAFiUeHtD/GBjQ/w4O0P8GBtD/AQHQ/11d
+        1//4+Pz/+Pj8/2ho3P8aGt3/Gxvg/xsb4v8bG+P/Hh7l/gAACiIAAAcLLS3T9DY23/82NuD/NTXg/3p6
+        4f/5+f3/eXnj/3l54//5+f3/enrl/zU16P82Nuv/Njbs/y8v1+4AAAEOAAAFASsrnrRVVev/VVXr/3Bw
+        5//6+v3/jIzp/1RU7v9UVO7/jIzq//r6/f9wcOv/VVXy/1VV8/8uLpevAAADAgAAAAAMDD8/b2/x/XV1
+        9P90dPD/ioru/3R09P91dfb/dXX2/3R09f+KivD/dHT0/3V1+P9ycvT7CwswPQAAAAAAAAAAAQEKATQ0
+        io2Tk/n/lJT6/5SU+v+UlPr/lJT6/5SU+v+UlPv/lJT7/5SU+/+Tk/v/MzN6hwAABgEAAAAAAAAAAAAA
+        AAACAhIDQkKOjamp+/2vr/3/r6/9/6+v/f+vr/3/r6/9/6+v/f+mpvr8OTl/hwEBCQQAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAiIkw9cHCwsqOj8/S7u/7/u7v+/6Cg8fJnZ6qvFxc/OwEBCQEAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAxMIAgIpIQICJyECAhAIAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAA+B8AAOAHAADAAwAAgAEAAIABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAQAAgAEAAMAD
+        AADwBwAA/D8AAA==
+</value>
   </data>
 </root>

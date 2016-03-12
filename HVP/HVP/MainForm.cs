@@ -102,5 +102,10 @@ namespace HVP
 
             PasswordTextBox.Text = "";
         }
+
+        private void ExitButton_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(1);
+        }
     }
 }

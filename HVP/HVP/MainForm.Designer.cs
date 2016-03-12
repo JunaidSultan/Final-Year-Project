@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.LoginGroupBox = new System.Windows.Forms.GroupBox();
-            this.UsernameLabel = new System.Windows.Forms.Label();
-            this.PasswordLabel = new System.Windows.Forms.Label();
-            this.UsernameTextBox = new System.Windows.Forms.TextBox();
-            this.PasswordTextBox = new System.Windows.Forms.TextBox();
-            this.LoginButton = new System.Windows.Forms.Button();
-            this.ExitButton = new System.Windows.Forms.Button();
-            this.CancelButton = new System.Windows.Forms.Button();
             this.LoginPagePictureBox = new System.Windows.Forms.PictureBox();
+            this.CancelButton = new System.Windows.Forms.Button();
+            this.LoginButton = new System.Windows.Forms.Button();
+            this.PasswordTextBox = new System.Windows.Forms.TextBox();
+            this.UsernameTextBox = new System.Windows.Forms.TextBox();
+            this.PasswordLabel = new System.Windows.Forms.Label();
+            this.UsernameLabel = new System.Windows.Forms.Label();
+            this.ExitButton = new System.Windows.Forms.Button();
             this.LoginGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LoginPagePictureBox)).BeginInit();
             this.SuspendLayout();
@@ -57,63 +57,16 @@
             this.LoginGroupBox.TabStop = false;
             this.LoginGroupBox.Text = "Login";
             // 
-            // UsernameLabel
+            // LoginPagePictureBox
             // 
-            this.UsernameLabel.AutoSize = true;
-            this.UsernameLabel.Font = new System.Drawing.Font("Californian FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UsernameLabel.Location = new System.Drawing.Point(185, 46);
-            this.UsernameLabel.Name = "UsernameLabel";
-            this.UsernameLabel.Size = new System.Drawing.Size(89, 22);
-            this.UsernameLabel.TabIndex = 0;
-            this.UsernameLabel.Text = "Username";
-            // 
-            // PasswordLabel
-            // 
-            this.PasswordLabel.AutoSize = true;
-            this.PasswordLabel.Font = new System.Drawing.Font("Californian FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PasswordLabel.Location = new System.Drawing.Point(192, 115);
-            this.PasswordLabel.Name = "PasswordLabel";
-            this.PasswordLabel.Size = new System.Drawing.Size(82, 22);
-            this.PasswordLabel.TabIndex = 1;
-            this.PasswordLabel.Text = "Password";
-            // 
-            // UsernameTextBox
-            // 
-            this.UsernameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.UsernameTextBox.Location = new System.Drawing.Point(321, 49);
-            this.UsernameTextBox.Name = "UsernameTextBox";
-            this.UsernameTextBox.Size = new System.Drawing.Size(167, 20);
-            this.UsernameTextBox.TabIndex = 2;
-            // 
-            // PasswordTextBox
-            // 
-            this.PasswordTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PasswordTextBox.Location = new System.Drawing.Point(321, 118);
-            this.PasswordTextBox.Name = "PasswordTextBox";
-            this.PasswordTextBox.PasswordChar = '.';
-            this.PasswordTextBox.Size = new System.Drawing.Size(167, 20);
-            this.PasswordTextBox.TabIndex = 3;
-            // 
-            // LoginButton
-            // 
-            this.LoginButton.BackColor = System.Drawing.SystemColors.Control;
-            this.LoginButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.LoginButton.Location = new System.Drawing.Point(321, 183);
-            this.LoginButton.Name = "LoginButton";
-            this.LoginButton.Size = new System.Drawing.Size(61, 33);
-            this.LoginButton.TabIndex = 4;
-            this.LoginButton.Text = "Login";
-            this.LoginButton.UseVisualStyleBackColor = false;
-            this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
-            // 
-            // ExitButton
-            // 
-            this.ExitButton.Location = new System.Drawing.Point(541, 304);
-            this.ExitButton.Name = "ExitButton";
-            this.ExitButton.Size = new System.Drawing.Size(75, 23);
-            this.ExitButton.TabIndex = 5;
-            this.ExitButton.Text = "Exit";
-            this.ExitButton.UseVisualStyleBackColor = true;
+            this.LoginPagePictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.LoginPagePictureBox.Image = global::HVP.Properties.Resources.keychain_access;
+            this.LoginPagePictureBox.Location = new System.Drawing.Point(20, 32);
+            this.LoginPagePictureBox.Name = "LoginPagePictureBox";
+            this.LoginPagePictureBox.Size = new System.Drawing.Size(149, 184);
+            this.LoginPagePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.LoginPagePictureBox.TabIndex = 6;
+            this.LoginPagePictureBox.TabStop = false;
             // 
             // CancelButton
             // 
@@ -127,16 +80,66 @@
             this.CancelButton.UseVisualStyleBackColor = false;
             this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
             // 
-            // LoginPagePictureBox
+            // LoginButton
             // 
-            this.LoginPagePictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.LoginPagePictureBox.Image = global::HVP.Properties.Resources.keychain_access;
-            this.LoginPagePictureBox.Location = new System.Drawing.Point(20, 32);
-            this.LoginPagePictureBox.Name = "LoginPagePictureBox";
-            this.LoginPagePictureBox.Size = new System.Drawing.Size(149, 184);
-            this.LoginPagePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.LoginPagePictureBox.TabIndex = 6;
-            this.LoginPagePictureBox.TabStop = false;
+            this.LoginButton.BackColor = System.Drawing.SystemColors.Control;
+            this.LoginButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.LoginButton.Location = new System.Drawing.Point(321, 183);
+            this.LoginButton.Name = "LoginButton";
+            this.LoginButton.Size = new System.Drawing.Size(61, 33);
+            this.LoginButton.TabIndex = 4;
+            this.LoginButton.Text = "Login";
+            this.LoginButton.UseVisualStyleBackColor = false;
+            this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
+            // 
+            // PasswordTextBox
+            // 
+            this.PasswordTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PasswordTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PasswordTextBox.Location = new System.Drawing.Point(321, 118);
+            this.PasswordTextBox.Name = "PasswordTextBox";
+            this.PasswordTextBox.PasswordChar = '*';
+            this.PasswordTextBox.Size = new System.Drawing.Size(167, 22);
+            this.PasswordTextBox.TabIndex = 3;
+            // 
+            // UsernameTextBox
+            // 
+            this.UsernameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.UsernameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UsernameTextBox.Location = new System.Drawing.Point(321, 49);
+            this.UsernameTextBox.Name = "UsernameTextBox";
+            this.UsernameTextBox.Size = new System.Drawing.Size(167, 22);
+            this.UsernameTextBox.TabIndex = 2;
+            // 
+            // PasswordLabel
+            // 
+            this.PasswordLabel.AutoSize = true;
+            this.PasswordLabel.Font = new System.Drawing.Font("Californian FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PasswordLabel.Location = new System.Drawing.Point(192, 115);
+            this.PasswordLabel.Name = "PasswordLabel";
+            this.PasswordLabel.Size = new System.Drawing.Size(82, 22);
+            this.PasswordLabel.TabIndex = 1;
+            this.PasswordLabel.Text = "Password";
+            // 
+            // UsernameLabel
+            // 
+            this.UsernameLabel.AutoSize = true;
+            this.UsernameLabel.Font = new System.Drawing.Font("Californian FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UsernameLabel.Location = new System.Drawing.Point(185, 46);
+            this.UsernameLabel.Name = "UsernameLabel";
+            this.UsernameLabel.Size = new System.Drawing.Size(89, 22);
+            this.UsernameLabel.TabIndex = 0;
+            this.UsernameLabel.Text = "Username";
+            // 
+            // ExitButton
+            // 
+            this.ExitButton.Location = new System.Drawing.Point(541, 304);
+            this.ExitButton.Name = "ExitButton";
+            this.ExitButton.Size = new System.Drawing.Size(75, 23);
+            this.ExitButton.TabIndex = 5;
+            this.ExitButton.Text = "Exit";
+            this.ExitButton.UseVisualStyleBackColor = true;
+            this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
             // MainForm
             // 
@@ -146,7 +149,7 @@
             this.Controls.Add(this.ExitButton);
             this.Controls.Add(this.LoginGroupBox);
             this.Name = "MainForm";
-            this.Text = "Main Form";
+            this.Text = "Login";
             this.LoginGroupBox.ResumeLayout(false);
             this.LoginGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LoginPagePictureBox)).EndInit();

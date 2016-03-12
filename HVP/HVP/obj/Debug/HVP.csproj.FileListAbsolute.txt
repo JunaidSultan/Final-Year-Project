@@ -40,3 +40,5 @@ D:\Eighth Semester\HVP\HVP\bin\Debug\CLRWrapper.dll
 D:\Eighth Semester\HVP\HVP\bin\Debug\CLRWrapper.pdb
 D:\Eighth Semester\HVP\HVP\obj\Debug\HVP.MainForm.resources
 D:\Eighth Semester\HVP\HVP\obj\Debug\HVP.DatabaseRecordForm.resources
+D:\Eighth Semester\HVP\HVP\obj\Debug\HVP.RegisterForm.resources
+D:\Eighth Semester\HVP\HVP\obj\Debug\HVP.exe.licenses
