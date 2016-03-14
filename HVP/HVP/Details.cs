@@ -34,6 +34,40 @@ namespace HVP
 
         public static string userimagefilepath { get; set; }
 
+        public static string FirstName { get; set; }
+
+        public static string LastName { get; set; }
+
+        public static string Prefix { get; set; }
+
+        public static string Title { get; set; }
+
+        public static string Address { get; set; }
+
+        public static string City { get; set; }
+
+        public static string State { get; set; }
+
+        public static string Country { get; set; }
+
+        public static string HomePhone { get; set; }
+
+        public static string MobilePhone { get; set; }
+
+        public static string OfficePhone { get; set; }
+
+        public static string Fax { get; set; }
+
+        public static string Email { get; set; }
+
+        public static string Skype { get; set; }
+
+        public static string Website { get; set; }
+
+        public static DateTime DOB { get; set; }
+
+        public static string AdditionalNotes { get; set; }
+
         #endregion
 
         //Admin Registration Property Region
@@ -66,6 +100,47 @@ namespace HVP
             _facepicture = null;
         }
 
+        //Clears All Properties
+
+        public static void cleardetails()
+        {
+            FirstName = string.Empty;
+
+            LastName = string.Empty;
+
+            Prefix = string.Empty;
+
+            Title = string.Empty;
+
+            Address = string.Empty;
+
+            City = string.Empty;
+
+            State = string.Empty;
+
+            Country = string.Empty;
+
+            HomePhone = string.Empty;
+
+            MobilePhone = string.Empty;
+
+            OfficePhone = string.Empty;
+
+            Fax = string.Empty;
+
+            Email = string.Empty;
+
+            Skype = string.Empty;
+
+            Website = string.Empty;
+
+            //DOB = DateTime.Now;
+
+            AdditionalNotes = string.Empty;
+
+        }
+
         #endregion
+
     }
 }
