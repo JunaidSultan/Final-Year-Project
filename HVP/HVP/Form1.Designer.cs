@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.OriginalImagePanel = new System.Windows.Forms.Panel();
+            this.OriginalImagePictureBoxLabel = new System.Windows.Forms.Label();
             this.WrapperProcessingButton = new System.Windows.Forms.Button();
             this.ProcessButton = new System.Windows.Forms.Button();
             this.OriginalImagePictureBox = new System.Windows.Forms.PictureBox();
@@ -36,12 +37,12 @@
             this.ImageLocationTextBox = new System.Windows.Forms.TextBox();
             this.ImageLocationLabel = new System.Windows.Forms.Label();
             this.ProcessedImagePanel = new System.Windows.Forms.Panel();
+            this.InsertDatabaseButton = new System.Windows.Forms.Button();
+            this.ProcessedImagePictureBoxLabel = new System.Windows.Forms.Label();
             this.ProcessedImagePictureBox = new System.Windows.Forms.PictureBox();
             this.ExitButton = new System.Windows.Forms.Button();
             this.BackButton = new System.Windows.Forms.Button();
-            this.OriginalImagePictureBoxLabel = new System.Windows.Forms.Label();
-            this.ProcessedImagePictureBoxLabel = new System.Windows.Forms.Label();
-            this.InsertDatabaseButton = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.OriginalImagePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.OriginalImagePictureBox)).BeginInit();
             this.ProcessedImagePanel.SuspendLayout();
@@ -52,6 +53,7 @@
             // 
             this.OriginalImagePanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
+            this.OriginalImagePanel.Controls.Add(this.button1);
             this.OriginalImagePanel.Controls.Add(this.OriginalImagePictureBoxLabel);
             this.OriginalImagePanel.Controls.Add(this.WrapperProcessingButton);
             this.OriginalImagePanel.Controls.Add(this.ProcessButton);
@@ -63,6 +65,15 @@
             this.OriginalImagePanel.Name = "OriginalImagePanel";
             this.OriginalImagePanel.Size = new System.Drawing.Size(475, 510);
             this.OriginalImagePanel.TabIndex = 0;
+            // 
+            // OriginalImagePictureBoxLabel
+            // 
+            this.OriginalImagePictureBoxLabel.AutoSize = true;
+            this.OriginalImagePictureBoxLabel.Location = new System.Drawing.Point(13, 38);
+            this.OriginalImagePictureBoxLabel.Name = "OriginalImagePictureBoxLabel";
+            this.OriginalImagePictureBoxLabel.Size = new System.Drawing.Size(131, 13);
+            this.OriginalImagePictureBoxLabel.TabIndex = 7;
+            this.OriginalImagePictureBoxLabel.Text = "Original Image Picture Box";
             // 
             // WrapperProcessingButton
             // 
@@ -132,6 +143,26 @@
             this.ProcessedImagePanel.Size = new System.Drawing.Size(474, 510);
             this.ProcessedImagePanel.TabIndex = 1;
             // 
+            // InsertDatabaseButton
+            // 
+            this.InsertDatabaseButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.InsertDatabaseButton.Location = new System.Drawing.Point(383, 471);
+            this.InsertDatabaseButton.Name = "InsertDatabaseButton";
+            this.InsertDatabaseButton.Size = new System.Drawing.Size(75, 23);
+            this.InsertDatabaseButton.TabIndex = 7;
+            this.InsertDatabaseButton.Text = "Insert";
+            this.InsertDatabaseButton.UseVisualStyleBackColor = true;
+            this.InsertDatabaseButton.Click += new System.EventHandler(this.InsertDatabaseButton_Click);
+            // 
+            // ProcessedImagePictureBoxLabel
+            // 
+            this.ProcessedImagePictureBoxLabel.AutoSize = true;
+            this.ProcessedImagePictureBoxLabel.Location = new System.Drawing.Point(14, 38);
+            this.ProcessedImagePictureBoxLabel.Name = "ProcessedImagePictureBoxLabel";
+            this.ProcessedImagePictureBoxLabel.Size = new System.Drawing.Size(146, 13);
+            this.ProcessedImagePictureBoxLabel.TabIndex = 6;
+            this.ProcessedImagePictureBoxLabel.Text = "Processed Image Picture Box";
+            // 
             // ProcessedImagePictureBox
             // 
             this.ProcessedImagePictureBox.Location = new System.Drawing.Point(17, 69);
@@ -162,34 +193,15 @@
             this.BackButton.UseVisualStyleBackColor = true;
             this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
-            // OriginalImagePictureBoxLabel
+            // button1
             // 
-            this.OriginalImagePictureBoxLabel.AutoSize = true;
-            this.OriginalImagePictureBoxLabel.Location = new System.Drawing.Point(13, 38);
-            this.OriginalImagePictureBoxLabel.Name = "OriginalImagePictureBoxLabel";
-            this.OriginalImagePictureBoxLabel.Size = new System.Drawing.Size(131, 13);
-            this.OriginalImagePictureBoxLabel.TabIndex = 7;
-            this.OriginalImagePictureBoxLabel.Text = "Original Image Picture Box";
-            // 
-            // ProcessedImagePictureBoxLabel
-            // 
-            this.ProcessedImagePictureBoxLabel.AutoSize = true;
-            this.ProcessedImagePictureBoxLabel.Location = new System.Drawing.Point(14, 38);
-            this.ProcessedImagePictureBoxLabel.Name = "ProcessedImagePictureBoxLabel";
-            this.ProcessedImagePictureBoxLabel.Size = new System.Drawing.Size(146, 13);
-            this.ProcessedImagePictureBoxLabel.TabIndex = 6;
-            this.ProcessedImagePictureBoxLabel.Text = "Processed Image Picture Box";
-            // 
-            // InsertDatabaseButton
-            // 
-            this.InsertDatabaseButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.InsertDatabaseButton.Location = new System.Drawing.Point(383, 471);
-            this.InsertDatabaseButton.Name = "InsertDatabaseButton";
-            this.InsertDatabaseButton.Size = new System.Drawing.Size(75, 23);
-            this.InsertDatabaseButton.TabIndex = 7;
-            this.InsertDatabaseButton.Text = "Insert";
-            this.InsertDatabaseButton.UseVisualStyleBackColor = true;
-            this.InsertDatabaseButton.Click += new System.EventHandler(this.InsertDatabaseButton_Click);
+            this.button1.Location = new System.Drawing.Point(284, 471);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
@@ -228,6 +240,7 @@
         private System.Windows.Forms.Label OriginalImagePictureBoxLabel;
         private System.Windows.Forms.Label ProcessedImagePictureBoxLabel;
         private System.Windows.Forms.Button InsertDatabaseButton;
+        private System.Windows.Forms.Button button1;
     }
 }
 

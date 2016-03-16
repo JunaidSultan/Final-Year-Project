@@ -66,7 +66,7 @@ namespace HVP
                 TitleErrorProvider.SetError(TitleTextBox, "Title Required");
             }
 
-            if (DOBDateEdit.Text == string.Empty)
+            if (DOBDateEdit.DateTime == null)
             {
                 DOBErrorProvider.SetError(DOBDateEdit, "DOB Required");
             }
@@ -112,7 +112,7 @@ namespace HVP
 
         private void DOBDateEdit_EditValueChanged(object sender, EventArgs e)
         {
-            if (DOBDateEdit.Text != string.Empty)
+            if (DOBDateEdit.DateTime != null)
             {
                 DOBErrorProvider.Clear();
             }
@@ -121,8 +121,10 @@ namespace HVP
                 DOBErrorProvider.SetError(DOBDateEdit, "DOB Required");
             }
         }
-
+       
         #endregion
+
+        #region Record Entry Buttons
 
         private void AdditionalNotesRichTextBox_TextChanged(object sender, EventArgs e)
         {
@@ -145,6 +147,8 @@ namespace HVP
             this.Close();
         }
 
+        #endregion
+
         #region Form Methods
 
         private void formreset()
@@ -165,19 +169,19 @@ namespace HVP
 
             CountryComboBoxEdit.SelectedIndex = 0;
 
-            HomePhoneTextBox.Text = string.Empty;
+            HomePhoneButtonEdit.Text = string.Empty;
 
-            MobilePhoneTextBox.Text = string.Empty;
+            MobilePhoneButtonEdit.Text = string.Empty;
 
-            OfficePhoneTextBox.Text = string.Empty;
+            OfficePhoneButtonEdit.Text = string.Empty;
 
-            FaxTextBox.Text = string.Empty;
+            FaxButtonEdit.Text = string.Empty;
 
-            EmailTextBox.Text = string.Empty;
+            EmailButtonEdit.Text = string.Empty;
 
-            SkypeTextBox.Text = string.Empty;
+            SkypeButtonEdit.Text = string.Empty;
 
-            WebsiteTextBox.Text = string.Empty;
+            WebsiteButtonEdit.Text = string.Empty;
 
             DOBDateEdit.Text = string.Empty;
 
@@ -189,7 +193,7 @@ namespace HVP
 
         }
 
-        #endregion
+        #endregion       
 
     }
 }

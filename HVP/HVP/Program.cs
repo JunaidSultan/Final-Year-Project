@@ -17,7 +17,7 @@ namespace HVP
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new DisplayForm()); //new MainForm());
-        }
+            Application.Run(new RegisterForm()); //Form1()); //MainForm());
+        } 
     }
 }

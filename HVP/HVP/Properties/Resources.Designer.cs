@@ -63,6 +63,76 @@ namespace HVP.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1458091133_Call01 {
+            get {
+                object obj = ResourceManager.GetObject("1458091133_Call01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1458091434_office_29 {
+            get {
+                object obj = ResourceManager.GetObject("1458091434_office-29", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1458091519_print {
+            get {
+                object obj = ResourceManager.GetObject("1458091519_print", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1458091589_mail {
+            get {
+                object obj = ResourceManager.GetObject("1458091589_mail", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1458091670_skype {
+            get {
+                object obj = ResourceManager.GetObject("1458091670_skype", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1458091953_globe {
+            get {
+                object obj = ResourceManager.GetObject("1458091953_globe", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1458092018_calendar {
+            get {
+                object obj = ResourceManager.GetObject("1458092018_calendar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _33 {
             get {
                 object obj = ResourceManager.GetObject("33", resourceCulture);
@@ -96,6 +166,16 @@ namespace HVP.Properties {
         internal static System.Drawing.Bitmap folder_PNG8773 {
             get {
                 object obj = ResourceManager.GetObject("folder_PNG8773", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap handset_in_512 {
+            get {
+                object obj = ResourceManager.GetObject("handset_in-512", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

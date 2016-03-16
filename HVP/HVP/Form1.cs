@@ -26,6 +26,8 @@ namespace HVP
 
         string filename;
 
+        static Mat src2;
+
         public Form1()
         {
             InitializeComponent();
@@ -122,6 +124,8 @@ namespace HVP
 
             Program.filepath = @"D:\Eighth Semester\HVP\RuntimeDirectory\ResultImage.jpg";
 
+            src2 = new Mat(Program.filepath, LoadImageType.Grayscale);
+
         }
 
         private void BackButton_Click(object sender, EventArgs e)
@@ -140,6 +144,23 @@ namespace HVP
             databaserecordform.Show();
 
             this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Mat src = new Mat(filename, LoadImageType.Grayscale);
+            Mat dst1 = new Mat();
+            Mat dst = new Mat();
+            CvInvoke.MorphologyEx(src2, dst1, MorphOp.Erode, CvInvoke.GetStructuringElement(ElementShape.Ellipse, new Size(3, 3), new Point(-1, -1)), new Point(-1, -1), 1, BorderType.Constant, new MCvScalar(0));
+            CvInvoke.Multiply(src, dst1, dst, 1, DepthType.Cv8U);
+
+            //CvInvoke.AdaptiveThreshold(src, dst1, 255, AdaptiveThresholdType.GaussianC, ThresholdType.Binary, 11, -3);
+
+            CvInvoke.Laplacian(src, dst, DepthType.Cv8U, 11, 1, 0, BorderType.Default);
+
+            CvInvoke.Imwrite(@"D:\Eighth Semester\HVP\RuntimeDirectory\FinalResult.jpg", dst);
+
+            ProcessedImagePictureBox.Image = dst1.Bitmap;
         }
     }
 }

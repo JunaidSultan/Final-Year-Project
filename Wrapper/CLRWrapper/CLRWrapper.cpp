@@ -108,6 +108,10 @@ void MYGui::process()
 
 	result.setTo(Scalar(0), mask != 127);
 
-	imwrite("D:/Eighth Semester/HVP/RuntimeDirectory/ResultImage.jpg", result);
+	Mat1b image = mask;
+
+	Mat1b newmask = (image == 127);
+
+	imwrite("D:/Eighth Semester/HVP/RuntimeDirectory/ResultImage.jpg", newmask);
 
 }

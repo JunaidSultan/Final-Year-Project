@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CLRWrapper, Version=1.0.5895.35951, Culture=neutral, processorArchitecture=AMD64">
+    <Reference Include="CLRWrapper, Version=1.0.5896.43181, Culture=neutral, processorArchitecture=AMD64">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Wrapper\x64\Debug\CLRWrapper.dll</HintPath>
     </Reference>
@@ -251,6 +251,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\33.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1458091133_Call01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1458092018_calendar.png" />
+    <None Include="Resources\1458091953_globe.png" />
+    <None Include="Resources\1458091670_skype.png" />
+    <None Include="Resources\1458091589_mail.png" />
+    <None Include="Resources\1458091519_print.png" />
+    <None Include="Resources\1458091434_office-29.png" />
+    <Content Include="Resources\handset_in-512.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
