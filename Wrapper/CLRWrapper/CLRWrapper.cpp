@@ -33,7 +33,7 @@ using namespace cv;
 //	return result;
 //}
 
-void MYGui::process()
+void ImageProcessing::process()
 {
 	//Load The Original Image In Grayscale Mode
 

@@ -22,7 +22,7 @@ namespace HVP
 {
     public partial class Form1 : Form
     {
-        MYGui cvGui;
+        ImageProcessing _imageprocessing;
 
         string filename;
 
@@ -32,7 +32,7 @@ namespace HVP
         {
             InitializeComponent();
 
-            cvGui = new MYGui();
+            _imageprocessing = new ImageProcessing();
 
             if (File.Exists(@"D:\Eighth Semester\HVP\RuntimeDirectory\ResultImage.jpg"))
             {
@@ -103,7 +103,7 @@ namespace HVP
 
         void wrapperimageprocessing()
         {
-            cvGui.process();
+            _imageprocessing.process();
         }
 
         private void ProcessButton_Click(object sender, EventArgs e)

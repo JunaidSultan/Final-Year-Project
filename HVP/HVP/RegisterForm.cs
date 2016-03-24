@@ -133,7 +133,43 @@ namespace HVP
 
         private void RegisterButton_Click(object sender, EventArgs e)
         {
-
+            //Details.ID =
+            
+            //Details._facepicture = facepicture();
+            
+            Details.FirstName = FirstNameTextBox.Text;
+            
+            Details.LastName = LastNameTextBox.Text;
+            
+            Details.Prefix = PrefixComboBoxEdit.SelectedItem.ToString();
+            
+            Details.Title = TitleTextBox.Text;
+            
+            Details.Address = AddressTextBox.Text;
+            
+            Details.City = CityTextBox.Text;
+            
+            Details.State = StateTextBox.Text;
+            
+            Details.Country = CountryComboBoxEdit.SelectedItem.ToString();
+            
+            Details.HomePhone = HomePhoneButtonEdit.Text;
+            
+            Details.MobilePhone = MobilePhoneButtonEdit.Text;
+            
+            Details.OfficePhone = OfficePhoneButtonEdit.Text;
+            
+            Details.Fax = FaxButtonEdit.Text;
+            
+            Details.Email = EmailButtonEdit.Text;
+            
+            Details.Skype = SkypeButtonEdit.Text;
+            
+            Details.Website = WebsiteButtonEdit.Text;
+            
+            Details.DOB = Convert.ToDateTime(DOBDateEdit.Text).Date;
+            
+            Details.AdditionalNotes = AdditionalNotesRichTextBox.Text;
         }
 
         private void ResetButton_Click(object sender, EventArgs e)

@@ -29,15 +29,24 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterForm));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterForm));
             this.UserRegistrationGroupControl = new DevExpress.XtraEditors.GroupControl();
+            this.RegisterProgressBarControl = new DevExpress.XtraEditors.ProgressBarControl();
+            this.DOBDateEdit = new DevExpress.XtraEditors.DateEdit();
+            this.WebsiteButtonEdit = new DevExpress.XtraEditors.ButtonEdit();
+            this.SkypeButtonEdit = new DevExpress.XtraEditors.ButtonEdit();
+            this.EmailButtonEdit = new DevExpress.XtraEditors.ButtonEdit();
+            this.FaxButtonEdit = new DevExpress.XtraEditors.ButtonEdit();
+            this.OfficePhoneButtonEdit = new DevExpress.XtraEditors.ButtonEdit();
+            this.HomePhoneButtonEdit = new DevExpress.XtraEditors.ButtonEdit();
+            this.MobilePhoneButtonEdit = new DevExpress.XtraEditors.ButtonEdit();
             this.AdditionalNotesLabel = new System.Windows.Forms.Label();
             this.RegisterButton = new DevExpress.XtraEditors.SimpleButton();
             this.ResetButton = new DevExpress.XtraEditors.SimpleButton();
@@ -67,50 +76,44 @@
             this.LastNameLabel = new System.Windows.Forms.Label();
             this.FirstNameTextBox = new System.Windows.Forms.TextBox();
             this.FirstNameLabel = new System.Windows.Forms.Label();
+            this.UserPictureEdit = new DevExpress.XtraEditors.PictureEdit();
             this.PictureEditContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.PasteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.LoadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.DeleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.FirstNameErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.LastNameErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.TitleErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.DOBErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
-            this.MobilePhoneButtonEdit = new DevExpress.XtraEditors.ButtonEdit();
-            this.HomePhoneButtonEdit = new DevExpress.XtraEditors.ButtonEdit();
-            this.OfficePhoneButtonEdit = new DevExpress.XtraEditors.ButtonEdit();
-            this.FaxButtonEdit = new DevExpress.XtraEditors.ButtonEdit();
-            this.EmailButtonEdit = new DevExpress.XtraEditors.ButtonEdit();
-            this.SkypeButtonEdit = new DevExpress.XtraEditors.ButtonEdit();
-            this.WebsiteButtonEdit = new DevExpress.XtraEditors.ButtonEdit();
-            this.UserPictureEdit = new DevExpress.XtraEditors.PictureEdit();
-            this.PasteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.LoadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.DeleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.DOBDateEdit = new DevExpress.XtraEditors.DateEdit();
-            this.RegisterProgressBarControl = new DevExpress.XtraEditors.ProgressBarControl();
             ((System.ComponentModel.ISupportInitialize)(this.UserRegistrationGroupControl)).BeginInit();
             this.UserRegistrationGroupControl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RegisterProgressBarControl.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DOBDateEdit.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DOBDateEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WebsiteButtonEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SkypeButtonEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EmailButtonEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FaxButtonEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OfficePhoneButtonEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HomePhoneButtonEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MobilePhoneButtonEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CountryComboBoxEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PrefixComboBoxEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UserPictureEdit.Properties)).BeginInit();
             this.PictureEditContextMenuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FirstNameErrorProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LastNameErrorProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TitleErrorProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DOBErrorProvider)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MobilePhoneButtonEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.HomePhoneButtonEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.OfficePhoneButtonEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.FaxButtonEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EmailButtonEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SkypeButtonEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.WebsiteButtonEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.UserPictureEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DOBDateEdit.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DOBDateEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RegisterProgressBarControl.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // UserRegistrationGroupControl
             // 
+            this.UserRegistrationGroupControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.UserRegistrationGroupControl.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(236)))), ((int)(((byte)(239)))));
             this.UserRegistrationGroupControl.Appearance.Options.UseBackColor = true;
             this.UserRegistrationGroupControl.Controls.Add(this.RegisterProgressBarControl);
@@ -157,6 +160,108 @@
             this.UserRegistrationGroupControl.Size = new System.Drawing.Size(960, 555);
             this.UserRegistrationGroupControl.TabIndex = 0;
             this.UserRegistrationGroupControl.Text = "User Registration";
+            // 
+            // RegisterProgressBarControl
+            // 
+            this.RegisterProgressBarControl.Location = new System.Drawing.Point(16, 512);
+            this.RegisterProgressBarControl.Name = "RegisterProgressBarControl";
+            this.RegisterProgressBarControl.Properties.ShowTitle = true;
+            this.RegisterProgressBarControl.Size = new System.Drawing.Size(197, 26);
+            this.RegisterProgressBarControl.TabIndex = 51;
+            // 
+            // DOBDateEdit
+            // 
+            this.DOBDateEdit.EditValue = null;
+            this.DOBDateEdit.Location = new System.Drawing.Point(778, 368);
+            this.DOBDateEdit.Name = "DOBDateEdit";
+            this.DOBDateEdit.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DOBDateEdit.Properties.Appearance.Options.UseFont = true;
+            this.DOBDateEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.DOBDateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.DOBDateEdit.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.Classic;
+            this.DOBDateEdit.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.False;
+            this.DOBDateEdit.Size = new System.Drawing.Size(145, 26);
+            this.DOBDateEdit.TabIndex = 50;
+            this.DOBDateEdit.EditValueChanged += new System.EventHandler(this.DOBDateEdit_EditValueChanged);
+            // 
+            // WebsiteButtonEdit
+            // 
+            this.WebsiteButtonEdit.Location = new System.Drawing.Point(778, 319);
+            this.WebsiteButtonEdit.Name = "WebsiteButtonEdit";
+            this.WebsiteButtonEdit.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WebsiteButtonEdit.Properties.Appearance.Options.UseFont = true;
+            this.WebsiteButtonEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::HVP.Properties.Resources._1458091953_globe, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
+            this.WebsiteButtonEdit.Size = new System.Drawing.Size(145, 26);
+            this.WebsiteButtonEdit.TabIndex = 49;
+            // 
+            // SkypeButtonEdit
+            // 
+            this.SkypeButtonEdit.Location = new System.Drawing.Point(778, 272);
+            this.SkypeButtonEdit.Name = "SkypeButtonEdit";
+            this.SkypeButtonEdit.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SkypeButtonEdit.Properties.Appearance.Options.UseFont = true;
+            this.SkypeButtonEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::HVP.Properties.Resources._1458091670_skype, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
+            this.SkypeButtonEdit.Size = new System.Drawing.Size(145, 26);
+            this.SkypeButtonEdit.TabIndex = 48;
+            // 
+            // EmailButtonEdit
+            // 
+            this.EmailButtonEdit.Location = new System.Drawing.Point(778, 223);
+            this.EmailButtonEdit.Name = "EmailButtonEdit";
+            this.EmailButtonEdit.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmailButtonEdit.Properties.Appearance.Options.UseFont = true;
+            this.EmailButtonEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::HVP.Properties.Resources._1458091589_mail, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
+            this.EmailButtonEdit.Size = new System.Drawing.Size(145, 26);
+            this.EmailButtonEdit.TabIndex = 47;
+            // 
+            // FaxButtonEdit
+            // 
+            this.FaxButtonEdit.Location = new System.Drawing.Point(778, 178);
+            this.FaxButtonEdit.Name = "FaxButtonEdit";
+            this.FaxButtonEdit.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FaxButtonEdit.Properties.Appearance.Options.UseFont = true;
+            this.FaxButtonEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::HVP.Properties.Resources._1458091519_print, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true)});
+            this.FaxButtonEdit.Size = new System.Drawing.Size(145, 26);
+            this.FaxButtonEdit.TabIndex = 46;
+            // 
+            // OfficePhoneButtonEdit
+            // 
+            this.OfficePhoneButtonEdit.Location = new System.Drawing.Point(778, 135);
+            this.OfficePhoneButtonEdit.Name = "OfficePhoneButtonEdit";
+            this.OfficePhoneButtonEdit.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OfficePhoneButtonEdit.Properties.Appearance.Options.UseFont = true;
+            this.OfficePhoneButtonEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::HVP.Properties.Resources._1458091434_office_29, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, "", null, null, true)});
+            this.OfficePhoneButtonEdit.Size = new System.Drawing.Size(145, 26);
+            this.OfficePhoneButtonEdit.TabIndex = 45;
+            // 
+            // HomePhoneButtonEdit
+            // 
+            this.HomePhoneButtonEdit.Location = new System.Drawing.Point(778, 41);
+            this.HomePhoneButtonEdit.Name = "HomePhoneButtonEdit";
+            this.HomePhoneButtonEdit.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HomePhoneButtonEdit.Properties.Appearance.Options.UseFont = true;
+            this.HomePhoneButtonEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::HVP.Properties.Resources._1458091133_Call01, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject6, "", null, null, true)});
+            this.HomePhoneButtonEdit.Size = new System.Drawing.Size(145, 26);
+            this.HomePhoneButtonEdit.TabIndex = 44;
+            // 
+            // MobilePhoneButtonEdit
+            // 
+            this.MobilePhoneButtonEdit.Location = new System.Drawing.Point(778, 87);
+            this.MobilePhoneButtonEdit.Name = "MobilePhoneButtonEdit";
+            this.MobilePhoneButtonEdit.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MobilePhoneButtonEdit.Properties.Appearance.Options.UseFont = true;
+            this.MobilePhoneButtonEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::HVP.Properties.Resources.phone_touch, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject7, "", null, null, true)});
+            this.MobilePhoneButtonEdit.Size = new System.Drawing.Size(145, 26);
+            this.MobilePhoneButtonEdit.TabIndex = 43;
             // 
             // AdditionalNotesLabel
             // 
@@ -703,6 +808,17 @@
             this.FirstNameLabel.TabIndex = 2;
             this.FirstNameLabel.Text = "First Name";
             // 
+            // UserPictureEdit
+            // 
+            this.UserPictureEdit.EditValue = global::HVP.Properties.Resources.noprofile;
+            this.UserPictureEdit.Location = new System.Drawing.Point(16, 33);
+            this.UserPictureEdit.Name = "UserPictureEdit";
+            this.UserPictureEdit.Properties.ContextMenuStrip = this.PictureEditContextMenuStrip;
+            this.UserPictureEdit.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.UserPictureEdit.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
+            this.UserPictureEdit.Size = new System.Drawing.Size(273, 327);
+            this.UserPictureEdit.TabIndex = 1;
+            // 
             // PictureEditContextMenuStrip
             // 
             this.PictureEditContextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -715,15 +831,39 @@
             this.PictureEditContextMenuStrip.Size = new System.Drawing.Size(108, 82);
             this.PictureEditContextMenuStrip.Opening += new System.ComponentModel.CancelEventHandler(this.PictureEditContextMenuStrip_Opening);
             // 
+            // PasteToolStripMenuItem
+            // 
+            this.PasteToolStripMenuItem.Enabled = false;
+            this.PasteToolStripMenuItem.Image = global::HVP.Properties.Resources.paste;
+            this.PasteToolStripMenuItem.Name = "PasteToolStripMenuItem";
+            this.PasteToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.PasteToolStripMenuItem.Text = "Paste";
+            this.PasteToolStripMenuItem.Click += new System.EventHandler(this.PasteToolStripMenuItem_Click);
+            // 
             // ToolStripSeparator1
             // 
             this.ToolStripSeparator1.Name = "ToolStripSeparator1";
             this.ToolStripSeparator1.Size = new System.Drawing.Size(104, 6);
             // 
+            // LoadToolStripMenuItem
+            // 
+            this.LoadToolStripMenuItem.Image = global::HVP.Properties.Resources.folder_PNG8773;
+            this.LoadToolStripMenuItem.Name = "LoadToolStripMenuItem";
+            this.LoadToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.LoadToolStripMenuItem.Text = "Load";
+            this.LoadToolStripMenuItem.Click += new System.EventHandler(this.LoadToolStripMenuItem_Click);
+            // 
             // ToolStripSeparator2
             // 
             this.ToolStripSeparator2.Name = "ToolStripSeparator2";
             this.ToolStripSeparator2.Size = new System.Drawing.Size(104, 6);
+            // 
+            // DeleteToolStripMenuItem
+            // 
+            this.DeleteToolStripMenuItem.Image = global::HVP.Properties.Resources.DeleteRed;
+            this.DeleteToolStripMenuItem.Name = "DeleteToolStripMenuItem";
+            this.DeleteToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.DeleteToolStripMenuItem.Text = "Delete";
             // 
             // FirstNameErrorProvider
             // 
@@ -751,143 +891,6 @@
             this.DOBErrorProvider.Icon = ((System.Drawing.Icon)(resources.GetObject("DOBErrorProvider.Icon")));
             this.DOBErrorProvider.RightToLeft = true;
             // 
-            // MobilePhoneButtonEdit
-            // 
-            this.MobilePhoneButtonEdit.Location = new System.Drawing.Point(778, 87);
-            this.MobilePhoneButtonEdit.Name = "MobilePhoneButtonEdit";
-            this.MobilePhoneButtonEdit.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MobilePhoneButtonEdit.Properties.Appearance.Options.UseFont = true;
-            this.MobilePhoneButtonEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::HVP.Properties.Resources.phone_touch, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject7, "", null, null, true)});
-            this.MobilePhoneButtonEdit.Size = new System.Drawing.Size(145, 26);
-            this.MobilePhoneButtonEdit.TabIndex = 43;
-            // 
-            // HomePhoneButtonEdit
-            // 
-            this.HomePhoneButtonEdit.Location = new System.Drawing.Point(778, 41);
-            this.HomePhoneButtonEdit.Name = "HomePhoneButtonEdit";
-            this.HomePhoneButtonEdit.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HomePhoneButtonEdit.Properties.Appearance.Options.UseFont = true;
-            this.HomePhoneButtonEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::HVP.Properties.Resources._1458091133_Call01, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject6, "", null, null, true)});
-            this.HomePhoneButtonEdit.Size = new System.Drawing.Size(145, 26);
-            this.HomePhoneButtonEdit.TabIndex = 44;
-            // 
-            // OfficePhoneButtonEdit
-            // 
-            this.OfficePhoneButtonEdit.Location = new System.Drawing.Point(778, 135);
-            this.OfficePhoneButtonEdit.Name = "OfficePhoneButtonEdit";
-            this.OfficePhoneButtonEdit.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OfficePhoneButtonEdit.Properties.Appearance.Options.UseFont = true;
-            this.OfficePhoneButtonEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::HVP.Properties.Resources._1458091434_office_29, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, "", null, null, true)});
-            this.OfficePhoneButtonEdit.Size = new System.Drawing.Size(145, 26);
-            this.OfficePhoneButtonEdit.TabIndex = 45;
-            // 
-            // FaxButtonEdit
-            // 
-            this.FaxButtonEdit.Location = new System.Drawing.Point(778, 178);
-            this.FaxButtonEdit.Name = "FaxButtonEdit";
-            this.FaxButtonEdit.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FaxButtonEdit.Properties.Appearance.Options.UseFont = true;
-            this.FaxButtonEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::HVP.Properties.Resources._1458091519_print, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true)});
-            this.FaxButtonEdit.Size = new System.Drawing.Size(145, 26);
-            this.FaxButtonEdit.TabIndex = 46;
-            // 
-            // EmailButtonEdit
-            // 
-            this.EmailButtonEdit.Location = new System.Drawing.Point(778, 223);
-            this.EmailButtonEdit.Name = "EmailButtonEdit";
-            this.EmailButtonEdit.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmailButtonEdit.Properties.Appearance.Options.UseFont = true;
-            this.EmailButtonEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::HVP.Properties.Resources._1458091589_mail, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
-            this.EmailButtonEdit.Size = new System.Drawing.Size(145, 26);
-            this.EmailButtonEdit.TabIndex = 47;
-            // 
-            // SkypeButtonEdit
-            // 
-            this.SkypeButtonEdit.Location = new System.Drawing.Point(778, 272);
-            this.SkypeButtonEdit.Name = "SkypeButtonEdit";
-            this.SkypeButtonEdit.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SkypeButtonEdit.Properties.Appearance.Options.UseFont = true;
-            this.SkypeButtonEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::HVP.Properties.Resources._1458091670_skype, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
-            this.SkypeButtonEdit.Size = new System.Drawing.Size(145, 26);
-            this.SkypeButtonEdit.TabIndex = 48;
-            // 
-            // WebsiteButtonEdit
-            // 
-            this.WebsiteButtonEdit.Location = new System.Drawing.Point(778, 319);
-            this.WebsiteButtonEdit.Name = "WebsiteButtonEdit";
-            this.WebsiteButtonEdit.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WebsiteButtonEdit.Properties.Appearance.Options.UseFont = true;
-            this.WebsiteButtonEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::HVP.Properties.Resources._1458091953_globe, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
-            this.WebsiteButtonEdit.Size = new System.Drawing.Size(145, 26);
-            this.WebsiteButtonEdit.TabIndex = 49;
-            // 
-            // UserPictureEdit
-            // 
-            this.UserPictureEdit.EditValue = global::HVP.Properties.Resources.noprofile;
-            this.UserPictureEdit.Location = new System.Drawing.Point(16, 33);
-            this.UserPictureEdit.Name = "UserPictureEdit";
-            this.UserPictureEdit.Properties.ContextMenuStrip = this.PictureEditContextMenuStrip;
-            this.UserPictureEdit.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.UserPictureEdit.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
-            this.UserPictureEdit.Size = new System.Drawing.Size(273, 327);
-            this.UserPictureEdit.TabIndex = 1;
-            // 
-            // PasteToolStripMenuItem
-            // 
-            this.PasteToolStripMenuItem.Enabled = false;
-            this.PasteToolStripMenuItem.Image = global::HVP.Properties.Resources.paste;
-            this.PasteToolStripMenuItem.Name = "PasteToolStripMenuItem";
-            this.PasteToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
-            this.PasteToolStripMenuItem.Text = "Paste";
-            this.PasteToolStripMenuItem.Click += new System.EventHandler(this.PasteToolStripMenuItem_Click);
-            // 
-            // LoadToolStripMenuItem
-            // 
-            this.LoadToolStripMenuItem.Image = global::HVP.Properties.Resources.folder_PNG8773;
-            this.LoadToolStripMenuItem.Name = "LoadToolStripMenuItem";
-            this.LoadToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
-            this.LoadToolStripMenuItem.Text = "Load";
-            this.LoadToolStripMenuItem.Click += new System.EventHandler(this.LoadToolStripMenuItem_Click);
-            // 
-            // DeleteToolStripMenuItem
-            // 
-            this.DeleteToolStripMenuItem.Image = global::HVP.Properties.Resources.DeleteRed;
-            this.DeleteToolStripMenuItem.Name = "DeleteToolStripMenuItem";
-            this.DeleteToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
-            this.DeleteToolStripMenuItem.Text = "Delete";
-            // 
-            // DOBDateEdit
-            // 
-            this.DOBDateEdit.EditValue = null;
-            this.DOBDateEdit.Location = new System.Drawing.Point(778, 368);
-            this.DOBDateEdit.Name = "DOBDateEdit";
-            this.DOBDateEdit.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DOBDateEdit.Properties.Appearance.Options.UseFont = true;
-            this.DOBDateEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.DOBDateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.DOBDateEdit.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.Classic;
-            this.DOBDateEdit.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.False;
-            this.DOBDateEdit.Size = new System.Drawing.Size(145, 26);
-            this.DOBDateEdit.TabIndex = 50;
-            this.DOBDateEdit.EditValueChanged += new System.EventHandler(this.DOBDateEdit_EditValueChanged);
-            // 
-            // RegisterProgressBarControl
-            // 
-            this.RegisterProgressBarControl.Location = new System.Drawing.Point(16, 512);
-            this.RegisterProgressBarControl.Name = "RegisterProgressBarControl";
-            this.RegisterProgressBarControl.Properties.ShowTitle = true;
-            this.RegisterProgressBarControl.Size = new System.Drawing.Size(197, 26);
-            this.RegisterProgressBarControl.TabIndex = 51;
-            // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -900,24 +903,24 @@
             ((System.ComponentModel.ISupportInitialize)(this.UserRegistrationGroupControl)).EndInit();
             this.UserRegistrationGroupControl.ResumeLayout(false);
             this.UserRegistrationGroupControl.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RegisterProgressBarControl.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DOBDateEdit.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DOBDateEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WebsiteButtonEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SkypeButtonEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EmailButtonEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FaxButtonEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OfficePhoneButtonEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HomePhoneButtonEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MobilePhoneButtonEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CountryComboBoxEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PrefixComboBoxEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UserPictureEdit.Properties)).EndInit();
             this.PictureEditContextMenuStrip.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.FirstNameErrorProvider)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LastNameErrorProvider)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TitleErrorProvider)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DOBErrorProvider)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MobilePhoneButtonEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.HomePhoneButtonEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.OfficePhoneButtonEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.FaxButtonEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EmailButtonEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SkypeButtonEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.WebsiteButtonEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.UserPictureEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DOBDateEdit.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DOBDateEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RegisterProgressBarControl.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

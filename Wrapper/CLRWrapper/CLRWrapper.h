@@ -8,11 +8,12 @@ using namespace System::Runtime::InteropServices;
 
 namespace MYopencv {
 	
-	public ref class MYGui
+	public ref class ImageProcessing
 	{
 	public:
 		
 		void process();
 
 	};
+
 }

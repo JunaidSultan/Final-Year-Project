@@ -12,6 +12,8 @@ using Emgu.CV.Util;
 using Emgu.Util;
 using Emgu.CV.Structure;
 
+using System.Drawing;
+
 namespace HVP
 {
     static class Details
@@ -33,6 +35,10 @@ namespace HVP
         #region User Registration
 
         public static string userimagefilepath { get; set; }
+
+        public static string ID { get; set; }
+
+        public static Image Faceimage { get; set; }
 
         public static string FirstName { get; set; }
 
