@@ -1,18 +1,11 @@
-﻿using System;
+﻿using Emgu.CV;
+using System;
 using System.Collections.Generic;
+using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
-using System.IO;
-
-using Emgu.CV;
-using Emgu.CV.CvEnum;
-using Emgu.CV.Util;
-using Emgu.Util;
-using Emgu.CV.Structure;
-
-using System.Drawing;
 
 namespace HVP
 {
@@ -27,6 +20,20 @@ namespace HVP
         public static Mat sourceimagehand { get; set; }
 
         public static Mat destinationimagehand { get; set; }
+
+        public static Mat whitebalance { get; set; }
+
+        public static Mat adaptivethreshold { get; set; }
+
+        public static Mat maskedimage { get; set; }
+
+        public static Mat erode_step1 { get; set; }
+
+        public static Mat erode_step2 { get; set; }
+
+        public static Mat laplacian { get; set; }
+
+        public static Mat multipliedimage { get; set; }
 
         #endregion
 
@@ -48,6 +55,8 @@ namespace HVP
 
         public static string Title { get; set; }
 
+        public static string Gender { get; set; }
+
         public static string Address { get; set; }
 
         public static string City { get; set; }
@@ -66,8 +75,6 @@ namespace HVP
 
         public static string Email { get; set; }
 
-        public static string Skype { get; set; }
-
         public static string Website { get; set; }
 
         public static DateTime DOB { get; set; }
@@ -78,7 +85,7 @@ namespace HVP
 
         //Admin Registration Property Region
 
-        #region Admin Registrarion 
+        #region Admin Registrarion
 
         public static string adminimagefilepath { get; set; }
 
@@ -95,6 +102,16 @@ namespace HVP
         public static byte _handpicturebyte { get; set; }
 
         public static byte _facepicturebyte { get; set; }
+
+        #endregion
+
+        //Step Images View Property Region
+
+        #region Step Images Views
+
+        public static Image stepimage { get; set; }
+
+        public static string imagelabel { get; set; }
 
         #endregion
 
@@ -118,6 +135,8 @@ namespace HVP
 
             Title = string.Empty;
 
+            Gender = string.Empty;
+
             Address = string.Empty;
 
             City = string.Empty;
@@ -136,8 +155,6 @@ namespace HVP
 
             Email = string.Empty;
 
-            Skype = string.Empty;
-
             Website = string.Empty;
 
             //DOB = DateTime.Now;
@@ -147,6 +164,5 @@ namespace HVP
         }
 
         #endregion
-
     }
 }

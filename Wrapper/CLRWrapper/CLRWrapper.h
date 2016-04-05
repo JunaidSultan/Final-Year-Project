@@ -8,7 +8,7 @@ using namespace System::Runtime::InteropServices;
 
 namespace MYopencv {
 	
-	public ref class ImageProcessing
+	public ref class WrapperImageProcessing
 	{
 	public:
 		

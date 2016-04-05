@@ -63,9 +63,9 @@ namespace HVP.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _1458091133_Call01 {
+        internal static System.Drawing.Bitmap apply_32x32 {
             get {
-                object obj = ResourceManager.GetObject("1458091133_Call01", resourceCulture);
+                object obj = ResourceManager.GetObject("apply_32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace HVP.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _1458091434_office_29 {
+        internal static System.Drawing.Bitmap Blank_Hand_Image {
             get {
-                object obj = ResourceManager.GetObject("1458091434_office-29", resourceCulture);
+                object obj = ResourceManager.GetObject("Blank Hand Image", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace HVP.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _1458091519_print {
+        internal static System.Drawing.Bitmap colors_32x32 {
             get {
-                object obj = ResourceManager.GetObject("1458091519_print", resourceCulture);
+                object obj = ResourceManager.GetObject("colors_32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,59 +93,9 @@ namespace HVP.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _1458091589_mail {
+        internal static System.Drawing.Bitmap convert_32x32 {
             get {
-                object obj = ResourceManager.GetObject("1458091589_mail", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _1458091670_skype {
-            get {
-                object obj = ResourceManager.GetObject("1458091670_skype", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _1458091953_globe {
-            get {
-                object obj = ResourceManager.GetObject("1458091953_globe", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _1458092018_calendar {
-            get {
-                object obj = ResourceManager.GetObject("1458092018_calendar", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _33 {
-            get {
-                object obj = ResourceManager.GetObject("33", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap biometric_91 {
-            get {
-                object obj = ResourceManager.GetObject("biometric-91", resourceCulture);
+                object obj = ResourceManager.GetObject("convert_32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -163,6 +113,16 @@ namespace HVP.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap dslr_camera {
+            get {
+                object obj = ResourceManager.GetObject("dslr-camera", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap folder_PNG8773 {
             get {
                 object obj = ResourceManager.GetObject("folder_PNG8773", resourceCulture);
@@ -173,39 +133,9 @@ namespace HVP.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap handset_in_512 {
+        internal static System.Drawing.Bitmap navigationbar_16x16 {
             get {
-                object obj = ResourceManager.GetObject("handset_in-512", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap iphone {
-            get {
-                object obj = ResourceManager.GetObject("iphone", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap keychain_access {
-            get {
-                object obj = ResourceManager.GetObject("keychain_access", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap LoginRed {
-            get {
-                object obj = ResourceManager.GetObject("LoginRed", resourceCulture);
+                object obj = ResourceManager.GetObject("navigationbar_16x16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -233,9 +163,9 @@ namespace HVP.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap phone_touch {
+        internal static System.Drawing.Bitmap processing_icon {
             get {
-                object obj = ResourceManager.GetObject("phone_touch", resourceCulture);
+                object obj = ResourceManager.GetObject("processing-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -243,9 +173,9 @@ namespace HVP.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap tick {
+        internal static System.Drawing.Bitmap technology_32x32 {
             get {
-                object obj = ResourceManager.GetObject("tick", resourceCulture);
+                object obj = ResourceManager.GetObject("technology_32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

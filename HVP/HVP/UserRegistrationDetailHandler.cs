@@ -1,13 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
-using System.Data;
-using System.Data.Sql;
-using System.Data.SqlClient;
-using System.Data.SqlTypes;
 
 namespace HVP
 {
@@ -21,9 +18,9 @@ namespace HVP
             try
             {
                 command = connecion.CreateCommand();
-                
-                command.CommandText = "INSERT INTO USERDETAILS(ID, IMAGE, FIRSTNAME, LASTNAME, PREFIX, TITLE, ADDRESS, CITY, STATE, COUNTRY, HOMEPHONE, MOBILEPHONE, OFFICEPHONE, FAX, EMAIL, SKYPE, WEBSITE, DOB, ADDITIONALNOTES) VALUES(@ID, @IMAGE, @FN, @LN, @PF, @TITLE, @ADD, @CITY, @STATE, @COUNTRY, @HP, @MP, @OP, @FAX, @EM, @SKYPE, @WEB, @DOB, @AN)";
-                
+
+                command.CommandText = "INSERT INTO USERDETAILS(ID, IMAGE, FIRSTNAME, LASTNAME, PREFIX, TITLE, GENDER, ADDRESS, CITY, STATE, COUNTRY, HOMEPHONE, MOBILEPHONE, OFFICEPHONE, FAX, EMAIL, WEBSITE, DOB, ADDITIONALNOTES) VALUES(@ID, @IMAGE, @FN, @LN, @PF, @TITLE, @GEN, @ADD, @CITY, @STATE, @COUNTRY, @HP, @MP, @OP, @FAX, @EM, @SKYPE, @WEB, @DOB, @AN)";
+
                 command.Parameters.AddWithValue("@ID", Details.ID);
 
                 command.Parameters.AddWithValue("@IMAGE", Details._facepicture);
@@ -35,6 +32,8 @@ namespace HVP
                 command.Parameters.AddWithValue("@PF", Details.Prefix);
 
                 command.Parameters.AddWithValue("@TITLE", Details.Title);
+
+                command.Parameters.AddWithValue("@GEN", Details.Gender);
 
                 command.Parameters.AddWithValue("@ADD", Details.Address);
 
@@ -52,14 +51,12 @@ namespace HVP
 
                 command.Parameters.AddWithValue("@FAX", Details.Fax);
 
-                command.Parameters.AddWithValue("@SKYPE", Details.Skype);
-
                 command.Parameters.AddWithValue("@WEB", Details.Website);
 
                 command.Parameters.AddWithValue("@DOB", Details.DOB);
 
                 command.Parameters.AddWithValue("@AN", Details.AdditionalNotes);
-                
+
                 command.ExecuteNonQuery();
             }
             catch (Exception)
