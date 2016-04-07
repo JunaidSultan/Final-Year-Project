@@ -16,7 +16,7 @@ namespace HandVeinPattern
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ImageProcessing());
+            Application.Run(new MainForm()); //ImageProcessing());
         }
     }
 }

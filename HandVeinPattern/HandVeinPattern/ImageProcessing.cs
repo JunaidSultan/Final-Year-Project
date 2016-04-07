@@ -11,10 +11,14 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors.Camera;
 using Emgu.CV;
 using Emgu.CV.CvEnum;
+using Emgu.CV.Features2D;
+using Emgu.CV.Shape;
+using Emgu.CV.Structure;
+using Emgu.CV.XFeatures2D;
+using Emgu.Util;
 using System.IO;
 
 using Wrapper;
-using Emgu.CV.Structure;
 
 namespace HandVeinPattern
 {
@@ -192,6 +196,22 @@ namespace HandVeinPattern
             CvInvoke.Multiply(Details.laplacian, Details.erode_step2, Details.multipliedimage, 1.0, DepthType.Cv8U);
 
             Step8PictureEdit.Image = Details.multipliedimage.Bitmap;
+
+            //Mat result = new Mat();
+
+            //CvInvoke.Multiply(Details.laplacian, Details.maskedimage, result, 1.0, DepthType.Cv8U);
+
+            //Step9PictureEdit.Image = result.Bitmap;
+        }
+
+        private void ThinningBarButtonItem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Details.thinnedimage = new Mat();
+
+            CvInvoke.CopyMakeBorder(Details.multipliedimage, Details.thinnedimage, 10, 10, 10, 10, BorderType.Constant, new MCvScalar(0));
+
+            Step9PictureEdit.Image = Details.thinnedimage.Bitmap;
+
         }
 
         #endregion
@@ -307,6 +327,8 @@ namespace HandVeinPattern
             Application.Run(new Dashboard());
             this.Close();
         }
+
+        
 
     }
 }

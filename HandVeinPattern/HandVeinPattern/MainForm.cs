@@ -16,5 +16,10 @@ namespace HandVeinPattern
         {
             InitializeComponent();
         }
+
+        private void ContinueSimpleButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

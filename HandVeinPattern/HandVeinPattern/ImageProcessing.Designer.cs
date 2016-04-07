@@ -96,6 +96,8 @@
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.DeleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.OriginalImageLabel = new System.Windows.Forms.Label();
+            this.SegmentationRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ThinningBarButtonItem = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ImageProcessingRibbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImageProcessingGroupControl)).BeginInit();
             this.ImageProcessingGroupControl.SuspendLayout();
@@ -145,9 +147,10 @@
             this.InsertBarButtonItem,
             this.InsertRecordBarButtonItem,
             this.ResetBarButtonItem,
-            this.CancelBarButtonItem});
+            this.CancelBarButtonItem,
+            this.ThinningBarButtonItem});
             this.ImageProcessingRibbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ImageProcessingRibbonControl.MaxItemId = 13;
+            this.ImageProcessingRibbonControl.MaxItemId = 14;
             this.ImageProcessingRibbonControl.Name = "ImageProcessingRibbonControl";
             this.ImageProcessingRibbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -268,7 +271,8 @@
             this.PreProcessingRibbonPageGroup,
             this.ThresholdingRibbonPageGroup,
             this.WrapperProcessingRibbonPageGroup,
-            this.PostProcessingRibbonPageGroup});
+            this.PostProcessingRibbonPageGroup,
+            this.SegmentationRibbonPageGroup});
             this.ribbonPage1.Image = global::HandVeinPattern.Properties.Resources.processing_icon;
             this.ribbonPage1.Name = "ribbonPage1";
             this.ribbonPage1.Text = "Image Processing";
@@ -743,6 +747,19 @@
             this.OriginalImageLabel.TabIndex = 1;
             this.OriginalImageLabel.Text = "Original Image";
             // 
+            // SegmentationRibbonPageGroup
+            // 
+            this.SegmentationRibbonPageGroup.ItemLinks.Add(this.ThinningBarButtonItem);
+            this.SegmentationRibbonPageGroup.Name = "SegmentationRibbonPageGroup";
+            this.SegmentationRibbonPageGroup.Text = "Segmentation";
+            // 
+            // ThinningBarButtonItem
+            // 
+            this.ThinningBarButtonItem.Caption = "Thinning";
+            this.ThinningBarButtonItem.Id = 13;
+            this.ThinningBarButtonItem.Name = "ThinningBarButtonItem";
+            this.ThinningBarButtonItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.ThinningBarButtonItem_ItemClick);
+            // 
             // ImageProcessing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -860,5 +877,7 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup InsertRecordsRibbonPageGroup;
         private DevExpress.XtraBars.BarButtonItem ResetBarButtonItem;
         private DevExpress.XtraBars.BarButtonItem CancelBarButtonItem;
+        private DevExpress.XtraBars.BarButtonItem ThinningBarButtonItem;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup SegmentationRibbonPageGroup;
     }
 }
