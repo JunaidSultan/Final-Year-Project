@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace HandVeinPattern
 {
-    public partial class Dashboard : DevExpress.XtraBars.Ribbon.RibbonForm
+    public partial class AboutForm : Form
     {
-        public Dashboard()
+        public AboutForm()
         {
             InitializeComponent();
         }

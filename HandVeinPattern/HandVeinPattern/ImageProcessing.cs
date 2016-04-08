@@ -127,6 +127,10 @@ namespace HandVeinPattern
             Details.sourceimagehand = new Mat(Details.imagefilepath, LoadImageType.Grayscale);
 
             Step1PictureEdit.Image = Details.sourceimagehand.Bitmap;
+
+            ImageProcessingProgressBarControl.PerformStep();
+
+            ImageProcessingProgressBarControl.Update();
         }
 
         private void WhiteBalanceBarButtonItem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -136,6 +140,10 @@ namespace HandVeinPattern
             CvInvoke.BalanceWhite(Details.sourceimagehand, Details.whitebalance, WhiteBalanceMethod.Simple, 0f, 255f, 0f, 255f);
 
             Step2PictureEdit.Image = Details.whitebalance.Bitmap;
+
+            ImageProcessingProgressBarControl.PerformStep();
+
+            ImageProcessingProgressBarControl.Update();
         }
 
         private void AdaptiveThresholdingBarButtonItem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -149,6 +157,10 @@ namespace HandVeinPattern
             Step3PictureEdit.Image = Details.adaptivethreshold.Bitmap;
 
             CvInvoke.Imwrite(@"D:\Eighth Semester\HandVeinPattern\RuntimeDirectory\AdaptiveThreshold.jpg", Details.adaptivethreshold);
+
+            ImageProcessingProgressBarControl.PerformStep();
+
+            ImageProcessingProgressBarControl.Update();
         }
 
         private void WrapperProcessingBarButtonItem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -160,15 +172,23 @@ namespace HandVeinPattern
             Details.maskedimage = new Mat(@"D:\Eighth Semester\HandVeinPattern\RuntimeDirectory\ResultImage.jpg", LoadImageType.Grayscale);
 
             Step4PictureEdit.Image = Details.maskedimage.Bitmap;
+
+            ImageProcessingProgressBarControl.PerformStep();
+
+            ImageProcessingProgressBarControl.Update();
         }
 
         private void MorphologicalOperationBarButtonItem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Details.erode_step1 = new Mat();
 
-            CvInvoke.MorphologyEx(Details.maskedimage, Details.erode_step1, MorphOp.Erode, CvInvoke.GetStructuringElement(ElementShape.Ellipse, new Size(3, 3), new Point(-1, -1)), new Point(-1, -1), 2, BorderType.Constant, new MCvScalar(0));
+            CvInvoke.MorphologyEx(Details.maskedimage, Details.erode_step1, MorphOp.Erode, CvInvoke.GetStructuringElement(ElementShape.Ellipse, new Size(3, 3), new Point(-1, -1)), new Point(-1, -1), 9, BorderType.Constant, new MCvScalar(0));
 
             Step5PictureEdit.Image = Details.erode_step1.Bitmap;
+
+            ImageProcessingProgressBarControl.PerformStep();
+
+            ImageProcessingProgressBarControl.Update();
         }
 
         private void LaplacianFilterBarButtonItem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -178,6 +198,10 @@ namespace HandVeinPattern
             CvInvoke.Laplacian(Details.sourceimagehand, Details.laplacian, DepthType.Cv8U, 11, 1.0, 0.0, BorderType.Constant);
 
             Step6PictureEdit.Image = Details.laplacian.Bitmap;
+
+            ImageProcessingProgressBarControl.PerformStep();
+
+            ImageProcessingProgressBarControl.Update();
         }
 
         private void MorphologicalOperation2BarButtonItem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -187,6 +211,10 @@ namespace HandVeinPattern
             CvInvoke.MorphologyEx(Details.erode_step1, Details.erode_step2, MorphOp.Erode, CvInvoke.GetStructuringElement(ElementShape.Ellipse, new Size(3, 3), new Point(-1, -1)), new Point(-1, -1), 7, BorderType.Constant, new MCvScalar(0));
 
             Step7PictureEdit.Image = Details.erode_step2.Bitmap;
+
+            ImageProcessingProgressBarControl.PerformStep();
+
+            ImageProcessingProgressBarControl.Update();
         }
 
         private void ImageMultiplicationBarButtonItem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -197,11 +225,9 @@ namespace HandVeinPattern
 
             Step8PictureEdit.Image = Details.multipliedimage.Bitmap;
 
-            //Mat result = new Mat();
+            ImageProcessingProgressBarControl.PerformStep();
 
-            //CvInvoke.Multiply(Details.laplacian, Details.maskedimage, result, 1.0, DepthType.Cv8U);
-
-            //Step9PictureEdit.Image = result.Bitmap;
+            ImageProcessingProgressBarControl.Update();
         }
 
         private void ThinningBarButtonItem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -212,6 +238,9 @@ namespace HandVeinPattern
 
             Step9PictureEdit.Image = Details.thinnedimage.Bitmap;
 
+            ImageProcessingProgressBarControl.PerformStep();
+
+            ImageProcessingProgressBarControl.Update();
         }
 
         #endregion

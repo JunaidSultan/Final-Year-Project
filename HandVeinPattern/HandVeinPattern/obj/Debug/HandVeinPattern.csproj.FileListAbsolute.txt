@@ -41,3 +41,7 @@ D:\Eighth Semester\HandVeinPattern\HandVeinPattern\bin\Debug\Emgu.Util.xml
 D:\Eighth Semester\HandVeinPattern\HandVeinPattern\obj\Debug\HandVeinPattern.ViewForm.resources
 D:\Eighth Semester\HandVeinPattern\HandVeinPattern\bin\Debug\clrOpenCV.dll
 D:\Eighth Semester\HandVeinPattern\HandVeinPattern\bin\Debug\clrOpenCV.pdb
+D:\Eighth Semester\HandVeinPattern\HandVeinPattern\obj\Debug\HandVeinPattern.RegisterForm_User_.resources
+D:\Eighth Semester\HandVeinPattern\HandVeinPattern\obj\Debug\HandVeinPattern.Dashboard.resources
+D:\Eighth Semester\HandVeinPattern\HandVeinPattern\obj\Debug\HandVeinPattern.AboutForm.resources
+D:\Eighth Semester\HandVeinPattern\HandVeinPattern\obj\Debug\HandVeinPattern.Form1.resources

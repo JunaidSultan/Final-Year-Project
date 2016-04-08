@@ -19,7 +19,8 @@ namespace HandVeinPattern
 
         private void ContinueSimpleButton_Click(object sender, EventArgs e)
         {
-
+            Application.Run(new Dashboard());
+            this.Close();
         }
     }
 }

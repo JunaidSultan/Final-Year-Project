@@ -168,5 +168,13 @@ namespace HandVeinPattern
         }
 
         #endregion
+
+
+        #region ProgressBar
+
+        public static int progressbar_value { get; set; }
+
+        #endregion
+
     }
 }

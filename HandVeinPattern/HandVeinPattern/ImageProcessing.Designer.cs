@@ -42,15 +42,17 @@
             this.InsertRecordBarButtonItem = new DevExpress.XtraBars.BarButtonItem();
             this.ResetBarButtonItem = new DevExpress.XtraBars.BarButtonItem();
             this.CancelBarButtonItem = new DevExpress.XtraBars.BarButtonItem();
+            this.ThinningBarButtonItem = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.PreProcessingRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ThresholdingRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.WrapperProcessingRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.PostProcessingRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.SegmentationRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.DatabaseRecordsRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.InsertRecordsRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ImageProcessingGroupControl = new DevExpress.XtraEditors.GroupControl();
-            this.imageProcessingProgressBarControl = new DevExpress.XtraEditors.ProgressBarControl();
+            this.ImageProcessingProgressBarControl = new DevExpress.XtraEditors.ProgressBarControl();
             this.HorizontalRowLabel = new System.Windows.Forms.Label();
             this.StepsImagePanelControl = new DevExpress.XtraEditors.PanelControl();
             this.Step8PictureEdit = new DevExpress.XtraEditors.PictureEdit();
@@ -96,12 +98,10 @@
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.DeleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.OriginalImageLabel = new System.Windows.Forms.Label();
-            this.SegmentationRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ThinningBarButtonItem = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ImageProcessingRibbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImageProcessingGroupControl)).BeginInit();
             this.ImageProcessingGroupControl.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imageProcessingProgressBarControl.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImageProcessingProgressBarControl.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StepsImagePanelControl)).BeginInit();
             this.StepsImagePanelControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Step8PictureEdit.Properties)).BeginInit();
@@ -265,6 +265,13 @@
             this.CancelBarButtonItem.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.CancelBarButtonItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.CancelBarButtonItem_ItemClick);
             // 
+            // ThinningBarButtonItem
+            // 
+            this.ThinningBarButtonItem.Caption = "Thinning";
+            this.ThinningBarButtonItem.Id = 13;
+            this.ThinningBarButtonItem.Name = "ThinningBarButtonItem";
+            this.ThinningBarButtonItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.ThinningBarButtonItem_ItemClick);
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -305,6 +312,12 @@
             this.PostProcessingRibbonPageGroup.Name = "PostProcessingRibbonPageGroup";
             this.PostProcessingRibbonPageGroup.Text = "Post-Processing";
             // 
+            // SegmentationRibbonPageGroup
+            // 
+            this.SegmentationRibbonPageGroup.ItemLinks.Add(this.ThinningBarButtonItem);
+            this.SegmentationRibbonPageGroup.Name = "SegmentationRibbonPageGroup";
+            this.SegmentationRibbonPageGroup.Text = "Segmentation";
+            // 
             // DatabaseRecordsRibbonPage
             // 
             this.DatabaseRecordsRibbonPage.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -322,7 +335,7 @@
             // 
             // ImageProcessingGroupControl
             // 
-            this.ImageProcessingGroupControl.Controls.Add(this.imageProcessingProgressBarControl);
+            this.ImageProcessingGroupControl.Controls.Add(this.ImageProcessingProgressBarControl);
             this.ImageProcessingGroupControl.Controls.Add(this.HorizontalRowLabel);
             this.ImageProcessingGroupControl.Controls.Add(this.StepsImagePanelControl);
             this.ImageProcessingGroupControl.Controls.Add(this.ProcessedImagePanelControl);
@@ -333,14 +346,14 @@
             this.ImageProcessingGroupControl.TabIndex = 1;
             this.ImageProcessingGroupControl.Text = "ImageProcessing";
             // 
-            // imageProcessingProgressBarControl
+            // ImageProcessingProgressBarControl
             // 
-            this.imageProcessingProgressBarControl.Location = new System.Drawing.Point(5, 513);
-            this.imageProcessingProgressBarControl.MenuManager = this.ImageProcessingRibbonControl;
-            this.imageProcessingProgressBarControl.Name = "imageProcessingProgressBarControl";
-            this.imageProcessingProgressBarControl.Properties.ShowTitle = true;
-            this.imageProcessingProgressBarControl.Size = new System.Drawing.Size(323, 18);
-            this.imageProcessingProgressBarControl.TabIndex = 3;
+            this.ImageProcessingProgressBarControl.Location = new System.Drawing.Point(5, 513);
+            this.ImageProcessingProgressBarControl.MenuManager = this.ImageProcessingRibbonControl;
+            this.ImageProcessingProgressBarControl.Name = "ImageProcessingProgressBarControl";
+            this.ImageProcessingProgressBarControl.Properties.ShowTitle = true;
+            this.ImageProcessingProgressBarControl.Size = new System.Drawing.Size(323, 18);
+            this.ImageProcessingProgressBarControl.TabIndex = 3;
             // 
             // HorizontalRowLabel
             // 
@@ -741,24 +754,11 @@
             // 
             this.OriginalImageLabel.AutoSize = true;
             this.OriginalImageLabel.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OriginalImageLabel.Location = new System.Drawing.Point(69, 48);
+            this.OriginalImageLabel.Location = new System.Drawing.Point(85, 48);
             this.OriginalImageLabel.Name = "OriginalImageLabel";
             this.OriginalImageLabel.Size = new System.Drawing.Size(136, 26);
             this.OriginalImageLabel.TabIndex = 1;
             this.OriginalImageLabel.Text = "Original Image";
-            // 
-            // SegmentationRibbonPageGroup
-            // 
-            this.SegmentationRibbonPageGroup.ItemLinks.Add(this.ThinningBarButtonItem);
-            this.SegmentationRibbonPageGroup.Name = "SegmentationRibbonPageGroup";
-            this.SegmentationRibbonPageGroup.Text = "Segmentation";
-            // 
-            // ThinningBarButtonItem
-            // 
-            this.ThinningBarButtonItem.Caption = "Thinning";
-            this.ThinningBarButtonItem.Id = 13;
-            this.ThinningBarButtonItem.Name = "ThinningBarButtonItem";
-            this.ThinningBarButtonItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.ThinningBarButtonItem_ItemClick);
             // 
             // ImageProcessing
             // 
@@ -773,7 +773,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ImageProcessingRibbonControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImageProcessingGroupControl)).EndInit();
             this.ImageProcessingGroupControl.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.imageProcessingProgressBarControl.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImageProcessingProgressBarControl.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.StepsImagePanelControl)).EndInit();
             this.StepsImagePanelControl.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Step8PictureEdit.Properties)).EndInit();
@@ -817,7 +817,7 @@
         private DevExpress.XtraEditors.PanelControl OriginalImagePanelControl;
         private DevExpress.XtraEditors.PanelControl StepsImagePanelControl;
         private DevExpress.XtraEditors.PanelControl ProcessedImagePanelControl;
-        private DevExpress.XtraEditors.ProgressBarControl imageProcessingProgressBarControl;
+        private DevExpress.XtraEditors.ProgressBarControl ImageProcessingProgressBarControl;
         private System.Windows.Forms.Label HorizontalRowLabel;
         private DevExpress.XtraEditors.PictureEdit ProcessedImagePictureEdit;
         private DevExpress.XtraBars.BarButtonItem GrayScaleBarButtonItem;
