@@ -241,6 +241,10 @@ namespace HandVeinPattern
             ImageProcessingProgressBarControl.PerformStep();
 
             ImageProcessingProgressBarControl.Update();
+
+            ImageProcessingProgressBarControl.PerformStep();
+
+            ImageProcessingProgressBarControl.Update();
         }
 
         #endregion
@@ -321,9 +325,12 @@ namespace HandVeinPattern
 
         #endregion
 
+        #region Record Insertion
+
         private void InsertRecordBarButtonItem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            Application.Run(new RegisterForm_User_());
+            this.Close();
         }
 
         private void ResetBarButtonItem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -357,7 +364,7 @@ namespace HandVeinPattern
             this.Close();
         }
 
-        
+        #endregion
 
     }
 }

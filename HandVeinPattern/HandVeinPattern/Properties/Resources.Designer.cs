@@ -63,6 +63,26 @@ namespace HandVeinPattern.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _12194940_1006900322693768_226564516490243288_o {
+            get {
+                object obj = ResourceManager.GetObject("12194940_1006900322693768_226564516490243288_o", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _12920436_1171401906216926_3971342213584949455_n {
+            get {
+                object obj = ResourceManager.GetObject("12920436_1171401906216926_3971342213584949455_n", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _1458091589_mail {
             get {
                 object obj = ResourceManager.GetObject("1458091589_mail", resourceCulture);
@@ -203,6 +223,26 @@ namespace HandVeinPattern.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cooltext175952276914311 {
+            get {
+                object obj = ResourceManager.GetObject("cooltext175952276914311", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cooltext175955690174147 {
+            get {
+                object obj = ResourceManager.GetObject("cooltext175955690174147", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap copy {
             get {
                 object obj = ResourceManager.GetObject("copy", resourceCulture);
@@ -263,6 +303,16 @@ namespace HandVeinPattern.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap home_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("home_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon256 {
             get {
                 object obj = ResourceManager.GetObject("icon256", resourceCulture);
@@ -283,6 +333,16 @@ namespace HandVeinPattern.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Logo_Picture {
+            get {
+                object obj = ResourceManager.GetObject("Logo Picture", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Main_Form_Background {
             get {
                 object obj = ResourceManager.GetObject("Main Form Background", resourceCulture);
@@ -296,6 +356,16 @@ namespace HandVeinPattern.Properties {
         internal static System.Drawing.Bitmap mobilephone_16x16 {
             get {
                 object obj = ResourceManager.GetObject("mobilephone_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap navigationbar_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("navigationbar_32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -346,6 +416,16 @@ namespace HandVeinPattern.Properties {
         internal static System.Drawing.Bitmap reset_32x32 {
             get {
                 object obj = ResourceManager.GetObject("reset_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap technology_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("technology_32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

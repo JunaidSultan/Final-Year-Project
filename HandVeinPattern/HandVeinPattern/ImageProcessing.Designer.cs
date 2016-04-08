@@ -351,6 +351,7 @@
             this.ImageProcessingProgressBarControl.Location = new System.Drawing.Point(5, 513);
             this.ImageProcessingProgressBarControl.MenuManager = this.ImageProcessingRibbonControl;
             this.ImageProcessingProgressBarControl.Name = "ImageProcessingProgressBarControl";
+            this.ImageProcessingProgressBarControl.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.ImageProcessingProgressBarControl.Properties.ShowTitle = true;
             this.ImageProcessingProgressBarControl.Size = new System.Drawing.Size(323, 18);
             this.ImageProcessingProgressBarControl.TabIndex = 3;

@@ -37,6 +37,8 @@ namespace HandVeinPattern
 
         public static Mat thinnedimage { get; set; }
 
+        public static Mat processedimage { get; set; }
+
         #endregion
 
         //User Registration Property Region
