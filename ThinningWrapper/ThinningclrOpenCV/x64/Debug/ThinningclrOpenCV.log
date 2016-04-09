@@ -1,0 +1,33 @@
+﻿Build started 4/9/2016 4:22:06 AM.
+     1>Project "D:\Eighth Semester\ThinningWrapper\ThinningclrOpenCV\ThinningclrOpenCV.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\\" /AI"C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral" /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\\" /Zi /clr /nologo /W3 /WX- /Od /D WIN32 /D _DEBUG /D _WINDLL /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"x64\Debug\ThinningclrOpenCV.pch" /Fo"x64\Debug\\" /Fd"x64\Debug\vc120.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\mscorlib.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Xml.dll" /errorReport:prompt /clr:nostdlib ThinningclrOpenCV.cpp
+         ThinningclrOpenCV.cpp
+     1>d:\eighth semester\thinningwrapper\thinningclropencv\ThinningclrOpenCV.h(5): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+     1>d:\eighth semester\thinningwrapper\thinningclropencv\ThinningclrOpenCV.h(6): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+     1>ThinningclrOpenCV.cpp(10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+     1>ThinningclrOpenCV.cpp(65): warning C4267: '=' : conversion from 'size_t' to 'int', possible loss of data
+     1>ThinningclrOpenCV.cpp(86): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\opencv\build\include\opencv2\core\types_c.h(311): warning C4793: 'cvRound' : function compiled as native :
+         	Found an intrinsic not supported in managed code
+     1>c:\opencv\build\include\opencv2\core\types_c.h(311): warning C4793: 'cvRound' : function compiled as native :
+         	Aligned data types not supported in managed code
+     1>c:\opencv\build\include\opencv2\core\types_c.h(312): warning C4793: 'cvRound' : function compiled as native :
+         	Found an intrinsic not supported in managed code
+     1>c:\opencv\build\include\opencv2\core\types_c.h(312): warning C4793: 'cvRound' : function compiled as native :
+         	Aligned data types not supported in managed code
+     1>c:\opencv\build\include\opencv2\core\types_c.h(337): warning C4793: 'cvRound' : function compiled as native :
+         	Aligned data types not supported in managed code
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Eighth Semester\ThinningWrapper\x64\Debug\ThinningclrOpenCV.dll" /INCREMENTAL /NOLOGO opencv_calib3d2411d.lib opencv_contrib2411d.lib opencv_core2411d.lib opencv_features2d2411d.lib opencv_flann2411d.lib opencv_gpu2411d.lib opencv_highgui2411d.lib opencv_imgproc2411d.lib opencv_legacy2411d.lib opencv_ml2411d.lib opencv_nonfree2411d.lib opencv_objdetect2411d.lib opencv_photo2411d.lib opencv_stitching2411d.lib opencv_ts2411d.lib opencv_video2411d.lib opencv_videostab2411d.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\Eighth Semester\ThinningWrapper\x64\Debug\ThinningclrOpenCV.pdb" /ASSEMBLYDEBUG /TLBID:1 /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X64 /DLL x64\Debug\app.res
+         x64\Debug\AssemblyInfo.obj
+         x64\Debug\Stdafx.obj
+         x64\Debug\ThinningclrOpenCV.obj
+         "x64\Debug\.NETFramework,Version=v4.5.AssemblyAttributes.obj"
+     1>opencv_ts2411d.lib(opencv_ts_pch.obj) : warning LNK4099: PDB 'opencv_ts2411d.pdb' was not found with 'opencv_ts2411d.lib(opencv_ts_pch.obj)' or at 'D:\Eighth Semester\ThinningWrapper\x64\Debug\opencv_ts2411d.pdb'; linking object as if no debug info
+         ThinningclrOpenCV.vcxproj -> D:\Eighth Semester\ThinningWrapper\x64\Debug\ThinningclrOpenCV.dll
+     1>Done Building Project "D:\Eighth Semester\ThinningWrapper\ThinningclrOpenCV\ThinningclrOpenCV.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:02.12

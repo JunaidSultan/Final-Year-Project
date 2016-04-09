@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.DoughnutSeriesView doughnutSeriesView1 = new DevExpress.XtraCharts.DoughnutSeriesView();
+            DevExpress.XtraCharts.ChartTitle chartTitle1 = new DevExpress.XtraCharts.ChartTitle();
             this.HelpRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ApplicationInformationRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.AboutBarButtonItem = new DevExpress.XtraBars.BarButtonItem();
@@ -40,13 +43,18 @@
             this.ImageProcessingRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.UserRegistrationRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.UserDetailsChartPanelControl = new DevExpress.XtraEditors.PanelControl();
-            this.tabPane1 = new DevExpress.XtraBars.Navigation.TabPane();
-            this.tabNavigationPage1 = new DevExpress.XtraBars.Navigation.TabNavigationPage();
+            this.ChartsTabPane = new DevExpress.XtraBars.Navigation.TabPane();
+            this.ChartTabNavigationPage1 = new DevExpress.XtraBars.Navigation.TabNavigationPage();
             this.tabNavigationPage2 = new DevExpress.XtraBars.Navigation.TabNavigationPage();
+            this.UsersChartControl = new DevExpress.XtraCharts.ChartControl();
             ((System.ComponentModel.ISupportInitialize)(this.DashboardRibbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UserDetailsChartPanelControl)).BeginInit();
             this.UserDetailsChartPanelControl.SuspendLayout();
-            this.tabPane1.SuspendLayout();
+            this.ChartsTabPane.SuspendLayout();
+            this.ChartTabNavigationPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.UsersChartControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(doughnutSeriesView1)).BeginInit();
             this.SuspendLayout();
             // 
             // HelpRibbonPage
@@ -150,39 +158,54 @@
             // 
             // UserDetailsChartPanelControl
             // 
-            this.UserDetailsChartPanelControl.Controls.Add(this.tabPane1);
+            this.UserDetailsChartPanelControl.Controls.Add(this.ChartsTabPane);
             this.UserDetailsChartPanelControl.Location = new System.Drawing.Point(13, 169);
             this.UserDetailsChartPanelControl.Name = "UserDetailsChartPanelControl";
             this.UserDetailsChartPanelControl.Size = new System.Drawing.Size(387, 480);
             this.UserDetailsChartPanelControl.TabIndex = 1;
             // 
-            // tabPane1
+            // ChartsTabPane
             // 
-            this.tabPane1.Controls.Add(this.tabNavigationPage1);
-            this.tabPane1.Controls.Add(this.tabNavigationPage2);
-            this.tabPane1.Location = new System.Drawing.Point(5, 5);
-            this.tabPane1.Name = "tabPane1";
-            this.tabPane1.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] {
-            this.tabNavigationPage1,
+            this.ChartsTabPane.Controls.Add(this.ChartTabNavigationPage1);
+            this.ChartsTabPane.Controls.Add(this.tabNavigationPage2);
+            this.ChartsTabPane.Location = new System.Drawing.Point(5, 5);
+            this.ChartsTabPane.Name = "ChartsTabPane";
+            this.ChartsTabPane.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] {
+            this.ChartTabNavigationPage1,
             this.tabNavigationPage2});
-            this.tabPane1.RegularSize = new System.Drawing.Size(377, 470);
-            this.tabPane1.SelectedPage = this.tabNavigationPage2;
-            this.tabPane1.SelectedPageIndex = 0;
-            this.tabPane1.Size = new System.Drawing.Size(377, 470);
-            this.tabPane1.TabIndex = 0;
-            this.tabPane1.Text = "tabPane1";
+            this.ChartsTabPane.RegularSize = new System.Drawing.Size(377, 470);
+            this.ChartsTabPane.SelectedPage = this.tabNavigationPage2;
+            this.ChartsTabPane.SelectedPageIndex = 0;
+            this.ChartsTabPane.Size = new System.Drawing.Size(377, 470);
+            this.ChartsTabPane.TabIndex = 0;
+            this.ChartsTabPane.Text = "tabPane1";
             // 
-            // tabNavigationPage1
+            // ChartTabNavigationPage1
             // 
-            this.tabNavigationPage1.Caption = "tabNavigationPage1";
-            this.tabNavigationPage1.Name = "tabNavigationPage1";
-            this.tabNavigationPage1.Size = new System.Drawing.Size(359, 425);
+            this.ChartTabNavigationPage1.Caption = "Users";
+            this.ChartTabNavigationPage1.Controls.Add(this.UsersChartControl);
+            this.ChartTabNavigationPage1.Name = "ChartTabNavigationPage1";
+            this.ChartTabNavigationPage1.Size = new System.Drawing.Size(359, 425);
             // 
             // tabNavigationPage2
             // 
             this.tabNavigationPage2.Caption = "tabNavigationPage2";
             this.tabNavigationPage2.Name = "tabNavigationPage2";
             this.tabNavigationPage2.Size = new System.Drawing.Size(359, 425);
+            // 
+            // UsersChartControl
+            // 
+            this.UsersChartControl.Location = new System.Drawing.Point(3, 14);
+            this.UsersChartControl.Name = "UsersChartControl";
+            series1.Name = "Series 1";
+            series1.View = doughnutSeriesView1;
+            this.UsersChartControl.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
+        series1};
+            this.UsersChartControl.Size = new System.Drawing.Size(353, 399);
+            this.UsersChartControl.TabIndex = 0;
+            chartTitle1.Text = "Total Users";
+            this.UsersChartControl.Titles.AddRange(new DevExpress.XtraCharts.ChartTitle[] {
+            chartTitle1});
             // 
             // Dashboard
             // 
@@ -198,7 +221,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.DashboardRibbonControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.UserDetailsChartPanelControl)).EndInit();
             this.UserDetailsChartPanelControl.ResumeLayout(false);
-            this.tabPane1.ResumeLayout(false);
+            this.ChartsTabPane.ResumeLayout(false);
+            this.ChartTabNavigationPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(doughnutSeriesView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UsersChartControl)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -218,9 +245,10 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup UserRegistrationRibbonPageGroup;
         private DevExpress.XtraBars.BarButtonItem UserRegistrationBarButtonItem;
         private DevExpress.XtraEditors.PanelControl UserDetailsChartPanelControl;
-        private DevExpress.XtraBars.Navigation.TabPane tabPane1;
-        private DevExpress.XtraBars.Navigation.TabNavigationPage tabNavigationPage1;
+        private DevExpress.XtraBars.Navigation.TabPane ChartsTabPane;
+        private DevExpress.XtraBars.Navigation.TabNavigationPage ChartTabNavigationPage1;
         private DevExpress.XtraBars.Navigation.TabNavigationPage tabNavigationPage2;
+        private DevExpress.XtraCharts.ChartControl UsersChartControl;
 
     }
 }

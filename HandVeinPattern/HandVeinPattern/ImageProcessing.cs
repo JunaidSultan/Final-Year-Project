@@ -20,17 +20,23 @@ using System.IO;
 
 using Wrapper;
 
+using ThinningProcess;
+
 namespace HandVeinPattern
 {
     public partial class ImageProcessing : Form
     {
         OpenCVWrapper opencvwrapper;
 
+        ThinningOpenCVWrapper thinningopencvwrapper;
+
         public ImageProcessing()
         {
             InitializeComponent();
 
             opencvwrapper = new OpenCVWrapper();
+
+            thinningopencvwrapper = new ThinningOpenCVWrapper();
 
             if (File.Exists(@"D:\Eighth Semester\HandVeinPattern\RuntimeDirectory\ResultImage.jpg"))
             {
@@ -49,6 +55,30 @@ namespace HandVeinPattern
                 try
                 {
                     File.Delete(@"D:\Eighth Semester\HandVeinPattern\RuntimeDirectory\AdaptiveThreshold.jpg");
+                }
+                catch (IOException exception)
+                {
+                    MessageBox.Show(exception.Message);
+                }
+            }
+
+            if (File.Exists(@"D:\Eighth Semester\HandVeinPattern\RuntimeDirectory\MultipliedImage.jpg"))
+            {
+                try
+                {
+                    File.Delete(@"D:\Eighth Semester\HandVeinPattern\RuntimeDirectory\MultipliedImage.jpg");
+                }
+                catch (IOException exception)
+                {
+                    MessageBox.Show(exception.Message);
+                }
+            }
+
+            if (File.Exists(@"D:\Eighth Semester\HandVeinPattern\RuntimeDirectory\ThinnedImage.jpg"))
+            {
+                try
+                {
+                    File.Delete(@"D:\Eighth Semester\HandVeinPattern\RuntimeDirectory\ThinnedImage.jpg");
                 }
                 catch (IOException exception)
                 {
@@ -225,6 +255,8 @@ namespace HandVeinPattern
 
             Step8PictureEdit.Image = Details.multipliedimage.Bitmap;
 
+            //CvInvoke.Imwrite(@"D:\Eighth Semester\HandVeinPattern\RuntimeDirectory\MultipliedImage.jpg", Details.multipliedimage);
+
             ImageProcessingProgressBarControl.PerformStep();
 
             ImageProcessingProgressBarControl.Update();
@@ -232,9 +264,25 @@ namespace HandVeinPattern
 
         private void ThinningBarButtonItem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            Mat newsource = new Mat();
+
+            newsource = Details.multipliedimage.Clone();
+
             Details.thinnedimage = new Mat();
 
-            CvInvoke.CopyMakeBorder(Details.multipliedimage, Details.thinnedimage, 10, 10, 10, 10, BorderType.Constant, new MCvScalar(0));
+            //CvInvoke.CvtColor(newsource, Details.thinnedimage, ColorConversion.Bgr2Gray, 0);
+
+            CvInvoke.Threshold(newsource, Details.thinnedimage, 10, 255, ThresholdType.Binary);
+
+            CvInvoke.Imwrite(@"D:\Eighth Semester\HandVeinPattern\RuntimeDirectory\MultipliedImage.jpg", Details.thinnedimage);
+
+            Step9PictureEdit.Image = Details.thinnedimage.Bitmap;
+
+            thinningopencvwrapper.process();
+
+            Details.thinnedimage = new Mat();
+
+            Details.thinnedimage = new Mat(@"D:\Eighth Semester\HandVeinPattern\RuntimeDirectory\ThinnedImage.jpg", LoadImageType.Grayscale);
 
             Step9PictureEdit.Image = Details.thinnedimage.Bitmap;
 
