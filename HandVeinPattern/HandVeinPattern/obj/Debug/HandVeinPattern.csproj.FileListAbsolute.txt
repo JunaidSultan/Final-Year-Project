@@ -46,3 +46,4 @@ D:\Eighth Semester\HandVeinPattern\HandVeinPattern\obj\Debug\HandVeinPattern.Das
 D:\Eighth Semester\HandVeinPattern\HandVeinPattern\obj\Debug\HandVeinPattern.AboutForm.resources
 D:\Eighth Semester\HandVeinPattern\HandVeinPattern\bin\Debug\ThinningclrOpenCV.dll
 D:\Eighth Semester\HandVeinPattern\HandVeinPattern\bin\Debug\ThinningclrOpenCV.pdb
+D:\Eighth Semester\HandVeinPattern\HandVeinPattern\obj\Debug\HandVeinPattern.LoginForm.resources

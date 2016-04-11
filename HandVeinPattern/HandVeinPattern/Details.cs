@@ -89,7 +89,11 @@ namespace HandVeinPattern
 
         //Admin Registration Property Region
 
-        #region Admin Registrarion
+        #region Admin Login & Registrarion
+
+        public static string AdminID { get; set; }
+
+        public static string AdminName { get; set; }
 
         public static string adminimagefilepath { get; set; }
 

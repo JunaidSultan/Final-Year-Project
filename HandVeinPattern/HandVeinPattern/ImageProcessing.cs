@@ -408,8 +408,9 @@ namespace HandVeinPattern
 
         private void CancelBarButtonItem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Application.Run(new Dashboard());
-            this.Close();
+            Dashboard dashboard = new Dashboard();
+            dashboard.Show();
+            this.Hide();
         }
 
         #endregion

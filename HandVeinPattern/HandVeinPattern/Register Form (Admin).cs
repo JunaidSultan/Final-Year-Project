@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace HandVeinPattern
 {
-    public partial class MainForm : Form
+    public partial class Register_Form__Admin_ : DevExpress.XtraBars.Ribbon.RibbonForm
     {
-        public MainForm()
+        public Register_Form__Admin_()
         {
             InitializeComponent();
-        }
-
-        private void ContinueSimpleButton_Click(object sender, EventArgs e)
-        {
-            Dashboard dashboard = new Dashboard();
-            dashboard.Show();
-            this.Hide();
         }
     }
 }

@@ -28,204 +28,329 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.DoughnutSeriesView doughnutSeriesView1 = new DevExpress.XtraCharts.DoughnutSeriesView();
-            DevExpress.XtraCharts.ChartTitle chartTitle1 = new DevExpress.XtraCharts.ChartTitle();
-            this.HelpRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ApplicationInformationRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.AboutBarButtonItem = new DevExpress.XtraBars.BarButtonItem();
-            this.DashboardRibbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
-            this.MainMenuBarButtonItem = new DevExpress.XtraBars.BarButtonItem();
+            this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
+            this.HomeBarButtonItem = new DevExpress.XtraBars.BarButtonItem();
             this.ImageProcessingBarButtonItem = new DevExpress.XtraBars.BarButtonItem();
-            this.UserRegistrationBarButtonItem = new DevExpress.XtraBars.BarButtonItem();
+            this.SkinRibbonGalleryBarItem = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
+            this.ExitBarButtonItem = new DevExpress.XtraBars.BarButtonItem();
+            this.ProfileManagementBarButtonItem = new DevExpress.XtraBars.BarButtonItem();
+            this.ChangePasswordBarButtonItem = new DevExpress.XtraBars.BarButtonItem();
+            this.LogoutBarButtonItem = new DevExpress.XtraBars.BarButtonItem();
             this.NavigationRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.MainMenuRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ImageProcessingRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.UserRegistrationRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.UserDetailsChartPanelControl = new DevExpress.XtraEditors.PanelControl();
-            this.ChartsTabPane = new DevExpress.XtraBars.Navigation.TabPane();
-            this.ChartTabNavigationPage1 = new DevExpress.XtraBars.Navigation.TabNavigationPage();
-            this.tabNavigationPage2 = new DevExpress.XtraBars.Navigation.TabNavigationPage();
-            this.UsersChartControl = new DevExpress.XtraCharts.ChartControl();
-            ((System.ComponentModel.ISupportInitialize)(this.DashboardRibbonControl)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.UserDetailsChartPanelControl)).BeginInit();
-            this.UserDetailsChartPanelControl.SuspendLayout();
-            this.ChartsTabPane.SuspendLayout();
-            this.ChartTabNavigationPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.UsersChartControl)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(doughnutSeriesView1)).BeginInit();
+            this.HomeRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ImageProcessingBibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.AccountRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.AccountSettingsRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.LogoutRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ActionsRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.SkinRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ActionsRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.DashboardPanelControl3 = new DevExpress.XtraEditors.PanelControl();
+            this.AdminDetailsTabPane = new DevExpress.XtraBars.Navigation.TabPane();
+            this.AdminDetailsNavigationPage = new DevExpress.XtraBars.Navigation.TabNavigationPage();
+            this.AdminDetailsDataGridView = new System.Windows.Forms.DataGridView();
+            this.AdminStatusTabPane = new DevExpress.XtraBars.Navigation.TabPane();
+            this.OnlineStatusTabNavigationPage = new DevExpress.XtraBars.Navigation.TabNavigationPage();
+            this.OnlineStatusDataGridView = new System.Windows.Forms.DataGridView();
+            this.DashboardPanelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.DashboardPanelControl2 = new DevExpress.XtraEditors.PanelControl();
+            this.NewAdminTabPane = new DevExpress.XtraBars.Navigation.TabPane();
+            this.AddAdminTabNavigationPage = new DevExpress.XtraBars.Navigation.TabNavigationPage();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DashboardPanelControl3)).BeginInit();
+            this.DashboardPanelControl3.SuspendLayout();
+            this.AdminDetailsTabPane.SuspendLayout();
+            this.AdminDetailsNavigationPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AdminDetailsDataGridView)).BeginInit();
+            this.AdminStatusTabPane.SuspendLayout();
+            this.OnlineStatusTabNavigationPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.OnlineStatusDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DashboardPanelControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DashboardPanelControl2)).BeginInit();
+            this.DashboardPanelControl2.SuspendLayout();
+            this.NewAdminTabPane.SuspendLayout();
             this.SuspendLayout();
             // 
-            // HelpRibbonPage
+            // ribbonControl1
             // 
-            this.HelpRibbonPage.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ApplicationInformationRibbonPageGroup});
-            this.HelpRibbonPage.Image = global::HandVeinPattern.Properties.Resources.index_32x32;
-            this.HelpRibbonPage.Name = "HelpRibbonPage";
-            this.HelpRibbonPage.Text = "Help";
-            // 
-            // ApplicationInformationRibbonPageGroup
-            // 
-            this.ApplicationInformationRibbonPageGroup.ItemLinks.Add(this.AboutBarButtonItem);
-            this.ApplicationInformationRibbonPageGroup.Name = "ApplicationInformationRibbonPageGroup";
-            this.ApplicationInformationRibbonPageGroup.Text = "Application Information";
-            // 
-            // AboutBarButtonItem
-            // 
-            this.AboutBarButtonItem.Caption = "About";
-            this.AboutBarButtonItem.Glyph = global::HandVeinPattern.Properties.Resources.about_32x32;
-            this.AboutBarButtonItem.Id = 1;
-            this.AboutBarButtonItem.Name = "AboutBarButtonItem";
-            this.AboutBarButtonItem.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
-            this.AboutBarButtonItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.AboutBarButtonItem_ItemClick);
-            // 
-            // DashboardRibbonControl
-            // 
-            this.DashboardRibbonControl.ExpandCollapseItem.Id = 0;
-            this.DashboardRibbonControl.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
-            this.DashboardRibbonControl.ExpandCollapseItem,
-            this.AboutBarButtonItem,
-            this.MainMenuBarButtonItem,
+            this.ribbonControl1.ExpandCollapseItem.Id = 0;
+            this.ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
+            this.ribbonControl1.ExpandCollapseItem,
+            this.HomeBarButtonItem,
             this.ImageProcessingBarButtonItem,
-            this.UserRegistrationBarButtonItem});
-            this.DashboardRibbonControl.Location = new System.Drawing.Point(0, 0);
-            this.DashboardRibbonControl.MaxItemId = 7;
-            this.DashboardRibbonControl.Name = "DashboardRibbonControl";
-            this.DashboardRibbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
+            this.SkinRibbonGalleryBarItem,
+            this.ExitBarButtonItem,
+            this.ProfileManagementBarButtonItem,
+            this.ChangePasswordBarButtonItem,
+            this.LogoutBarButtonItem});
+            this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
+            this.ribbonControl1.MaxItemId = 8;
+            this.ribbonControl1.Name = "ribbonControl1";
+            this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.NavigationRibbonPage,
-            this.HelpRibbonPage});
-            this.DashboardRibbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013;
-            this.DashboardRibbonControl.Size = new System.Drawing.Size(1234, 162);
+            this.AccountRibbonPage,
+            this.ActionsRibbonPage});
+            this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013;
+            this.ribbonControl1.Size = new System.Drawing.Size(1228, 162);
             // 
-            // MainMenuBarButtonItem
+            // HomeBarButtonItem
             // 
-            this.MainMenuBarButtonItem.Caption = "Main Menu";
-            this.MainMenuBarButtonItem.Glyph = global::HandVeinPattern.Properties.Resources.home_32x32;
-            this.MainMenuBarButtonItem.Id = 3;
-            this.MainMenuBarButtonItem.Name = "MainMenuBarButtonItem";
-            this.MainMenuBarButtonItem.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
-            this.MainMenuBarButtonItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.MainMenuBarButtonItem_ItemClick);
+            this.HomeBarButtonItem.Caption = "Home";
+            this.HomeBarButtonItem.Glyph = global::HandVeinPattern.Properties.Resources.home_32x32;
+            this.HomeBarButtonItem.Id = 1;
+            this.HomeBarButtonItem.Name = "HomeBarButtonItem";
+            this.HomeBarButtonItem.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.HomeBarButtonItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.HomeBarButtonItem_ItemClick);
             // 
             // ImageProcessingBarButtonItem
             // 
             this.ImageProcessingBarButtonItem.Caption = "Image Processing";
             this.ImageProcessingBarButtonItem.Glyph = global::HandVeinPattern.Properties.Resources.technology_32x32;
-            this.ImageProcessingBarButtonItem.Id = 5;
+            this.ImageProcessingBarButtonItem.Id = 2;
             this.ImageProcessingBarButtonItem.Name = "ImageProcessingBarButtonItem";
             this.ImageProcessingBarButtonItem.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.ImageProcessingBarButtonItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.ImageProcessingBarButtonItem_ItemClick);
             // 
-            // UserRegistrationBarButtonItem
+            // SkinRibbonGalleryBarItem
             // 
-            this.UserRegistrationBarButtonItem.Caption = "User Registration";
-            this.UserRegistrationBarButtonItem.Glyph = global::HandVeinPattern.Properties.Resources.database_32x32;
-            this.UserRegistrationBarButtonItem.Id = 6;
-            this.UserRegistrationBarButtonItem.Name = "UserRegistrationBarButtonItem";
-            this.UserRegistrationBarButtonItem.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
-            this.UserRegistrationBarButtonItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.UserRegistrationBarButtonItem_ItemClick);
+            this.SkinRibbonGalleryBarItem.Caption = "Skins";
+            // 
+            // 
+            // 
+            this.SkinRibbonGalleryBarItem.Gallery.ShowItemText = true;
+            this.SkinRibbonGalleryBarItem.Id = 3;
+            this.SkinRibbonGalleryBarItem.Name = "SkinRibbonGalleryBarItem";
+            // 
+            // ExitBarButtonItem
+            // 
+            this.ExitBarButtonItem.Caption = "Exit";
+            this.ExitBarButtonItem.Glyph = global::HandVeinPattern.Properties.Resources.close_32x32;
+            this.ExitBarButtonItem.Id = 4;
+            this.ExitBarButtonItem.Name = "ExitBarButtonItem";
+            this.ExitBarButtonItem.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.ExitBarButtonItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.ExitBarButtonItem_ItemClick);
+            // 
+            // ProfileManagementBarButtonItem
+            // 
+            this.ProfileManagementBarButtonItem.Caption = "Profile";
+            this.ProfileManagementBarButtonItem.Glyph = global::HandVeinPattern.Properties.Resources.customer_32x32;
+            this.ProfileManagementBarButtonItem.Id = 5;
+            this.ProfileManagementBarButtonItem.Name = "ProfileManagementBarButtonItem";
+            this.ProfileManagementBarButtonItem.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            // 
+            // ChangePasswordBarButtonItem
+            // 
+            this.ChangePasswordBarButtonItem.Caption = "Change Password";
+            this.ChangePasswordBarButtonItem.Glyph = global::HandVeinPattern.Properties.Resources.Security_Password_2_icon;
+            this.ChangePasswordBarButtonItem.Id = 6;
+            this.ChangePasswordBarButtonItem.Name = "ChangePasswordBarButtonItem";
+            this.ChangePasswordBarButtonItem.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            // 
+            // LogoutBarButtonItem
+            // 
+            this.LogoutBarButtonItem.Caption = "Logout";
+            this.LogoutBarButtonItem.Glyph = global::HandVeinPattern.Properties.Resources.logout;
+            this.LogoutBarButtonItem.Id = 7;
+            this.LogoutBarButtonItem.Name = "LogoutBarButtonItem";
+            this.LogoutBarButtonItem.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
             // NavigationRibbonPage
             // 
             this.NavigationRibbonPage.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.MainMenuRibbonPageGroup,
-            this.ImageProcessingRibbonPageGroup,
-            this.UserRegistrationRibbonPageGroup});
+            this.HomeRibbonPageGroup,
+            this.ImageProcessingBibbonPageGroup});
             this.NavigationRibbonPage.Image = global::HandVeinPattern.Properties.Resources.navigationbar_32x32;
             this.NavigationRibbonPage.Name = "NavigationRibbonPage";
             this.NavigationRibbonPage.Text = "Navigation";
             // 
-            // MainMenuRibbonPageGroup
+            // HomeRibbonPageGroup
             // 
-            this.MainMenuRibbonPageGroup.AllowTextClipping = false;
-            this.MainMenuRibbonPageGroup.ItemLinks.Add(this.MainMenuBarButtonItem);
-            this.MainMenuRibbonPageGroup.Name = "MainMenuRibbonPageGroup";
-            this.MainMenuRibbonPageGroup.Text = "Main Menu";
+            this.HomeRibbonPageGroup.AllowTextClipping = false;
+            this.HomeRibbonPageGroup.ItemLinks.Add(this.HomeBarButtonItem);
+            this.HomeRibbonPageGroup.Name = "HomeRibbonPageGroup";
+            this.HomeRibbonPageGroup.Text = "Home";
             // 
-            // ImageProcessingRibbonPageGroup
+            // ImageProcessingBibbonPageGroup
             // 
-            this.ImageProcessingRibbonPageGroup.AllowTextClipping = false;
-            this.ImageProcessingRibbonPageGroup.ItemLinks.Add(this.ImageProcessingBarButtonItem);
-            this.ImageProcessingRibbonPageGroup.Name = "ImageProcessingRibbonPageGroup";
-            this.ImageProcessingRibbonPageGroup.Text = "Image Processing";
+            this.ImageProcessingBibbonPageGroup.AllowTextClipping = false;
+            this.ImageProcessingBibbonPageGroup.ItemLinks.Add(this.ImageProcessingBarButtonItem);
+            this.ImageProcessingBibbonPageGroup.Name = "ImageProcessingBibbonPageGroup";
+            this.ImageProcessingBibbonPageGroup.Text = "Image Processing";
             // 
-            // UserRegistrationRibbonPageGroup
+            // AccountRibbonPage
             // 
-            this.UserRegistrationRibbonPageGroup.AllowTextClipping = false;
-            this.UserRegistrationRibbonPageGroup.ItemLinks.Add(this.UserRegistrationBarButtonItem);
-            this.UserRegistrationRibbonPageGroup.Name = "UserRegistrationRibbonPageGroup";
-            this.UserRegistrationRibbonPageGroup.Text = "User Registration";
+            this.AccountRibbonPage.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.AccountSettingsRibbonPageGroup,
+            this.LogoutRibbonPageGroup});
+            this.AccountRibbonPage.Image = global::HandVeinPattern.Properties.Resources.publicfix_32x32;
+            this.AccountRibbonPage.Name = "AccountRibbonPage";
+            this.AccountRibbonPage.Text = "Account";
             // 
-            // UserDetailsChartPanelControl
+            // AccountSettingsRibbonPageGroup
             // 
-            this.UserDetailsChartPanelControl.Controls.Add(this.ChartsTabPane);
-            this.UserDetailsChartPanelControl.Location = new System.Drawing.Point(13, 169);
-            this.UserDetailsChartPanelControl.Name = "UserDetailsChartPanelControl";
-            this.UserDetailsChartPanelControl.Size = new System.Drawing.Size(387, 480);
-            this.UserDetailsChartPanelControl.TabIndex = 1;
+            this.AccountSettingsRibbonPageGroup.AllowTextClipping = false;
+            this.AccountSettingsRibbonPageGroup.ItemLinks.Add(this.ProfileManagementBarButtonItem);
+            this.AccountSettingsRibbonPageGroup.ItemLinks.Add(this.ChangePasswordBarButtonItem);
+            this.AccountSettingsRibbonPageGroup.Name = "AccountSettingsRibbonPageGroup";
+            this.AccountSettingsRibbonPageGroup.Text = "Account Settings";
             // 
-            // ChartsTabPane
+            // LogoutRibbonPageGroup
             // 
-            this.ChartsTabPane.Controls.Add(this.ChartTabNavigationPage1);
-            this.ChartsTabPane.Controls.Add(this.tabNavigationPage2);
-            this.ChartsTabPane.Location = new System.Drawing.Point(5, 5);
-            this.ChartsTabPane.Name = "ChartsTabPane";
-            this.ChartsTabPane.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] {
-            this.ChartTabNavigationPage1,
-            this.tabNavigationPage2});
-            this.ChartsTabPane.RegularSize = new System.Drawing.Size(377, 470);
-            this.ChartsTabPane.SelectedPage = this.tabNavigationPage2;
-            this.ChartsTabPane.SelectedPageIndex = 0;
-            this.ChartsTabPane.Size = new System.Drawing.Size(377, 470);
-            this.ChartsTabPane.TabIndex = 0;
-            this.ChartsTabPane.Text = "tabPane1";
+            this.LogoutRibbonPageGroup.AllowTextClipping = false;
+            this.LogoutRibbonPageGroup.ItemLinks.Add(this.LogoutBarButtonItem);
+            this.LogoutRibbonPageGroup.Name = "LogoutRibbonPageGroup";
+            this.LogoutRibbonPageGroup.Text = "Logout";
             // 
-            // ChartTabNavigationPage1
+            // ActionsRibbonPage
             // 
-            this.ChartTabNavigationPage1.Caption = "Users";
-            this.ChartTabNavigationPage1.Controls.Add(this.UsersChartControl);
-            this.ChartTabNavigationPage1.Name = "ChartTabNavigationPage1";
-            this.ChartTabNavigationPage1.Size = new System.Drawing.Size(359, 425);
+            this.ActionsRibbonPage.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.SkinRibbonPageGroup,
+            this.ActionsRibbonPageGroup});
+            this.ActionsRibbonPage.Image = global::HandVeinPattern.Properties.Resources.viewsetting_32x32;
+            this.ActionsRibbonPage.Name = "ActionsRibbonPage";
+            this.ActionsRibbonPage.Text = "Actions";
             // 
-            // tabNavigationPage2
+            // SkinRibbonPageGroup
             // 
-            this.tabNavigationPage2.Caption = "tabNavigationPage2";
-            this.tabNavigationPage2.Name = "tabNavigationPage2";
-            this.tabNavigationPage2.Size = new System.Drawing.Size(359, 425);
+            this.SkinRibbonPageGroup.AllowTextClipping = false;
+            this.SkinRibbonPageGroup.ItemLinks.Add(this.SkinRibbonGalleryBarItem);
+            this.SkinRibbonPageGroup.Name = "SkinRibbonPageGroup";
+            this.SkinRibbonPageGroup.Text = "Skins";
             // 
-            // UsersChartControl
+            // ActionsRibbonPageGroup
             // 
-            this.UsersChartControl.Location = new System.Drawing.Point(3, 14);
-            this.UsersChartControl.Name = "UsersChartControl";
-            series1.Name = "Series 1";
-            series1.View = doughnutSeriesView1;
-            this.UsersChartControl.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
-        series1};
-            this.UsersChartControl.Size = new System.Drawing.Size(353, 399);
-            this.UsersChartControl.TabIndex = 0;
-            chartTitle1.Text = "Total Users";
-            this.UsersChartControl.Titles.AddRange(new DevExpress.XtraCharts.ChartTitle[] {
-            chartTitle1});
+            this.ActionsRibbonPageGroup.ItemLinks.Add(this.ExitBarButtonItem);
+            this.ActionsRibbonPageGroup.Name = "ActionsRibbonPageGroup";
+            this.ActionsRibbonPageGroup.Text = "Actions";
+            // 
+            // DashboardPanelControl3
+            // 
+            this.DashboardPanelControl3.Controls.Add(this.AdminDetailsTabPane);
+            this.DashboardPanelControl3.Controls.Add(this.AdminStatusTabPane);
+            this.DashboardPanelControl3.Location = new System.Drawing.Point(826, 168);
+            this.DashboardPanelControl3.Name = "DashboardPanelControl3";
+            this.DashboardPanelControl3.Size = new System.Drawing.Size(390, 447);
+            this.DashboardPanelControl3.TabIndex = 1;
+            // 
+            // AdminDetailsTabPane
+            // 
+            this.AdminDetailsTabPane.Controls.Add(this.AdminDetailsNavigationPage);
+            this.AdminDetailsTabPane.Location = new System.Drawing.Point(5, 236);
+            this.AdminDetailsTabPane.Name = "AdminDetailsTabPane";
+            this.AdminDetailsTabPane.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] {
+            this.AdminDetailsNavigationPage});
+            this.AdminDetailsTabPane.RegularSize = new System.Drawing.Size(380, 206);
+            this.AdminDetailsTabPane.SelectedPage = this.AdminDetailsNavigationPage;
+            this.AdminDetailsTabPane.SelectedPageIndex = 0;
+            this.AdminDetailsTabPane.Size = new System.Drawing.Size(380, 206);
+            this.AdminDetailsTabPane.TabIndex = 1;
+            this.AdminDetailsTabPane.Text = "Admin Details";
+            // 
+            // AdminDetailsNavigationPage
+            // 
+            this.AdminDetailsNavigationPage.Caption = "Admin Details";
+            this.AdminDetailsNavigationPage.Controls.Add(this.AdminDetailsDataGridView);
+            this.AdminDetailsNavigationPage.Name = "AdminDetailsNavigationPage";
+            this.AdminDetailsNavigationPage.Size = new System.Drawing.Size(362, 161);
+            // 
+            // AdminDetailsDataGridView
+            // 
+            this.AdminDetailsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.AdminDetailsDataGridView.Location = new System.Drawing.Point(3, 3);
+            this.AdminDetailsDataGridView.Name = "AdminDetailsDataGridView";
+            this.AdminDetailsDataGridView.Size = new System.Drawing.Size(356, 155);
+            this.AdminDetailsDataGridView.TabIndex = 0;
+            // 
+            // AdminStatusTabPane
+            // 
+            this.AdminStatusTabPane.Controls.Add(this.OnlineStatusTabNavigationPage);
+            this.AdminStatusTabPane.Location = new System.Drawing.Point(5, 15);
+            this.AdminStatusTabPane.Name = "AdminStatusTabPane";
+            this.AdminStatusTabPane.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] {
+            this.OnlineStatusTabNavigationPage});
+            this.AdminStatusTabPane.RegularSize = new System.Drawing.Size(380, 215);
+            this.AdminStatusTabPane.SelectedPage = this.OnlineStatusTabNavigationPage;
+            this.AdminStatusTabPane.SelectedPageIndex = 0;
+            this.AdminStatusTabPane.Size = new System.Drawing.Size(380, 215);
+            this.AdminStatusTabPane.TabIndex = 0;
+            this.AdminStatusTabPane.Text = "Admin Status";
+            // 
+            // OnlineStatusTabNavigationPage
+            // 
+            this.OnlineStatusTabNavigationPage.Caption = "Online Status";
+            this.OnlineStatusTabNavigationPage.Controls.Add(this.OnlineStatusDataGridView);
+            this.OnlineStatusTabNavigationPage.Name = "OnlineStatusTabNavigationPage";
+            this.OnlineStatusTabNavigationPage.Size = new System.Drawing.Size(362, 170);
+            // 
+            // OnlineStatusDataGridView
+            // 
+            this.OnlineStatusDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.OnlineStatusDataGridView.Location = new System.Drawing.Point(3, 3);
+            this.OnlineStatusDataGridView.Name = "OnlineStatusDataGridView";
+            this.OnlineStatusDataGridView.Size = new System.Drawing.Size(356, 164);
+            this.OnlineStatusDataGridView.TabIndex = 0;
+            // 
+            // DashboardPanelControl1
+            // 
+            this.DashboardPanelControl1.Location = new System.Drawing.Point(12, 168);
+            this.DashboardPanelControl1.Name = "DashboardPanelControl1";
+            this.DashboardPanelControl1.Size = new System.Drawing.Size(382, 447);
+            this.DashboardPanelControl1.TabIndex = 2;
+            // 
+            // DashboardPanelControl2
+            // 
+            this.DashboardPanelControl2.Controls.Add(this.NewAdminTabPane);
+            this.DashboardPanelControl2.Location = new System.Drawing.Point(421, 168);
+            this.DashboardPanelControl2.Name = "DashboardPanelControl2";
+            this.DashboardPanelControl2.Size = new System.Drawing.Size(382, 447);
+            this.DashboardPanelControl2.TabIndex = 3;
+            // 
+            // NewAdminTabPane
+            // 
+            this.NewAdminTabPane.Controls.Add(this.AddAdminTabNavigationPage);
+            this.NewAdminTabPane.Location = new System.Drawing.Point(5, 5);
+            this.NewAdminTabPane.Name = "NewAdminTabPane";
+            this.NewAdminTabPane.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] {
+            this.AddAdminTabNavigationPage});
+            this.NewAdminTabPane.RegularSize = new System.Drawing.Size(372, 437);
+            this.NewAdminTabPane.SelectedPage = this.AddAdminTabNavigationPage;
+            this.NewAdminTabPane.SelectedPageIndex = 0;
+            this.NewAdminTabPane.Size = new System.Drawing.Size(372, 437);
+            this.NewAdminTabPane.TabIndex = 0;
+            this.NewAdminTabPane.Text = "New Admin";
+            // 
+            // AddAdminTabNavigationPage
+            // 
+            this.AddAdminTabNavigationPage.Caption = "Add Admin";
+            this.AddAdminTabNavigationPage.Name = "AddAdminTabNavigationPage";
+            this.AddAdminTabNavigationPage.Size = new System.Drawing.Size(354, 392);
             // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1234, 661);
-            this.Controls.Add(this.UserDetailsChartPanelControl);
-            this.Controls.Add(this.DashboardRibbonControl);
+            this.ClientSize = new System.Drawing.Size(1228, 627);
+            this.Controls.Add(this.DashboardPanelControl2);
+            this.Controls.Add(this.DashboardPanelControl1);
+            this.Controls.Add(this.DashboardPanelControl3);
+            this.Controls.Add(this.ribbonControl1);
             this.Name = "Dashboard";
-            this.Ribbon = this.DashboardRibbonControl;
+            this.Ribbon = this.ribbonControl1;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard";
-            ((System.ComponentModel.ISupportInitialize)(this.DashboardRibbonControl)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.UserDetailsChartPanelControl)).EndInit();
-            this.UserDetailsChartPanelControl.ResumeLayout(false);
-            this.ChartsTabPane.ResumeLayout(false);
-            this.ChartTabNavigationPage1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(doughnutSeriesView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.UsersChartControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DashboardPanelControl3)).EndInit();
+            this.DashboardPanelControl3.ResumeLayout(false);
+            this.AdminDetailsTabPane.ResumeLayout(false);
+            this.AdminDetailsNavigationPage.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.AdminDetailsDataGridView)).EndInit();
+            this.AdminStatusTabPane.ResumeLayout(false);
+            this.OnlineStatusTabNavigationPage.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.OnlineStatusDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DashboardPanelControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DashboardPanelControl2)).EndInit();
+            this.DashboardPanelControl2.ResumeLayout(false);
+            this.NewAdminTabPane.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -233,22 +358,33 @@
 
         #endregion
 
-        private DevExpress.XtraBars.Ribbon.RibbonPage HelpRibbonPage;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ApplicationInformationRibbonPageGroup;
-        private DevExpress.XtraBars.BarButtonItem AboutBarButtonItem;
-        private DevExpress.XtraBars.Ribbon.RibbonControl DashboardRibbonControl;
+        private DevExpress.XtraBars.Ribbon.RibbonControl ribbonControl1;
         private DevExpress.XtraBars.Ribbon.RibbonPage NavigationRibbonPage;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup MainMenuRibbonPageGroup;
-        private DevExpress.XtraBars.BarButtonItem MainMenuBarButtonItem;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ImageProcessingRibbonPageGroup;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup HomeRibbonPageGroup;
+        private DevExpress.XtraBars.BarButtonItem HomeBarButtonItem;
         private DevExpress.XtraBars.BarButtonItem ImageProcessingBarButtonItem;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup UserRegistrationRibbonPageGroup;
-        private DevExpress.XtraBars.BarButtonItem UserRegistrationBarButtonItem;
-        private DevExpress.XtraEditors.PanelControl UserDetailsChartPanelControl;
-        private DevExpress.XtraBars.Navigation.TabPane ChartsTabPane;
-        private DevExpress.XtraBars.Navigation.TabNavigationPage ChartTabNavigationPage1;
-        private DevExpress.XtraBars.Navigation.TabNavigationPage tabNavigationPage2;
-        private DevExpress.XtraCharts.ChartControl UsersChartControl;
-
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ImageProcessingBibbonPageGroup;
+        private DevExpress.XtraBars.SkinRibbonGalleryBarItem SkinRibbonGalleryBarItem;
+        private DevExpress.XtraBars.BarButtonItem ExitBarButtonItem;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ActionsRibbonPage;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup SkinRibbonPageGroup;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ActionsRibbonPageGroup;
+        private DevExpress.XtraEditors.PanelControl DashboardPanelControl3;
+        private DevExpress.XtraEditors.PanelControl DashboardPanelControl1;
+        private DevExpress.XtraEditors.PanelControl DashboardPanelControl2;
+        private DevExpress.XtraBars.Navigation.TabPane AdminStatusTabPane;
+        private DevExpress.XtraBars.Navigation.TabNavigationPage OnlineStatusTabNavigationPage;
+        private System.Windows.Forms.DataGridView OnlineStatusDataGridView;
+        private DevExpress.XtraBars.Navigation.TabPane AdminDetailsTabPane;
+        private DevExpress.XtraBars.Navigation.TabNavigationPage AdminDetailsNavigationPage;
+        private System.Windows.Forms.DataGridView AdminDetailsDataGridView;
+        private DevExpress.XtraBars.Navigation.TabPane NewAdminTabPane;
+        private DevExpress.XtraBars.Navigation.TabNavigationPage AddAdminTabNavigationPage;
+        private DevExpress.XtraBars.Ribbon.RibbonPage AccountRibbonPage;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup AccountSettingsRibbonPageGroup;
+        private DevExpress.XtraBars.BarButtonItem ProfileManagementBarButtonItem;
+        private DevExpress.XtraBars.BarButtonItem ChangePasswordBarButtonItem;
+        private DevExpress.XtraBars.BarButtonItem LogoutBarButtonItem;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup LogoutRibbonPageGroup;
     }
 }
