@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,23 +11,40 @@ namespace HandVeinPattern
 {
     public static class UserRegistrationDetailHandler
     {
+        public static byte[] GetPhoto(string filePath)
+        {
+            FileStream stream = new FileStream(filePath, FileMode.Open, FileAccess.Read);
+
+            BinaryReader reader = new BinaryReader(stream);
+
+            byte[] photo = reader.ReadBytes((int)stream.Length);
+
+            reader.Close();
+
+            stream.Close();
+
+            return photo;
+        }
+
         public static void recordentry()
         {
-            SqlConnection connecion = new SqlConnection(HandVeinPattern.Properties.Settings.Default.HandVeinPatternConnectionString);
+            SqlConnection connection = new SqlConnection(HandVeinPattern.Properties.Settings.Default.HandVeinPatternConnectionString);
 
             SqlCommand command = new SqlCommand();
 
-            connecion.Open();
+            connection.Open();
 
             try
             {
-                command = connecion.CreateCommand();
+                byte[] photo = GetPhoto(Details.UserImageFilePath);
+
+                command = connection.CreateCommand();
 
                 command.CommandText = "INSERT INTO USERDETAILS(ID, IMAGE, FIRSTNAME, LASTNAME, PREFIX, TITLE, GENDER, ADDRESS, CITY, STATE, COUNTRY, HOMEPHONE, MOBILEPHONE, OFFICEPHONE, FAX, EMAIL, WEBSITE, DOB, ADDITIONALNOTES) VALUES(@ID, @IMAGE, @FN, @LN, @PF, @TITLE, @GEN, @ADD, @CITY, @STATE, @COUNTRY, @HP, @MP, @OP, @FAX, @EM, @SKYPE, @WEB, @DOB, @AN)";
 
                 command.Parameters.AddWithValue("@ID", Details.ID);
 
-                command.Parameters.AddWithValue("@IMAGE", Details.Faceimage);
+                command.Parameters.Add("@IMAGE", SqlDbType.Image, photo.Length).Value = photo;
 
                 command.Parameters.AddWithValue("@FN", Details.FirstName);
 
@@ -69,9 +87,9 @@ namespace HandVeinPattern
             }
             finally
             {
-                if (connecion.State == ConnectionState.Open)
+                if (connection.State == ConnectionState.Open)
                 {
-                    connecion.Close();
+                    connection.Close();
                 }
             }
         }

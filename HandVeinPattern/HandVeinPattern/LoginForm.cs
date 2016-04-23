@@ -13,8 +13,6 @@ namespace HandVeinPattern
 {
     public partial class LoginForm : Form
     {
-        int AdminID = 0;
-
         string username = string.Empty;
 
         string password = string.Empty;
@@ -53,8 +51,6 @@ namespace HandVeinPattern
             username = string.Empty;
 
             password = string.Empty;
-
-            Details.AdminName = string.Empty;
         }
 
 
@@ -113,15 +109,13 @@ namespace HandVeinPattern
 
                     reader.Read();
 
-                    AdminID = Convert.ToInt32(reader["AdminID"]);
-
-                    Details.AdminName = reader["FirstName"].ToString();
+                    Details.AdminLoginID = reader["AdminID"].ToString();
 
                     connection.Close();
                 }
-                switch (AdminID)
+                switch (Details.AdminLoginID)
                 {
-                    case -1:
+                    case "":
                         MessageBox.Show("Invalid Username Or Password", "Authentication Failed", MessageBoxButtons.OK);
                         clear();
                         break;
@@ -142,8 +136,7 @@ namespace HandVeinPattern
             mainform.Show();
             this.Hide();
         }
-
-
+        
         #endregion
 
     }

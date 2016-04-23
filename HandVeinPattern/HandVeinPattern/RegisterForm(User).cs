@@ -14,6 +14,8 @@ namespace HandVeinPattern
 {
     public partial class RegisterForm_User_ : Form
     {
+        string userimagefilepath;
+
         public RegisterForm_User_()
         {
             InitializeComponent();
@@ -47,6 +49,7 @@ namespace HandVeinPattern
             if (loadimage.ShowDialog() == DialogResult.OK)
             {
                 UserPictureEdit.Image = Image.FromFile(loadimage.FileName);
+                userimagefilepath = loadimage.FileName;
             }
         }
 
@@ -85,7 +88,7 @@ namespace HandVeinPattern
         {
             Details.ID = IDTextBox.Text;
 
-            Details.Faceimage = UserPictureEdit.Image;
+            Details.UserImageFilePath = userimagefilepath;
 
             Details.FirstName = FirstNameTextBox.Text;
 
@@ -131,8 +134,9 @@ namespace HandVeinPattern
 
         private void CancelBarButtonItem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Application.Run(new MainForm());
-            this.Close();
+            Dashboard dashboard = new Dashboard();
+            dashboard.Show();
+            this.Hide();
         }
 
         private void AdditionalNotesRichTextBox_TextChanged(object sender, EventArgs e)
@@ -183,12 +187,14 @@ namespace HandVeinPattern
 
             AdditionalNotesLabel.Visible = true;
 
-            Details.cleardetails();
+            Details.clear_user_details();
 
         }
 
         #endregion
 
+
+        #region Error Providers
 
         private void errorprovider()
         {
@@ -278,6 +284,8 @@ namespace HandVeinPattern
                 DOBErrorProvider.SetError(DOBDateEdit, "DOB Required");
             }
         }
-        
+
+        #endregion
+
     }
 }

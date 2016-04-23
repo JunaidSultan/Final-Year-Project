@@ -1,4 +1,5 @@
 ﻿using Emgu.CV;
+using Emgu.CV.Util;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -37,7 +38,11 @@ namespace HandVeinPattern
 
         public static Mat thinnedimage { get; set; }
 
+        public static Mat keypointsimage { get; set; }
+
         public static Mat processedimage { get; set; }
+
+        public static VectorOfKeyPoint modelKeyPoints { get; set; }
 
         #endregion
 
@@ -45,11 +50,9 @@ namespace HandVeinPattern
 
         #region User Registration
 
-        public static string userimagefilepath { get; set; }
+        public static string UserImageFilePath { get; set; }
 
         public static string ID { get; set; }
-
-        public static Image Faceimage { get; set; }
 
         public static string FirstName { get; set; }
 
@@ -89,29 +92,28 @@ namespace HandVeinPattern
 
         //Admin Registration Property Region
 
-        #region Admin Login & Registrarion
+        #region Admin Login & Registrarion 
+
+        public static string AdminLoginID { get; set; }
 
         public static string AdminID { get; set; }
 
-        public static string AdminName { get; set; }
+        public static string Username { get; set; }
 
-        public static string adminimagefilepath { get; set; }
+        public static string Password { get; set; }
 
-        #endregion
+        public static string AdminFirstName { get; set; }
 
-        //File Stream Property Region
+        public static string AdminLastName { get; set; }
 
-        #region File Stream
+        public static string AdminGender { get; set; }
 
-        public static FileStream _handpicture { get; set; }
+        public static string AdminEmail { get; set; }
 
-        public static FileStream _facepicture { get; set; }
-
-        public static byte _handpicturebyte { get; set; }
-
-        public static byte _facepicturebyte { get; set; }
+        public static string AdminImageFilePath { get; set; }
 
         #endregion
+
 
         //Step Images View Property Region
 
@@ -127,16 +129,14 @@ namespace HandVeinPattern
 
         #region Methods
 
-        public static void cleardatabaseentry()
-        {
-            _handpicture = null;
-            _facepicture = null;
-        }
+        //Clears User Regestration Properties
 
-        //Clears All Properties
-
-        public static void cleardetails()
+        public static void clear_user_details()
         {
+            ID = string.Empty;
+
+            UserImageFilePath = string.Empty;
+
             FirstName = string.Empty;
 
             LastName = string.Empty;
@@ -167,18 +167,32 @@ namespace HandVeinPattern
 
             Website = string.Empty;
 
-            //DOB = DateTime.Now;
+            DOB = DateTime.Now;
 
             AdditionalNotes = string.Empty;
 
         }
 
-        #endregion
+        //Clears Admin Regesitration Properties
 
+        public static void clear_admin_details()
+        {
+            AdminID = string.Empty;
 
-        #region ProgressBar
+            Username = string.Empty;
 
-        public static int progressbar_value { get; set; }
+            Password = string.Empty;
+
+            AdminFirstName = string.Empty;
+
+            AdminLastName = string.Empty;
+
+            AdminGender = string.Empty;
+
+            AdminEmail = string.Empty;
+
+            AdminImageFilePath = string.Empty;
+        }
 
         #endregion
 

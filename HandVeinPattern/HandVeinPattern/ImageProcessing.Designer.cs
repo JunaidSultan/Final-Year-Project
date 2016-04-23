@@ -36,19 +36,20 @@
             this.WrapperProcessingBarButtonItem = new DevExpress.XtraBars.BarButtonItem();
             this.MorphologicalOperationBarButtonItem = new DevExpress.XtraBars.BarButtonItem();
             this.LaplacianFilterBarButtonItem = new DevExpress.XtraBars.BarButtonItem();
-            this.MorphologicalOperation2BarButtonItem = new DevExpress.XtraBars.BarButtonItem();
             this.ImageMultiplicationBarButtonItem = new DevExpress.XtraBars.BarButtonItem();
             this.InsertBarButtonItem = new DevExpress.XtraBars.BarButtonItem();
             this.InsertRecordBarButtonItem = new DevExpress.XtraBars.BarButtonItem();
             this.ResetBarButtonItem = new DevExpress.XtraBars.BarButtonItem();
             this.CancelBarButtonItem = new DevExpress.XtraBars.BarButtonItem();
             this.ThinningBarButtonItem = new DevExpress.XtraBars.BarButtonItem();
+            this.FeaturesExtractionBarButtonItem = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.PreProcessingRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ThresholdingRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.WrapperProcessingRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.PostProcessingRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.SegmentationRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.FeaturesExtractionRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.DatabaseRecordsRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.InsertRecordsRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ImageProcessingGroupControl = new DevExpress.XtraEditors.GroupControl();
@@ -142,15 +143,15 @@
             this.WrapperProcessingBarButtonItem,
             this.MorphologicalOperationBarButtonItem,
             this.LaplacianFilterBarButtonItem,
-            this.MorphologicalOperation2BarButtonItem,
             this.ImageMultiplicationBarButtonItem,
             this.InsertBarButtonItem,
             this.InsertRecordBarButtonItem,
             this.ResetBarButtonItem,
             this.CancelBarButtonItem,
-            this.ThinningBarButtonItem});
+            this.ThinningBarButtonItem,
+            this.FeaturesExtractionBarButtonItem});
             this.ImageProcessingRibbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ImageProcessingRibbonControl.MaxItemId = 14;
+            this.ImageProcessingRibbonControl.MaxItemId = 15;
             this.ImageProcessingRibbonControl.Name = "ImageProcessingRibbonControl";
             this.ImageProcessingRibbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -212,15 +213,6 @@
             this.LaplacianFilterBarButtonItem.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.LaplacianFilterBarButtonItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.LaplacianFilterBarButtonItem_ItemClick);
             // 
-            // MorphologicalOperation2BarButtonItem
-            // 
-            this.MorphologicalOperation2BarButtonItem.Caption = "Morphological Operation 2";
-            this.MorphologicalOperation2BarButtonItem.Glyph = global::HandVeinPattern.Properties.Resources.cooltext175605941160719;
-            this.MorphologicalOperation2BarButtonItem.Id = 7;
-            this.MorphologicalOperation2BarButtonItem.Name = "MorphologicalOperation2BarButtonItem";
-            this.MorphologicalOperation2BarButtonItem.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
-            this.MorphologicalOperation2BarButtonItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.MorphologicalOperation2BarButtonItem_ItemClick);
-            // 
             // ImageMultiplicationBarButtonItem
             // 
             this.ImageMultiplicationBarButtonItem.Caption = "Image Multiplication";
@@ -272,6 +264,15 @@
             this.ThinningBarButtonItem.Name = "ThinningBarButtonItem";
             this.ThinningBarButtonItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.ThinningBarButtonItem_ItemClick);
             // 
+            // FeaturesExtractionBarButtonItem
+            // 
+            this.FeaturesExtractionBarButtonItem.Caption = "Features Extraction";
+            this.FeaturesExtractionBarButtonItem.Glyph = global::HandVeinPattern.Properties.Resources.feature_32x32;
+            this.FeaturesExtractionBarButtonItem.Id = 14;
+            this.FeaturesExtractionBarButtonItem.Name = "FeaturesExtractionBarButtonItem";
+            this.FeaturesExtractionBarButtonItem.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.FeaturesExtractionBarButtonItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.FeaturesExtractionBarButtonItem_ItemClick);
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -279,7 +280,8 @@
             this.ThresholdingRibbonPageGroup,
             this.WrapperProcessingRibbonPageGroup,
             this.PostProcessingRibbonPageGroup,
-            this.SegmentationRibbonPageGroup});
+            this.SegmentationRibbonPageGroup,
+            this.FeaturesExtractionRibbonPageGroup});
             this.ribbonPage1.Image = global::HandVeinPattern.Properties.Resources.processing_icon;
             this.ribbonPage1.Name = "ribbonPage1";
             this.ribbonPage1.Text = "Image Processing";
@@ -307,16 +309,23 @@
             // 
             this.PostProcessingRibbonPageGroup.ItemLinks.Add(this.MorphologicalOperationBarButtonItem);
             this.PostProcessingRibbonPageGroup.ItemLinks.Add(this.LaplacianFilterBarButtonItem);
-            this.PostProcessingRibbonPageGroup.ItemLinks.Add(this.MorphologicalOperation2BarButtonItem);
             this.PostProcessingRibbonPageGroup.ItemLinks.Add(this.ImageMultiplicationBarButtonItem);
             this.PostProcessingRibbonPageGroup.Name = "PostProcessingRibbonPageGroup";
             this.PostProcessingRibbonPageGroup.Text = "Post-Processing";
             // 
             // SegmentationRibbonPageGroup
             // 
+            this.SegmentationRibbonPageGroup.AllowTextClipping = false;
             this.SegmentationRibbonPageGroup.ItemLinks.Add(this.ThinningBarButtonItem);
             this.SegmentationRibbonPageGroup.Name = "SegmentationRibbonPageGroup";
             this.SegmentationRibbonPageGroup.Text = "Segmentation";
+            // 
+            // FeaturesExtractionRibbonPageGroup
+            // 
+            this.FeaturesExtractionRibbonPageGroup.AllowTextClipping = false;
+            this.FeaturesExtractionRibbonPageGroup.ItemLinks.Add(this.FeaturesExtractionBarButtonItem);
+            this.FeaturesExtractionRibbonPageGroup.Name = "FeaturesExtractionRibbonPageGroup";
+            this.FeaturesExtractionRibbonPageGroup.Text = "Features Extraction";
             // 
             // DatabaseRecordsRibbonPage
             // 
@@ -852,7 +861,6 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup PostProcessingRibbonPageGroup;
         private DevExpress.XtraBars.BarButtonItem MorphologicalOperationBarButtonItem;
         private DevExpress.XtraBars.BarButtonItem LaplacianFilterBarButtonItem;
-        private DevExpress.XtraBars.BarButtonItem MorphologicalOperation2BarButtonItem;
         private DevExpress.XtraBars.BarButtonItem ImageMultiplicationBarButtonItem;
         private System.Windows.Forms.ContextMenuStrip Step1ImageContextMenuStrip;
         private System.Windows.Forms.ContextMenuStrip Step2ImageContextMenuStrip;
@@ -880,5 +888,7 @@
         private DevExpress.XtraBars.BarButtonItem CancelBarButtonItem;
         private DevExpress.XtraBars.BarButtonItem ThinningBarButtonItem;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup SegmentationRibbonPageGroup;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup FeaturesExtractionRibbonPageGroup;
+        private DevExpress.XtraBars.BarButtonItem FeaturesExtractionBarButtonItem;
     }
 }

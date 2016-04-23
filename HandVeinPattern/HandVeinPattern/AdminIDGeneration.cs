@@ -13,7 +13,9 @@ namespace HandVeinPattern
 {
     public class AdminIDGeneration
     {
-        static int count;
+        static int count;   // Variable To Store The Total Number Of Administrators In The Database
+
+        // Function To Count The Total Number Of Administrators In The Database
 
         public static void IDCount()
         {
@@ -33,7 +35,7 @@ namespace HandVeinPattern
 
                 reader.Read();
 
-                count = Convert.ToInt32(reader["COUNT"]);
+                count = Convert.ToInt32(reader["COUNT"]);   // Assigns The Value To The Variable 'Count' After Reading It From Database
             }
 
             catch (Exception)
@@ -50,19 +52,19 @@ namespace HandVeinPattern
             }
         }
 
+        // Function For Creating An Administrator ID
+
         public static void autogenerateID()
         {
             IDCount();
 
-            string ID;
-
             int id_number;
 
-            id_number = count + 1;
+            id_number = count + 1;      // Increments The Current Count Of Administrators By 1 To Create A Next ID
 
-            ID = string.Format("ADMIN-{0}-{1}-{2}-{3}", DateTime.Now.Day, DateTime.Now.Month, DateTime.Now.Year, id_number);
-
-            Details.AdminID = ID;
+            // Format For Creating An Administrator ID E.g. (ADMIN-20-11-2016-20)
+            Details.AdminID = string.Format("ADMIN-{0}-{1}-{2}-{3}", DateTime.Now.Day, DateTime.Now.Month, DateTime.Now.Year, id_number); 
         }
+
     }
 }

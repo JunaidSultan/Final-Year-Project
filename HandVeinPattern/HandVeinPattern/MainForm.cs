@@ -19,8 +19,8 @@ namespace HandVeinPattern
 
         private void ContinueSimpleButton_Click(object sender, EventArgs e)
         {
-            Dashboard dashboard = new Dashboard();
-            dashboard.Show();
+            LoginForm loginform = new LoginForm();
+            loginform.Show();
             this.Hide();
         }
     }

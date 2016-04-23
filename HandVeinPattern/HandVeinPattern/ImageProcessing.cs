@@ -15,17 +15,26 @@ using Emgu.CV.Features2D;
 using Emgu.CV.Shape;
 using Emgu.CV.Structure;
 using Emgu.CV.XFeatures2D;
-using Emgu.Util;
+using Emgu.CV.Util;
 using System.IO;
 
 using Wrapper;
 
 using ThinningProcess;
 
+using System.Diagnostics;
+using Emgu.CV.Cuda;
+
 namespace HandVeinPattern
 {
     public partial class ImageProcessing : Form
     {
+        System.Diagnostics.Stopwatch _stopwatch = new Stopwatch();
+
+        //VectorOfKeyPoint modelKeyPoints;// = new VectorOfKeyPoint();
+
+        MKeyPoint[] mKeyPoints;// = siftCPU.Detect(Details.thinnedimage, null);
+
         OpenCVWrapper opencvwrapper;
 
         ThinningOpenCVWrapper thinningopencvwrapper;
@@ -99,6 +108,7 @@ namespace HandVeinPattern
             }
         }
 
+
         #region Original Image Context Menu Strip Click Events
 
 
@@ -150,10 +160,13 @@ namespace HandVeinPattern
 
         #endregion
 
+
         #region Image Processing Functions Ribbon Control Click Events
 
         private void GrayScaleBarButtonItem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            _stopwatch.Start();
+
             Details.sourceimagehand = new Mat(Details.imagefilepath, LoadImageType.Grayscale);
 
             Step1PictureEdit.Image = Details.sourceimagehand.Bitmap;
@@ -161,10 +174,14 @@ namespace HandVeinPattern
             ImageProcessingProgressBarControl.PerformStep();
 
             ImageProcessingProgressBarControl.Update();
+
+            _stopwatch.Stop();
         }
 
         private void WhiteBalanceBarButtonItem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            _stopwatch.Start();
+
             Details.whitebalance = new Mat();
 
             CvInvoke.BalanceWhite(Details.sourceimagehand, Details.whitebalance, WhiteBalanceMethod.Simple, 0f, 255f, 0f, 255f);
@@ -174,10 +191,14 @@ namespace HandVeinPattern
             ImageProcessingProgressBarControl.PerformStep();
 
             ImageProcessingProgressBarControl.Update();
+
+            _stopwatch.Stop();
         }
 
         private void AdaptiveThresholdingBarButtonItem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            _stopwatch.Start();
+
             Directory.CreateDirectory(@"D:\Eighth Semester\HandVeinPattern\\RuntimeDirectory");
 
             Details.adaptivethreshold = new Mat();
@@ -191,10 +212,14 @@ namespace HandVeinPattern
             ImageProcessingProgressBarControl.PerformStep();
 
             ImageProcessingProgressBarControl.Update();
+
+            _stopwatch.Stop();
         }
 
         private void WrapperProcessingBarButtonItem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            _stopwatch.Start();
+
             opencvwrapper.process();
 
             Details.maskedimage = new Mat();
@@ -206,23 +231,35 @@ namespace HandVeinPattern
             ImageProcessingProgressBarControl.PerformStep();
 
             ImageProcessingProgressBarControl.Update();
+
+            _stopwatch.Stop();
         }
 
         private void MorphologicalOperationBarButtonItem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            _stopwatch.Start();
+
             Details.erode_step1 = new Mat();
+
+            Details.erode_step2 = new Mat();
 
             CvInvoke.MorphologyEx(Details.maskedimage, Details.erode_step1, MorphOp.Erode, CvInvoke.GetStructuringElement(ElementShape.Ellipse, new Size(3, 3), new Point(-1, -1)), new Point(-1, -1), 9, BorderType.Constant, new MCvScalar(0));
 
-            Step5PictureEdit.Image = Details.erode_step1.Bitmap;
+            CvInvoke.MorphologyEx(Details.erode_step1, Details.erode_step2, MorphOp.Erode, CvInvoke.GetStructuringElement(ElementShape.Ellipse, new Size(3, 3), new Point(-1, -1)), new Point(-1, -1), 7, BorderType.Constant, new MCvScalar(0));
+
+            Step5PictureEdit.Image = Details.erode_step2.Bitmap;
 
             ImageProcessingProgressBarControl.PerformStep();
 
             ImageProcessingProgressBarControl.Update();
+
+            _stopwatch.Stop();
         }
 
         private void LaplacianFilterBarButtonItem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            _stopwatch.Start();
+
             Details.laplacian = new Mat();
 
             CvInvoke.Laplacian(Details.sourceimagehand, Details.laplacian, DepthType.Cv8U, 11, 1.0, 0.0, BorderType.Constant);
@@ -232,51 +269,40 @@ namespace HandVeinPattern
             ImageProcessingProgressBarControl.PerformStep();
 
             ImageProcessingProgressBarControl.Update();
-        }
 
-        private void MorphologicalOperation2BarButtonItem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            Details.erode_step2 = new Mat();
-
-            CvInvoke.MorphologyEx(Details.erode_step1, Details.erode_step2, MorphOp.Erode, CvInvoke.GetStructuringElement(ElementShape.Ellipse, new Size(3, 3), new Point(-1, -1)), new Point(-1, -1), 7, BorderType.Constant, new MCvScalar(0));
-
-            Step7PictureEdit.Image = Details.erode_step2.Bitmap;
-
-            ImageProcessingProgressBarControl.PerformStep();
-
-            ImageProcessingProgressBarControl.Update();
+            _stopwatch.Stop();
         }
 
         private void ImageMultiplicationBarButtonItem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            _stopwatch.Start();
+
             Details.multipliedimage = new Mat();
 
             CvInvoke.Multiply(Details.laplacian, Details.erode_step2, Details.multipliedimage, 1.0, DepthType.Cv8U);
 
-            Step8PictureEdit.Image = Details.multipliedimage.Bitmap;
-
-            //CvInvoke.Imwrite(@"D:\Eighth Semester\HandVeinPattern\RuntimeDirectory\MultipliedImage.jpg", Details.multipliedimage);
+            Step7PictureEdit.Image = Details.multipliedimage.Bitmap;
 
             ImageProcessingProgressBarControl.PerformStep();
 
             ImageProcessingProgressBarControl.Update();
+
+            _stopwatch.Stop();
         }
 
         private void ThinningBarButtonItem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            _stopwatch.Start();
+
             Mat newsource = new Mat();
 
             newsource = Details.multipliedimage.Clone();
 
             Details.thinnedimage = new Mat();
 
-            //CvInvoke.CvtColor(newsource, Details.thinnedimage, ColorConversion.Bgr2Gray, 0);
-
             CvInvoke.Threshold(newsource, Details.thinnedimage, 10, 255, ThresholdType.Binary);
 
             CvInvoke.Imwrite(@"D:\Eighth Semester\HandVeinPattern\RuntimeDirectory\MultipliedImage.jpg", Details.thinnedimage);
-
-            Step9PictureEdit.Image = Details.thinnedimage.Bitmap;
 
             thinningopencvwrapper.process();
 
@@ -284,18 +310,68 @@ namespace HandVeinPattern
 
             Details.thinnedimage = new Mat(@"D:\Eighth Semester\HandVeinPattern\RuntimeDirectory\ThinnedImage.jpg", LoadImageType.Grayscale);
 
-            Step9PictureEdit.Image = Details.thinnedimage.Bitmap;
+            Step8PictureEdit.Image = Details.thinnedimage.Bitmap;
 
             ImageProcessingProgressBarControl.PerformStep();
 
             ImageProcessingProgressBarControl.Update();
 
+            _stopwatch.Stop();
+        }
+
+        public Mat PutFeaturesOnImage()
+        {
+            _stopwatch.Start();
+
+            SIFT siftCPU = new SIFT();
+
+            Details.modelKeyPoints = new VectorOfKeyPoint();
+
+            //modelKeyPoints = new VectorOfKeyPoint();
+
+            mKeyPoints = siftCPU.Detect(Details.thinnedimage, null);
+
+            Details.modelKeyPoints.Push(mKeyPoints);
+
+            Mat o = new Mat();
+
+            siftCPU.Compute(Details.thinnedimage, Details.modelKeyPoints, o);
+
+            Mat resultimage = new Mat();
+
+            Features2DToolbox.DrawKeypoints(Details.thinnedimage, Details.modelKeyPoints, resultimage, new Bgr(Color.Red), Features2DToolbox.KeypointDrawType.Default);
+
+            _stopwatch.Stop();
+
+            return resultimage;
+
+        }
+
+        private void FeaturesExtractionBarButtonItem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            _stopwatch.Start();
+
+            Details.keypointsimage = new Mat();
+
+            Details.keypointsimage = PutFeaturesOnImage();
+
+            Step9PictureEdit.Image = Details.keypointsimage.Bitmap;
+
             ImageProcessingProgressBarControl.PerformStep();
 
             ImageProcessingProgressBarControl.Update();
+
+            _stopwatch.Stop();
+
+            MessageBox.Show(_stopwatch.ElapsedMilliseconds.ToString());
+
+            MessageBox.Show(_stopwatch.Elapsed.ToString());
+
+            MessageBox.Show(_stopwatch.ElapsedTicks.ToString());
         }
 
         #endregion
+
 
         #region Step View Context Menu Strip Click Events
 
@@ -372,13 +448,15 @@ namespace HandVeinPattern
         }
 
         #endregion
+        
 
         #region Record Insertion
 
         private void InsertRecordBarButtonItem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Application.Run(new RegisterForm_User_());
-            this.Close();
+            RegisterForm_User_ registerform_user = new RegisterForm_User_();
+            registerform_user.Show();
+            this.Hide();
         }
 
         private void ResetBarButtonItem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -413,7 +491,7 @@ namespace HandVeinPattern
             this.Hide();
         }
 
-        #endregion
+        #endregion      
 
     }
 }
