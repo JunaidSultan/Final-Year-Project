@@ -47,7 +47,6 @@ D:\Eighth Semester\HandVeinPattern\HandVeinPattern\obj\Debug\HandVeinPattern.Abo
 D:\Eighth Semester\HandVeinPattern\HandVeinPattern\obj\Debug\HandVeinPattern.AdminPasswordChange.resources
 D:\Eighth Semester\HandVeinPattern\HandVeinPattern\obj\Debug\HandVeinPattern.AdminProfile.resources
 D:\Eighth Semester\HandVeinPattern\HandVeinPattern\obj\Debug\HandVeinPattern.Dashboard.resources
-D:\Eighth Semester\HandVeinPattern\HandVeinPattern\obj\Debug\HandVeinPattern.Form1.resources
 D:\Eighth Semester\HandVeinPattern\HandVeinPattern\obj\Debug\HandVeinPattern.ImageProcessing.resources
 D:\Eighth Semester\HandVeinPattern\HandVeinPattern\obj\Debug\HandVeinPattern.LoginForm.resources
 D:\Eighth Semester\HandVeinPattern\HandVeinPattern\obj\Debug\HandVeinPattern.MainForm.resources

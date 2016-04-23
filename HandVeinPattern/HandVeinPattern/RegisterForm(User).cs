@@ -125,6 +125,8 @@ namespace HandVeinPattern
             Details.AdditionalNotes = AdditionalNotesRichTextBox.Text;
 
             UserRegistrationDetailHandler.recordentry();
+
+            UserRegistrationDetailHandler.featuresentry();
         }
 
         private void ResetBarButtonItem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

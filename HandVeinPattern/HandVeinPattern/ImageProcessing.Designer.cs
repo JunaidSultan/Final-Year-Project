@@ -93,10 +93,8 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.PasteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.CameraCaptureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.LoadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.DeleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.OriginalImageLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ImageProcessingRibbonControl)).BeginInit();
@@ -691,72 +689,57 @@
             this.toolStripSeparator1,
             this.PasteToolStripMenuItem,
             this.toolStripSeparator2,
-            this.CameraCaptureToolStripMenuItem,
-            this.toolStripSeparator3,
             this.LoadToolStripMenuItem,
-            this.toolStripSeparator4,
+            this.toolStripSeparator3,
             this.DeleteToolStripMenuItem});
             this.OriginalImageContextMenuStrip.Name = "OriginalImageContextMenuStrip";
-            this.OriginalImageContextMenuStrip.Size = new System.Drawing.Size(161, 138);
+            this.OriginalImageContextMenuStrip.Size = new System.Drawing.Size(153, 132);
             this.OriginalImageContextMenuStrip.Opening += new System.ComponentModel.CancelEventHandler(this.OriginalImageContextMenuStrip_Opening);
             // 
             // CopyToolStripMenuItem
             // 
             this.CopyToolStripMenuItem.Image = global::HandVeinPattern.Properties.Resources.copy;
             this.CopyToolStripMenuItem.Name = "CopyToolStripMenuItem";
-            this.CopyToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.CopyToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.CopyToolStripMenuItem.Text = "Copy";
             this.CopyToolStripMenuItem.Click += new System.EventHandler(this.CopyToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(157, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
             // 
             // PasteToolStripMenuItem
             // 
             this.PasteToolStripMenuItem.Image = global::HandVeinPattern.Properties.Resources.paste;
             this.PasteToolStripMenuItem.Name = "PasteToolStripMenuItem";
-            this.PasteToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.PasteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.PasteToolStripMenuItem.Text = "Paste";
             this.PasteToolStripMenuItem.Click += new System.EventHandler(this.PasteToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(157, 6);
-            // 
-            // CameraCaptureToolStripMenuItem
-            // 
-            this.CameraCaptureToolStripMenuItem.Image = global::HandVeinPattern.Properties.Resources.dslr_camera;
-            this.CameraCaptureToolStripMenuItem.Name = "CameraCaptureToolStripMenuItem";
-            this.CameraCaptureToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
-            this.CameraCaptureToolStripMenuItem.Text = "Camera Capture";
-            this.CameraCaptureToolStripMenuItem.Click += new System.EventHandler(this.CameraCaptureToolStripMenuItem_Click);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(149, 6);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(157, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(149, 6);
             // 
             // LoadToolStripMenuItem
             // 
             this.LoadToolStripMenuItem.Image = global::HandVeinPattern.Properties.Resources.folder_PNG8773;
             this.LoadToolStripMenuItem.Name = "LoadToolStripMenuItem";
-            this.LoadToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.LoadToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.LoadToolStripMenuItem.Text = "Load";
             this.LoadToolStripMenuItem.Click += new System.EventHandler(this.LoadToolStripMenuItem_Click);
-            // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(157, 6);
             // 
             // DeleteToolStripMenuItem
             // 
             this.DeleteToolStripMenuItem.Image = global::HandVeinPattern.Properties.Resources.DeleteRed;
             this.DeleteToolStripMenuItem.Name = "DeleteToolStripMenuItem";
-            this.DeleteToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.DeleteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.DeleteToolStripMenuItem.Text = "Delete";
             this.DeleteToolStripMenuItem.Click += new System.EventHandler(this.DeleteToolStripMenuItem_Click);
             // 
@@ -837,10 +820,8 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem PasteToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripMenuItem CameraCaptureToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripMenuItem LoadToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripMenuItem DeleteToolStripMenuItem;
         private System.Windows.Forms.Label ProcessedImageLabel;
         private System.Windows.Forms.Label OriginalImageLabel;

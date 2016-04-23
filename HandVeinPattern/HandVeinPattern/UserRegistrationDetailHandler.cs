@@ -93,5 +93,55 @@ namespace HandVeinPattern
                 }
             }
         }
+
+        public static void featuresentry()
+        {
+            SqlConnection connection = new SqlConnection(HandVeinPattern.Properties.Settings.Default.HandVeinPatternConnectionString);
+
+            SqlCommand command = new SqlCommand();
+
+            connection.Open();
+
+            try
+            {
+                for (int i = 0; i < Details.modelKeyPoints.Size; i++)
+                {
+                    command = connection.CreateCommand();
+
+                    command.CommandText = "INSERT INTO FEATURES(UserID, Angle, ClassID, Octave, PointX, PointY, Response, Size) VALUES(@UserID, @Angle, @ClassID, @Octave, @PointX, @PointY, @Response, @Size)";
+
+                    command.Parameters.AddWithValue("@UserID", Details.ID);
+
+                    command.Parameters.AddWithValue("@Angle", Convert.ToDouble(Details.modelKeyPoints[i].Angle));
+
+                    command.Parameters.AddWithValue("@ClassID", Convert.ToDouble(Details.modelKeyPoints[i].ClassId));
+
+                    command.Parameters.AddWithValue("@Octave", Convert.ToDouble(Details.modelKeyPoints[i].Octave));
+
+                    command.Parameters.AddWithValue("@PointX", Convert.ToDouble(Details.modelKeyPoints[i].Point.X));
+
+                    command.Parameters.AddWithValue("@PointY", Convert.ToDouble(Details.modelKeyPoints[i].Point.Y));
+
+                    command.Parameters.AddWithValue("@Response", Convert.ToDouble(Details.modelKeyPoints[i].Response));
+
+                    command.Parameters.AddWithValue("@Size", Convert.ToDouble(Details.modelKeyPoints[i].Size));
+
+                    command.ExecuteNonQuery();
+                }
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                if (connection.State == ConnectionState.Open)
+                {
+                    connection.Close();
+                }
+            }
+        }
+
     }
 }

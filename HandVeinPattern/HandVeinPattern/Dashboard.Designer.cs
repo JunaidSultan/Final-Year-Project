@@ -53,6 +53,7 @@
             this.DashboardPanelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.NewAdminTabPane = new DevExpress.XtraBars.Navigation.TabPane();
             this.AddAdminTabNavigationPage = new DevExpress.XtraBars.Navigation.TabNavigationPage();
+            this.AboutBarButtonItem = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPictureEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DashboardPanelControl3)).BeginInit();
@@ -77,9 +78,10 @@
             this.ChangePasswordBarButtonItem,
             this.LogoutBarButtonItem,
             this.barEditItem1,
-            this.ribbonGalleryBarItem1});
+            this.ribbonGalleryBarItem1,
+            this.AboutBarButtonItem});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 10;
+            this.ribbonControl1.MaxItemId = 11;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.NavigationRibbonPage,
@@ -219,6 +221,8 @@
             // 
             // ActionsRibbonPageGroup
             // 
+            this.ActionsRibbonPageGroup.AllowTextClipping = false;
+            this.ActionsRibbonPageGroup.ItemLinks.Add(this.AboutBarButtonItem);
             this.ActionsRibbonPageGroup.ItemLinks.Add(this.ExitBarButtonItem);
             this.ActionsRibbonPageGroup.Name = "ActionsRibbonPageGroup";
             this.ActionsRibbonPageGroup.Text = "Actions";
@@ -288,6 +292,15 @@
             this.AddAdminTabNavigationPage.Name = "AddAdminTabNavigationPage";
             this.AddAdminTabNavigationPage.Size = new System.Drawing.Size(354, 270);
             // 
+            // AboutBarButtonItem
+            // 
+            this.AboutBarButtonItem.Caption = "About";
+            this.AboutBarButtonItem.Glyph = global::HandVeinPattern.Properties.Resources.about_32x32;
+            this.AboutBarButtonItem.Id = 10;
+            this.AboutBarButtonItem.Name = "AboutBarButtonItem";
+            this.AboutBarButtonItem.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.AboutBarButtonItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.AboutBarButtonItem_ItemClick);
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -342,5 +355,6 @@
         private DevExpress.XtraBars.BarEditItem barEditItem1;
         private DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit repositoryItemPictureEdit1;
         private DevExpress.XtraBars.RibbonGalleryBarItem ribbonGalleryBarItem1;
+        private DevExpress.XtraBars.BarButtonItem AboutBarButtonItem;
     }
 }

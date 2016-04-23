@@ -111,5 +111,11 @@ namespace HandVeinPattern
             this.Hide();
         }
 
+        private void AboutBarButtonItem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            AboutForm aboutform = new AboutForm();
+            aboutform.Show();
+        }
+
     }
 }

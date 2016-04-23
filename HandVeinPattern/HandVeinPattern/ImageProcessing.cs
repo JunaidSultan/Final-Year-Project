@@ -122,15 +122,6 @@ namespace HandVeinPattern
             OriginalImagePictureEdit.Image = Clipboard.GetImage();
         }
 
-        private void CameraCaptureToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            TakePictureDialog _cameraCapture = new TakePictureDialog();
-            if (_cameraCapture.ShowDialog() == DialogResult.OK)
-            {
-                OriginalImagePictureEdit.Image = _cameraCapture.Image;
-            }
-        }
-
         private void LoadToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OpenFileDialog loadimage = new OpenFileDialog();
