@@ -438,6 +438,21 @@
   <ItemGroup>
     <None Include="Resources\feature_32x32.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\insertpagebreaks_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\insertpagebreaks_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\technology_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_16x16.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

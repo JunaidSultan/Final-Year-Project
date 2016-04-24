@@ -52,6 +52,8 @@
             this.FeaturesExtractionRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.DatabaseRecordsRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.InsertRecordsRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ActionsRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ActionsRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ImageProcessingGroupControl = new DevExpress.XtraEditors.GroupControl();
             this.ImageProcessingProgressBarControl = new DevExpress.XtraEditors.ProgressBarControl();
             this.HorizontalRowLabel = new System.Windows.Forms.Label();
@@ -93,10 +95,12 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.PasteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.LoadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.DeleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.OriginalImageLabel = new System.Windows.Forms.Label();
+            this.AboutBarButtonItem = new DevExpress.XtraBars.BarButtonItem();
+            this.ExitBarButtonItem = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ImageProcessingRibbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImageProcessingGroupControl)).BeginInit();
             this.ImageProcessingGroupControl.SuspendLayout();
@@ -147,13 +151,16 @@
             this.ResetBarButtonItem,
             this.CancelBarButtonItem,
             this.ThinningBarButtonItem,
-            this.FeaturesExtractionBarButtonItem});
+            this.FeaturesExtractionBarButtonItem,
+            this.AboutBarButtonItem,
+            this.ExitBarButtonItem});
             this.ImageProcessingRibbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ImageProcessingRibbonControl.MaxItemId = 15;
+            this.ImageProcessingRibbonControl.MaxItemId = 17;
             this.ImageProcessingRibbonControl.Name = "ImageProcessingRibbonControl";
             this.ImageProcessingRibbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
-            this.DatabaseRecordsRibbonPage});
+            this.DatabaseRecordsRibbonPage,
+            this.ActionsRibbonPage});
             this.ImageProcessingRibbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013;
             this.ImageProcessingRibbonControl.Size = new System.Drawing.Size(1234, 144);
             // 
@@ -329,6 +336,7 @@
             // 
             this.DatabaseRecordsRibbonPage.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.InsertRecordsRibbonPageGroup});
+            this.DatabaseRecordsRibbonPage.Image = global::HandVeinPattern.Properties.Resources.insertpagebreaks_16x16;
             this.DatabaseRecordsRibbonPage.Name = "DatabaseRecordsRibbonPage";
             this.DatabaseRecordsRibbonPage.Text = "Insert Records";
             // 
@@ -339,6 +347,22 @@
             this.InsertRecordsRibbonPageGroup.ItemLinks.Add(this.CancelBarButtonItem);
             this.InsertRecordsRibbonPageGroup.Name = "InsertRecordsRibbonPageGroup";
             this.InsertRecordsRibbonPageGroup.Text = "ribbonPageGroup1";
+            // 
+            // ActionsRibbonPage
+            // 
+            this.ActionsRibbonPage.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ActionsRibbonPageGroup});
+            this.ActionsRibbonPage.Image = global::HandVeinPattern.Properties.Resources.technology_16x16;
+            this.ActionsRibbonPage.Name = "ActionsRibbonPage";
+            this.ActionsRibbonPage.Text = "Actions";
+            // 
+            // ActionsRibbonPageGroup
+            // 
+            this.ActionsRibbonPageGroup.AllowTextClipping = false;
+            this.ActionsRibbonPageGroup.ItemLinks.Add(this.AboutBarButtonItem);
+            this.ActionsRibbonPageGroup.ItemLinks.Add(this.ExitBarButtonItem);
+            this.ActionsRibbonPageGroup.Name = "ActionsRibbonPageGroup";
+            this.ActionsRibbonPageGroup.Text = "Actions";
             // 
             // ImageProcessingGroupControl
             // 
@@ -693,53 +717,53 @@
             this.toolStripSeparator3,
             this.DeleteToolStripMenuItem});
             this.OriginalImageContextMenuStrip.Name = "OriginalImageContextMenuStrip";
-            this.OriginalImageContextMenuStrip.Size = new System.Drawing.Size(153, 132);
+            this.OriginalImageContextMenuStrip.Size = new System.Drawing.Size(108, 110);
             this.OriginalImageContextMenuStrip.Opening += new System.ComponentModel.CancelEventHandler(this.OriginalImageContextMenuStrip_Opening);
             // 
             // CopyToolStripMenuItem
             // 
             this.CopyToolStripMenuItem.Image = global::HandVeinPattern.Properties.Resources.copy;
             this.CopyToolStripMenuItem.Name = "CopyToolStripMenuItem";
-            this.CopyToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.CopyToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.CopyToolStripMenuItem.Text = "Copy";
             this.CopyToolStripMenuItem.Click += new System.EventHandler(this.CopyToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(104, 6);
             // 
             // PasteToolStripMenuItem
             // 
             this.PasteToolStripMenuItem.Image = global::HandVeinPattern.Properties.Resources.paste;
             this.PasteToolStripMenuItem.Name = "PasteToolStripMenuItem";
-            this.PasteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.PasteToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.PasteToolStripMenuItem.Text = "Paste";
             this.PasteToolStripMenuItem.Click += new System.EventHandler(this.PasteToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(149, 6);
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(104, 6);
             // 
             // LoadToolStripMenuItem
             // 
             this.LoadToolStripMenuItem.Image = global::HandVeinPattern.Properties.Resources.folder_PNG8773;
             this.LoadToolStripMenuItem.Name = "LoadToolStripMenuItem";
-            this.LoadToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.LoadToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.LoadToolStripMenuItem.Text = "Load";
             this.LoadToolStripMenuItem.Click += new System.EventHandler(this.LoadToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(104, 6);
             // 
             // DeleteToolStripMenuItem
             // 
             this.DeleteToolStripMenuItem.Image = global::HandVeinPattern.Properties.Resources.DeleteRed;
             this.DeleteToolStripMenuItem.Name = "DeleteToolStripMenuItem";
-            this.DeleteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.DeleteToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.DeleteToolStripMenuItem.Text = "Delete";
             this.DeleteToolStripMenuItem.Click += new System.EventHandler(this.DeleteToolStripMenuItem_Click);
             // 
@@ -753,6 +777,24 @@
             this.OriginalImageLabel.TabIndex = 1;
             this.OriginalImageLabel.Text = "Original Image";
             // 
+            // AboutBarButtonItem
+            // 
+            this.AboutBarButtonItem.Caption = "About";
+            this.AboutBarButtonItem.Glyph = global::HandVeinPattern.Properties.Resources.about_32x32;
+            this.AboutBarButtonItem.Id = 15;
+            this.AboutBarButtonItem.Name = "AboutBarButtonItem";
+            this.AboutBarButtonItem.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.AboutBarButtonItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.AboutBarButtonItem_ItemClick);
+            // 
+            // ExitBarButtonItem
+            // 
+            this.ExitBarButtonItem.Caption = "Exit";
+            this.ExitBarButtonItem.Glyph = global::HandVeinPattern.Properties.Resources.close_32x32;
+            this.ExitBarButtonItem.Id = 16;
+            this.ExitBarButtonItem.Name = "ExitBarButtonItem";
+            this.ExitBarButtonItem.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.ExitBarButtonItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.ExitBarButtonItem_ItemClick);
+            // 
             // ImageProcessing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -760,6 +802,7 @@
             this.ClientSize = new System.Drawing.Size(1234, 692);
             this.Controls.Add(this.ImageProcessingGroupControl);
             this.Controls.Add(this.ImageProcessingRibbonControl);
+            this.MaximizeBox = false;
             this.Name = "ImageProcessing";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Image Processing";
@@ -871,5 +914,9 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup SegmentationRibbonPageGroup;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup FeaturesExtractionRibbonPageGroup;
         private DevExpress.XtraBars.BarButtonItem FeaturesExtractionBarButtonItem;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ActionsRibbonPage;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ActionsRibbonPageGroup;
+        private DevExpress.XtraBars.BarButtonItem AboutBarButtonItem;
+        private DevExpress.XtraBars.BarButtonItem ExitBarButtonItem;
     }
 }

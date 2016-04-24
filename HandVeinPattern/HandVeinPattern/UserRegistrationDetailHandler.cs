@@ -40,7 +40,7 @@ namespace HandVeinPattern
 
                 command = connection.CreateCommand();
 
-                command.CommandText = "INSERT INTO USERDETAILS(ID, IMAGE, FIRSTNAME, LASTNAME, PREFIX, TITLE, GENDER, ADDRESS, CITY, STATE, COUNTRY, HOMEPHONE, MOBILEPHONE, OFFICEPHONE, FAX, EMAIL, WEBSITE, DOB, ADDITIONALNOTES) VALUES(@ID, @IMAGE, @FN, @LN, @PF, @TITLE, @GEN, @ADD, @CITY, @STATE, @COUNTRY, @HP, @MP, @OP, @FAX, @EM, @SKYPE, @WEB, @DOB, @AN)";
+                command.CommandText = "INSERT INTO USERDETAILS(ID, IMAGE, FIRSTNAME, LASTNAME, PREFIX, TITLE, GENDER, ADDRESS, CITY, STATE, COUNTRY, HOMEPHONE, MOBILEPHONE, OFFICEPHONE, FAX, EMAIL, WEBSITE, DOB, ADDITIONALNOTES) VALUES(@ID, @IMAGE, @FN, @LN, @PF, @TITLE, @GEN, @ADD, @CITY, @STATE, @COUNTRY, @HP, @MP, @OP, @FAX, @EM,  @WEB, @DOB, @AN)";
 
                 command.Parameters.AddWithValue("@ID", Details.ID);
 
@@ -71,6 +71,8 @@ namespace HandVeinPattern
                 command.Parameters.AddWithValue("@OP", Details.OfficePhone);
 
                 command.Parameters.AddWithValue("@FAX", Details.Fax);
+
+                command.Parameters.AddWithValue("@EM", Details.Email);
 
                 command.Parameters.AddWithValue("@WEB", Details.Website);
 

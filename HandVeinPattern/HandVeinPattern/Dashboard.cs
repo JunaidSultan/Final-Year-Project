@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using System.Data.Sql;
 using System.Data.SqlClient;
 using System.Data.SqlTypes;
+using System.Diagnostics;
 
 namespace HandVeinPattern
 {
@@ -76,7 +77,7 @@ namespace HandVeinPattern
                 }
             }
         }
-
+        
 
         private void ExitBarButtonItem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
@@ -117,5 +118,12 @@ namespace HandVeinPattern
             aboutform.Show();
         }
 
+        private void AddAdminSimpleButton_Click(object sender, EventArgs e)
+        {
+            Register_Form__Admin_ register_form_admin = new Register_Form__Admin_();
+            register_form_admin.Show();
+            this.Hide();
+        }
+    
     }
 }
