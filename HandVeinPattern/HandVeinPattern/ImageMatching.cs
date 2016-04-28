@@ -33,6 +33,8 @@ namespace HandVeinPattern
 
         DataTable handimage_datatable;
 
+        int matchedfeatures_count;
+
         byte[] photo_array;
 
         static string _userID;
@@ -252,23 +254,22 @@ namespace HandVeinPattern
             }
         }
 
-        bool match()
+        void feaetures_match()
         {
+            matchedfeatures_count = 0;
+
             int i = 0;
+         
             if (Details.modelKeyPoints.Size == features_datatable.Rows.Count)
             {
                 while(i < Details.modelKeyPoints.Size)
                 {
-                    if (Convert.ToDouble(Details.modelKeyPoints[i].Angle) == Convert.ToDouble(features_datatable.Rows[i].Field<Double>(1)) && Convert.ToDouble(Details.modelKeyPoints[i].ClassId) == Convert.ToDouble(features_datatable.Rows[i].Field<Double>(2)) && Convert.ToDouble(Details.modelKeyPoints[i].Octave) == Convert.ToDouble(features_datatable.Rows[i].Field<Double>(3)) && Convert.ToDouble(Details.modelKeyPoints[i].Point.X) == Convert.ToDouble(features_datatable.Rows[i].Field<Double>(4)) && Convert.ToDouble(Details.modelKeyPoints[i].Point.Y) == Convert.ToDouble(features_datatable.Rows[i].Field<Double>(5)) && Convert.ToDouble(Details.modelKeyPoints[i].Response) == Convert.ToDouble(features_datatable.Rows[i].Field<Double>(6)) && Convert.ToDouble(Details.modelKeyPoints[i].Size) == Convert.ToDouble(features_datatable.Rows[i].Field<Double>(7)))
+                    if (Convert.ToDouble(Details.modelKeyPoints[i].Angle) == Convert.ToDouble(features_datatable.Rows[i].Field<Double>(2)) && Convert.ToDouble(Details.modelKeyPoints[i].ClassId) == Convert.ToDouble(features_datatable.Rows[i].Field<Double>(3)) && Convert.ToDouble(Details.modelKeyPoints[i].Octave) == Convert.ToDouble(features_datatable.Rows[i].Field<Double>(4)) && Convert.ToDouble(Details.modelKeyPoints[i].Point.X) == Convert.ToDouble(features_datatable.Rows[i].Field<Double>(5)) && Convert.ToDouble(Details.modelKeyPoints[i].Point.Y) == Convert.ToDouble(features_datatable.Rows[i].Field<Double>(6)) && Convert.ToDouble(Details.modelKeyPoints[i].Response) == Convert.ToDouble(features_datatable.Rows[i].Field<Double>(7)) && Convert.ToDouble(Details.modelKeyPoints[i].Size) == Convert.ToDouble(features_datatable.Rows[i].Field<Double>(8)))
                     {
                         i++;
+                        matchedfeatures_count += 1;
                     }
                 }
-                return true;
-            }
-            else
-            {
-                return false;
             }
         }
 
@@ -381,7 +382,7 @@ namespace HandVeinPattern
             
         }
 
-        void displayResult()
+        void displayResult(string id)
         {
             SqlConnection connection = new SqlConnection(HandVeinPattern.Properties.Settings.Default.HandVeinPatternConnectionString);
 
@@ -393,7 +394,7 @@ namespace HandVeinPattern
             {
                 command = connection.CreateCommand();
 
-                command.CommandText = "SELECT * FROM USERS";
+                command.CommandText = "SELECT * FROM USERS WHERE ID ='" + id + "'";
 
                 SqlDataAdapter adapter = new SqlDataAdapter(command);
 
@@ -423,45 +424,25 @@ namespace HandVeinPattern
 
         private void MatchBarButtonItem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            bool result;
-
             getUserID();
 
-            //for (int i = 0; i < userID_datatable.Rows.Count; i++)
-            //{
-            //    _userID = userID_datatable.Rows[i].Field<string>(0).ToString();
+            for (int i = 0; i < userID_datatable.Rows.Count; i++)
+            {
+                _userID = userID_datatable.Rows[i].Field<string>(0).ToString();
+                
+                getFeatures(_userID);
 
-            //    getFeatures(_userID);
+                feaetures_match();
 
-            //    result = match();
-
-            //    if (result == true)
-            //    {
-            //        Details.matchedID = _userID;
-            //        break;
-            //    }
-
-            //}
-
-            //for (int i = 0; i < userID_datatable.Rows.Count; i++)
-            //{
-            //    _userID = userID_datatable.Rows[i].Field<string>(0).ToString();
-
-            //    getimage();
-
-            //    match();
-            //}
-
-            _userID = userID_datatable.Rows[0].Field<string>(0).ToString();
-            getFeatures(_userID);
-
-            
-
-
+                if (matchedfeatures_count == Details.modelKeyPoints.Size)
+                {
+                    Details.matchedID = _userID;
+                    displayResult(_userID);
+                    break;
+                }
+            }
 
         }
-
-
 
     }
 }

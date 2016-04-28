@@ -217,9 +217,9 @@
             this.UserTitleResultLabel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UserTitleResultLabel.Location = new System.Drawing.Point(16, 258);
             this.UserTitleResultLabel.Name = "UserTitleResultLabel";
-            this.UserTitleResultLabel.Size = new System.Drawing.Size(50, 19);
+            this.UserTitleResultLabel.Size = new System.Drawing.Size(14, 19);
             this.UserTitleResultLabel.TabIndex = 7;
-            this.UserTitleResultLabel.Text = "Junaid";
+            this.UserTitleResultLabel.Text = "-";
             // 
             // UserTitleLabel
             // 
@@ -237,9 +237,9 @@
             this.UserIDResultLabel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UserIDResultLabel.Location = new System.Drawing.Point(16, 139);
             this.UserIDResultLabel.Name = "UserIDResultLabel";
-            this.UserIDResultLabel.Size = new System.Drawing.Size(119, 19);
+            this.UserIDResultLabel.Size = new System.Drawing.Size(14, 19);
             this.UserIDResultLabel.TabIndex = 5;
-            this.UserIDResultLabel.Text = "USR-24-4-2016-1";
+            this.UserIDResultLabel.Text = "-";
             // 
             // UserIDLabel
             // 
@@ -253,7 +253,7 @@
             // 
             // ResultImagePictureEdit
             // 
-            this.ResultImagePictureEdit.EditValue = global::HandVeinPattern.Properties.Resources._12194940_1006900322693768_226564516490243288_o;
+            this.ResultImagePictureEdit.EditValue = global::HandVeinPattern.Properties.Resources.noprofile;
             this.ResultImagePictureEdit.Location = new System.Drawing.Point(266, 57);
             this.ResultImagePictureEdit.MenuManager = this.ImageMatchingRibbonControl;
             this.ResultImagePictureEdit.Name = "ResultImagePictureEdit";

@@ -133,7 +133,7 @@ namespace HandVeinPattern
 
             RegistrationProgressBarControl.Update();
 
-            Thread.Sleep(5000);
+            Thread.Sleep(500);
 
             UserRegistrationDetailHandler.featuresentry();
 
