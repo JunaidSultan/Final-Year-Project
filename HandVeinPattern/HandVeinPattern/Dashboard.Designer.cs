@@ -28,9 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraGauges.Core.Model.ArcScaleRange arcScaleRange4 = new DevExpress.XtraGauges.Core.Model.ArcScaleRange();
-            DevExpress.XtraGauges.Core.Model.ArcScaleRange arcScaleRange5 = new DevExpress.XtraGauges.Core.Model.ArcScaleRange();
-            DevExpress.XtraGauges.Core.Model.ArcScaleRange arcScaleRange6 = new DevExpress.XtraGauges.Core.Model.ArcScaleRange();
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.ImageProcessingBarButtonItem = new DevExpress.XtraBars.BarButtonItem();
             this.SkinRibbonGalleryBarItem = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
@@ -42,8 +39,10 @@
             this.repositoryItemPictureEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
             this.ribbonGalleryBarItem1 = new DevExpress.XtraBars.RibbonGalleryBarItem();
             this.AboutBarButtonItem = new DevExpress.XtraBars.BarButtonItem();
+            this.MatchingBarButtonItem = new DevExpress.XtraBars.BarButtonItem();
             this.NavigationRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ImageProcessingBibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ImageMatchingRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.AccountRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.AccountSettingsRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.LogoutRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -62,12 +61,6 @@
             this.AddAdminSimpleButton = new DevExpress.XtraEditors.SimpleButton();
             this.RemoveAdminTabNavigationPage = new DevExpress.XtraBars.Navigation.TabNavigationPage();
             this.RemoveAdminSimpleButton = new DevExpress.XtraEditors.SimpleButton();
-            this.CPUPerformanceGaugeControl = new DevExpress.XtraGauges.Win.GaugeControl();
-            this.circularGauge1 = new DevExpress.XtraGauges.Win.Gauges.Circular.CircularGauge();
-            this.arcScaleComponent1 = new DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleComponent();
-            this.arcScaleBackgroundLayerComponent1 = new DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleBackgroundLayerComponent();
-            this.arcScaleNeedleComponent1 = new DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleNeedleComponent();
-            this.arcScaleSpindleCapComponent1 = new DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleSpindleCapComponent();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPictureEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DashboardPanelControl2)).BeginInit();
@@ -78,15 +71,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.DashboardPanelControl1)).BeginInit();
             this.DashboardPanelControl1.SuspendLayout();
             this.PerformanceTabPane.SuspendLayout();
-            this.PerformanceTabNavigationPage.SuspendLayout();
             this.AdminManagementTabPane.SuspendLayout();
             this.AddAdminTabNavigationPage.SuspendLayout();
             this.RemoveAdminTabNavigationPage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.circularGauge1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.arcScaleComponent1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.arcScaleBackgroundLayerComponent1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.arcScaleNeedleComponent1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.arcScaleSpindleCapComponent1)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl1
@@ -102,9 +89,10 @@
             this.LogoutBarButtonItem,
             this.barEditItem1,
             this.ribbonGalleryBarItem1,
-            this.AboutBarButtonItem});
+            this.AboutBarButtonItem,
+            this.MatchingBarButtonItem});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 11;
+            this.ribbonControl1.MaxItemId = 12;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.NavigationRibbonPage,
@@ -196,10 +184,20 @@
             this.AboutBarButtonItem.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.AboutBarButtonItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.AboutBarButtonItem_ItemClick);
             // 
+            // MatchingBarButtonItem
+            // 
+            this.MatchingBarButtonItem.Caption = "Matching";
+            this.MatchingBarButtonItem.Glyph = global::HandVeinPattern.Properties.Resources.CulpepperJobMatchingIcon;
+            this.MatchingBarButtonItem.Id = 11;
+            this.MatchingBarButtonItem.Name = "MatchingBarButtonItem";
+            this.MatchingBarButtonItem.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.MatchingBarButtonItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.MatchingBarButtonItem_ItemClick);
+            // 
             // NavigationRibbonPage
             // 
             this.NavigationRibbonPage.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ImageProcessingBibbonPageGroup});
+            this.ImageProcessingBibbonPageGroup,
+            this.ImageMatchingRibbonPageGroup});
             this.NavigationRibbonPage.Image = global::HandVeinPattern.Properties.Resources.navigationbar_32x32;
             this.NavigationRibbonPage.Name = "NavigationRibbonPage";
             this.NavigationRibbonPage.Text = "Navigation";
@@ -210,6 +208,13 @@
             this.ImageProcessingBibbonPageGroup.ItemLinks.Add(this.ImageProcessingBarButtonItem);
             this.ImageProcessingBibbonPageGroup.Name = "ImageProcessingBibbonPageGroup";
             this.ImageProcessingBibbonPageGroup.Text = "Image Processing";
+            // 
+            // ImageMatchingRibbonPageGroup
+            // 
+            this.ImageMatchingRibbonPageGroup.AllowTextClipping = false;
+            this.ImageMatchingRibbonPageGroup.ItemLinks.Add(this.MatchingBarButtonItem);
+            this.ImageMatchingRibbonPageGroup.Name = "ImageMatchingRibbonPageGroup";
+            this.ImageMatchingRibbonPageGroup.Text = "Image Matching";
             // 
             // AccountRibbonPage
             // 
@@ -322,7 +327,6 @@
             // PerformanceTabNavigationPage
             // 
             this.PerformanceTabNavigationPage.Caption = "CPU Performance";
-            this.PerformanceTabNavigationPage.Controls.Add(this.CPUPerformanceGaugeControl);
             this.PerformanceTabNavigationPage.Name = "PerformanceTabNavigationPage";
             this.PerformanceTabNavigationPage.Size = new System.Drawing.Size(336, 124);
             // 
@@ -375,103 +379,6 @@
             this.RemoveAdminSimpleButton.TabIndex = 1;
             this.RemoveAdminSimpleButton.Text = "Remove Admin";
             // 
-            // CPUPerformanceGaugeControl
-            // 
-            this.CPUPerformanceGaugeControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.CPUPerformanceGaugeControl.Gauges.AddRange(new DevExpress.XtraGauges.Base.IGauge[] {
-            this.circularGauge1});
-            this.CPUPerformanceGaugeControl.Location = new System.Drawing.Point(0, 0);
-            this.CPUPerformanceGaugeControl.Name = "CPUPerformanceGaugeControl";
-            this.CPUPerformanceGaugeControl.Size = new System.Drawing.Size(336, 124);
-            this.CPUPerformanceGaugeControl.TabIndex = 0;
-            // 
-            // circularGauge1
-            // 
-            this.circularGauge1.BackgroundLayers.AddRange(new DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleBackgroundLayerComponent[] {
-            this.arcScaleBackgroundLayerComponent1});
-            this.circularGauge1.Bounds = new System.Drawing.Rectangle(6, 6, 324, 112);
-            this.circularGauge1.Name = "circularGauge1";
-            this.circularGauge1.Needles.AddRange(new DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleNeedleComponent[] {
-            this.arcScaleNeedleComponent1});
-            this.circularGauge1.Scales.AddRange(new DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleComponent[] {
-            this.arcScaleComponent1});
-            this.circularGauge1.SpindleCaps.AddRange(new DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleSpindleCapComponent[] {
-            this.arcScaleSpindleCapComponent1});
-            // 
-            // arcScaleComponent1
-            // 
-            this.arcScaleComponent1.AppearanceMajorTickmark.BorderBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:White");
-            this.arcScaleComponent1.AppearanceMajorTickmark.ContentBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:White");
-            this.arcScaleComponent1.AppearanceMinorTickmark.BorderBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:White");
-            this.arcScaleComponent1.AppearanceMinorTickmark.ContentBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:White");
-            this.arcScaleComponent1.AppearanceTickmarkText.TextBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:#393939");
-            this.arcScaleComponent1.Center = new DevExpress.XtraGauges.Core.Base.PointF2D(125F, 170F);
-            this.arcScaleComponent1.EndAngle = 0F;
-            this.arcScaleComponent1.MajorTickCount = 6;
-            this.arcScaleComponent1.MajorTickmark.FormatString = "{0:F0}";
-            this.arcScaleComponent1.MajorTickmark.ShapeOffset = -6F;
-            this.arcScaleComponent1.MajorTickmark.ShapeType = DevExpress.XtraGauges.Core.Model.TickmarkShapeType.Circular_Style22_1;
-            this.arcScaleComponent1.MajorTickmark.TextOffset = 13F;
-            this.arcScaleComponent1.MajorTickmark.TextOrientation = DevExpress.XtraGauges.Core.Model.LabelOrientation.LeftToRight;
-            this.arcScaleComponent1.MaxValue = 100F;
-            this.arcScaleComponent1.MinorTickCount = 4;
-            this.arcScaleComponent1.MinorTickmark.ShapeOffset = -6F;
-            this.arcScaleComponent1.MinorTickmark.ShapeType = DevExpress.XtraGauges.Core.Model.TickmarkShapeType.Circular_Style22_2;
-            this.arcScaleComponent1.Name = "scale1";
-            this.arcScaleComponent1.RadiusX = 72F;
-            this.arcScaleComponent1.RadiusY = 72F;
-            arcScaleRange4.AppearanceRange.ContentBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:#95C573");
-            arcScaleRange4.EndThickness = 6F;
-            arcScaleRange4.EndValue = 33F;
-            arcScaleRange4.Name = "Range0";
-            arcScaleRange4.ShapeOffset = 29F;
-            arcScaleRange4.StartThickness = 6F;
-            arcScaleRange5.AppearanceRange.ContentBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:#F4C570");
-            arcScaleRange5.EndThickness = 6F;
-            arcScaleRange5.EndValue = 66F;
-            arcScaleRange5.Name = "Range1";
-            arcScaleRange5.ShapeOffset = 29F;
-            arcScaleRange5.StartThickness = 6F;
-            arcScaleRange5.StartValue = 33F;
-            arcScaleRange6.AppearanceRange.ContentBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:#DC615D");
-            arcScaleRange6.EndThickness = 6F;
-            arcScaleRange6.EndValue = 100F;
-            arcScaleRange6.Name = "Range2";
-            arcScaleRange6.ShapeOffset = 29F;
-            arcScaleRange6.StartThickness = 6F;
-            arcScaleRange6.StartValue = 66F;
-            this.arcScaleComponent1.Ranges.AddRange(new DevExpress.XtraGauges.Core.Model.IRange[] {
-            arcScaleRange4,
-            arcScaleRange5,
-            arcScaleRange6});
-            this.arcScaleComponent1.StartAngle = -180F;
-            this.arcScaleComponent1.Value = 22F;
-            // 
-            // arcScaleBackgroundLayerComponent1
-            // 
-            this.arcScaleBackgroundLayerComponent1.ArcScale = this.arcScaleComponent1;
-            this.arcScaleBackgroundLayerComponent1.Name = "bg";
-            this.arcScaleBackgroundLayerComponent1.ScaleCenterPos = new DevExpress.XtraGauges.Core.Base.PointF2D(0.5F, 0.695F);
-            this.arcScaleBackgroundLayerComponent1.ShapeType = DevExpress.XtraGauges.Core.Model.BackgroundLayerShapeType.CircularHalf_Style22;
-            this.arcScaleBackgroundLayerComponent1.Size = new System.Drawing.SizeF(250F, 179F);
-            this.arcScaleBackgroundLayerComponent1.ZOrder = 1000;
-            // 
-            // arcScaleNeedleComponent1
-            // 
-            this.arcScaleNeedleComponent1.ArcScale = this.arcScaleComponent1;
-            this.arcScaleNeedleComponent1.EndOffset = 3F;
-            this.arcScaleNeedleComponent1.Name = "needle";
-            this.arcScaleNeedleComponent1.ShapeType = DevExpress.XtraGauges.Core.Model.NeedleShapeType.CircularFull_Style22;
-            this.arcScaleNeedleComponent1.ZOrder = -50;
-            // 
-            // arcScaleSpindleCapComponent1
-            // 
-            this.arcScaleSpindleCapComponent1.ArcScale = this.arcScaleComponent1;
-            this.arcScaleSpindleCapComponent1.Name = "circularGauge7_SpindleCap1";
-            this.arcScaleSpindleCapComponent1.ShapeType = DevExpress.XtraGauges.Core.Model.SpindleCapShapeType.CircularFull_Style22;
-            this.arcScaleSpindleCapComponent1.Size = new System.Drawing.SizeF(28F, 28F);
-            this.arcScaleSpindleCapComponent1.ZOrder = -100;
-            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -495,15 +402,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.DashboardPanelControl1)).EndInit();
             this.DashboardPanelControl1.ResumeLayout(false);
             this.PerformanceTabPane.ResumeLayout(false);
-            this.PerformanceTabNavigationPage.ResumeLayout(false);
             this.AdminManagementTabPane.ResumeLayout(false);
             this.AddAdminTabNavigationPage.ResumeLayout(false);
             this.RemoveAdminTabNavigationPage.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.circularGauge1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.arcScaleComponent1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.arcScaleBackgroundLayerComponent1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.arcScaleNeedleComponent1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.arcScaleSpindleCapComponent1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -542,11 +443,7 @@
         private DevExpress.XtraBars.Navigation.TabNavigationPage PerformanceTabNavigationPage;
         private DevExpress.XtraBars.Navigation.TabNavigationPage RemoveAdminTabNavigationPage;
         private DevExpress.XtraEditors.SimpleButton RemoveAdminSimpleButton;
-        private DevExpress.XtraGauges.Win.GaugeControl CPUPerformanceGaugeControl;
-        private DevExpress.XtraGauges.Win.Gauges.Circular.CircularGauge circularGauge1;
-        private DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleBackgroundLayerComponent arcScaleBackgroundLayerComponent1;
-        private DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleComponent arcScaleComponent1;
-        private DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleNeedleComponent arcScaleNeedleComponent1;
-        private DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleSpindleCapComponent arcScaleSpindleCapComponent1;
+        private DevExpress.XtraBars.BarButtonItem MatchingBarButtonItem;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ImageMatchingRibbonPageGroup;
     }
 }

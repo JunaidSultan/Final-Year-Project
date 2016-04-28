@@ -26,6 +26,21 @@ namespace HandVeinPattern
             return photo;
         }
 
+        static byte[] GetHandPhoto(string filepath)
+        {
+            FileStream stream = new FileStream(filepath, FileMode.Open, FileAccess.Read);
+
+            BinaryReader reader = new BinaryReader(stream);
+
+            byte[] photo = reader.ReadBytes((int)stream.Length);
+
+            reader.Close();
+
+            stream.Close();
+
+            return photo;
+        }
+
         public static void recordentry()
         {
             SqlConnection connection = new SqlConnection(HandVeinPattern.Properties.Settings.Default.HandVeinPatternConnectionString);
@@ -36,11 +51,13 @@ namespace HandVeinPattern
 
             try
             {
+                RegisterForm_User_ register_user = new RegisterForm_User_();
+
                 byte[] photo = GetPhoto(Details.UserImageFilePath);
 
                 command = connection.CreateCommand();
 
-                command.CommandText = "INSERT INTO USERDETAILS(ID, IMAGE, FIRSTNAME, LASTNAME, PREFIX, TITLE, GENDER, ADDRESS, CITY, STATE, COUNTRY, HOMEPHONE, MOBILEPHONE, OFFICEPHONE, FAX, EMAIL, WEBSITE, DOB, ADDITIONALNOTES) VALUES(@ID, @IMAGE, @FN, @LN, @PF, @TITLE, @GEN, @ADD, @CITY, @STATE, @COUNTRY, @HP, @MP, @OP, @FAX, @EM,  @WEB, @DOB, @AN)";
+                command.CommandText = "INSERT INTO USERS(ID, IMAGE, FIRSTNAME, LASTNAME, PREFIX, TITLE, GENDER, ADDRESS, CITY, STATE, COUNTRY, HOMEPHONE, MOBILEPHONE, OFFICEPHONE, FAX, EMAIL, WEBSITE, DOB, ADDITIONALNOTES) VALUES(@ID, @IMAGE, @FN, @LN, @PF, @TITLE, @GEN, @ADD, @CITY, @STATE, @COUNTRY, @HP, @MP, @OP, @FAX, @EM,  @WEB, @DOB, @AN)";
 
                 command.Parameters.AddWithValue("@ID", Details.ID);
 
@@ -131,6 +148,41 @@ namespace HandVeinPattern
                     command.ExecuteNonQuery();
                 }
 
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                if (connection.State == ConnectionState.Open)
+                {
+                    connection.Close();
+                }
+            }
+        }
+
+        public static void handimageentry()
+        {
+            SqlConnection connection = new SqlConnection(HandVeinPattern.Properties.Settings.Default.HandVeinPatternConnectionString);
+
+            SqlCommand command = new SqlCommand();
+
+            connection.Open();
+
+            try
+            {
+                byte[] handphoto = GetPhoto(Details.ProcessedHandImage);
+
+                command = connection.CreateCommand();
+
+                command.CommandText = "INSERT INTO HANDIMAGES(ID, HANDIMAGE) VALUES(@ID, @IMAGE)";
+
+                command.Parameters.AddWithValue("@ID", Details.ID);
+
+                command.Parameters.Add("@IMAGE", SqlDbType.Image, handphoto.Length).Value = handphoto;
+
+                command.ExecuteNonQuery();
             }
             catch (Exception)
             {

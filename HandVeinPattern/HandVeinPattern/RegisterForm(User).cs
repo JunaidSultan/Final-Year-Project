@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using DevExpress.XtraEditors.Camera;
+using System.Threading;
 
 namespace HandVeinPattern
 {
@@ -124,9 +125,36 @@ namespace HandVeinPattern
 
             Details.AdditionalNotes = AdditionalNotesRichTextBox.Text;
 
+            //Details.ProcessedHandImage = @"D:\Eighth Semester\HandVeinPattern\RuntimeDirectory\FinalImage.jpg";
+
             UserRegistrationDetailHandler.recordentry();
 
+            RegistrationProgressBarControl.PerformStep();
+
+            RegistrationProgressBarControl.Update();
+
+            Thread.Sleep(5000);
+
             UserRegistrationDetailHandler.featuresentry();
+
+            RegistrationProgressBarControl.PerformStep();
+
+            RegistrationProgressBarControl.Update();
+
+            //UserRegistrationDetailHandler.handimageentry();
+
+            DialogResult messageboxresult = MessageBox.Show("User Successfully Registered", "User Registration", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            if (messageboxresult == DialogResult.OK)
+            {
+                formreset();
+
+                Dashboard dashboard = new Dashboard();
+
+                dashboard.Show();
+
+                this.Hide();
+            }
         }
 
         private void ResetBarButtonItem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

@@ -124,6 +124,13 @@ namespace HandVeinPattern
             register_form_admin.Show();
             this.Hide();
         }
+
+        private void MatchingBarButtonItem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            ImageMatching imagematching = new ImageMatching();
+            imagematching.Show();
+            this.Hide();
+        }
     
     }
 }

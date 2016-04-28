@@ -2,6 +2,7 @@
 using Emgu.CV.Util;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -44,6 +45,10 @@ namespace HandVeinPattern
 
         public static VectorOfKeyPoint modelKeyPoints { get; set; }
 
+        public static VectorOfKeyPoint matchedmodelKeyPoints { get; set; }
+
+        public static Image DBImage { get; set; }
+
         #endregion
 
         //User Registration Property Region
@@ -51,6 +56,8 @@ namespace HandVeinPattern
         #region User Registration
 
         public static string UserImageFilePath { get; set; }
+
+        public static string ProcessedHandImage { get; set; }
 
         public static string ID { get; set; }
 
@@ -114,6 +121,17 @@ namespace HandVeinPattern
 
         #endregion
 
+        //Matching Property Region
+        
+        #region Matching Variables
+
+        public static string matchedID { get; set; }
+
+        public static DataTable matchedUserDetails { get; set; }
+
+        //public static DataTable matchedUserDetails;
+
+        #endregion
 
         //Step Images View Property Region
 

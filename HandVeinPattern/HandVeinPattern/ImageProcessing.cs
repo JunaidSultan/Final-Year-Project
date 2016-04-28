@@ -109,7 +109,6 @@ namespace HandVeinPattern
 
         #region Original Image Context Menu Strip Click Events
 
-
         private void CopyToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Clipboard.SetImage(OriginalImagePictureEdit.Image);
@@ -315,6 +314,8 @@ namespace HandVeinPattern
 
             ProcessedImagePictureEdit.Image = Details.keypointsimage.Bitmap;
 
+            //CvInvoke.Imwrite(@"D:\Eighth Semester\HandVeinPattern\RuntimeDirectory\FinalImage.jpg", Details.thinnedimage);
+
             ImageProcessingProgressBarControl.PerformStep();
 
             ImageProcessingProgressBarControl.Update();
@@ -443,6 +444,9 @@ namespace HandVeinPattern
 
         #endregion      
 
+
+        #region Actions
+
         private void AboutBarButtonItem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             AboutForm aboutform = new AboutForm();
@@ -453,6 +457,8 @@ namespace HandVeinPattern
         {
             Environment.Exit(1);
         }
+
+        #endregion
 
     }
 }

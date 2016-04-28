@@ -246,7 +246,7 @@
             this.GenerateIDSimpleButton.Location = new System.Drawing.Point(593, 22);
             this.GenerateIDSimpleButton.Name = "GenerateIDSimpleButton";
             this.GenerateIDSimpleButton.Size = new System.Drawing.Size(94, 23);
-            this.GenerateIDSimpleButton.TabIndex = 110;
+            this.GenerateIDSimpleButton.TabIndex = 1;
             this.GenerateIDSimpleButton.Text = "Generate ID";
             this.GenerateIDSimpleButton.Click += new System.EventHandler(this.GenerateIDSimpleButton_Click);
             // 
@@ -275,7 +275,7 @@
             this.RegistrationProgressBarControl.MenuManager = this.ribbonControl1;
             this.RegistrationProgressBarControl.Name = "RegistrationProgressBarControl";
             this.RegistrationProgressBarControl.Properties.ShowTitle = true;
-            this.RegistrationProgressBarControl.Properties.Step = 20;
+            this.RegistrationProgressBarControl.Properties.Step = 50;
             this.RegistrationProgressBarControl.Size = new System.Drawing.Size(261, 18);
             this.RegistrationProgressBarControl.TabIndex = 107;
             // 
@@ -295,7 +295,7 @@
             this.AdditionalNotesRichTextBox.Location = new System.Drawing.Point(17, 437);
             this.AdditionalNotesRichTextBox.Name = "AdditionalNotesRichTextBox";
             this.AdditionalNotesRichTextBox.Size = new System.Drawing.Size(928, 54);
-            this.AdditionalNotesRichTextBox.TabIndex = 105;
+            this.AdditionalNotesRichTextBox.TabIndex = 19;
             this.AdditionalNotesRichTextBox.Text = "";
             this.AdditionalNotesRichTextBox.TextChanged += new System.EventHandler(this.AdditionalNotesRichTextBox_TextChanged);
             // 
@@ -315,7 +315,7 @@
             "Female",
             "Other"});
             this.GenderComboBoxEdit.Size = new System.Drawing.Size(145, 26);
-            this.GenderComboBoxEdit.TabIndex = 104;
+            this.GenderComboBoxEdit.TabIndex = 6;
             this.GenderComboBoxEdit.SelectedIndexChanged += new System.EventHandler(this.GenderComboBoxEdit_SelectedIndexChanged);
             // 
             // DOBDateEdit
@@ -332,7 +332,7 @@
             this.DOBDateEdit.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.Classic;
             this.DOBDateEdit.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.False;
             this.DOBDateEdit.Size = new System.Drawing.Size(145, 26);
-            this.DOBDateEdit.TabIndex = 103;
+            this.DOBDateEdit.TabIndex = 17;
             this.DOBDateEdit.EditValueChanged += new System.EventHandler(this.DOBDateEdit_EditValueChanged);
             // 
             // WebsiteButtonEdit
@@ -344,7 +344,7 @@
             this.WebsiteButtonEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::HandVeinPattern.Properties.Resources._1458091953_globe, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
             this.WebsiteButtonEdit.Size = new System.Drawing.Size(145, 26);
-            this.WebsiteButtonEdit.TabIndex = 102;
+            this.WebsiteButtonEdit.TabIndex = 16;
             // 
             // EmailButtonEdit
             // 
@@ -355,7 +355,7 @@
             this.EmailButtonEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::HandVeinPattern.Properties.Resources._1458091589_mail, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
             this.EmailButtonEdit.Size = new System.Drawing.Size(145, 26);
-            this.EmailButtonEdit.TabIndex = 101;
+            this.EmailButtonEdit.TabIndex = 15;
             // 
             // FaxButtonEdit
             // 
@@ -366,7 +366,7 @@
             this.FaxButtonEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::HandVeinPattern.Properties.Resources.fax_16x16, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
             this.FaxButtonEdit.Size = new System.Drawing.Size(145, 26);
-            this.FaxButtonEdit.TabIndex = 100;
+            this.FaxButtonEdit.TabIndex = 14;
             // 
             // OfficePhoneButtonEdit
             // 
@@ -377,7 +377,7 @@
             this.OfficePhoneButtonEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::HandVeinPattern.Properties.Resources.bocontact_16x16, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true)});
             this.OfficePhoneButtonEdit.Size = new System.Drawing.Size(145, 26);
-            this.OfficePhoneButtonEdit.TabIndex = 99;
+            this.OfficePhoneButtonEdit.TabIndex = 13;
             // 
             // HomePhoneButtonEdit
             // 
@@ -388,7 +388,7 @@
             this.HomePhoneButtonEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::HandVeinPattern.Properties.Resources.phone_16x16, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, "", null, null, true)});
             this.HomePhoneButtonEdit.Size = new System.Drawing.Size(145, 26);
-            this.HomePhoneButtonEdit.TabIndex = 98;
+            this.HomePhoneButtonEdit.TabIndex = 11;
             // 
             // MobilePhoneButtonEdit
             // 
@@ -399,7 +399,7 @@
             this.MobilePhoneButtonEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::HandVeinPattern.Properties.Resources.mobilephone_16x16, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject6, "", null, null, true)});
             this.MobilePhoneButtonEdit.Size = new System.Drawing.Size(145, 26);
-            this.MobilePhoneButtonEdit.TabIndex = 97;
+            this.MobilePhoneButtonEdit.TabIndex = 12;
             // 
             // DOBLabel
             // 
@@ -741,7 +741,7 @@
             "Zambia",
             "Zimbabwe"});
             this.CountryComboBoxEdit.Size = new System.Drawing.Size(145, 26);
-            this.CountryComboBoxEdit.TabIndex = 87;
+            this.CountryComboBoxEdit.TabIndex = 10;
             // 
             // StateTextBox
             // 
@@ -749,7 +749,7 @@
             this.StateTextBox.Location = new System.Drawing.Point(414, 396);
             this.StateTextBox.Name = "StateTextBox";
             this.StateTextBox.Size = new System.Drawing.Size(145, 27);
-            this.StateTextBox.TabIndex = 86;
+            this.StateTextBox.TabIndex = 9;
             // 
             // CityTextBox
             // 
@@ -757,7 +757,7 @@
             this.CityTextBox.Location = new System.Drawing.Point(414, 345);
             this.CityTextBox.Name = "CityTextBox";
             this.CityTextBox.Size = new System.Drawing.Size(145, 27);
-            this.CityTextBox.TabIndex = 85;
+            this.CityTextBox.TabIndex = 8;
             // 
             // AddressTextBox
             // 
@@ -765,7 +765,7 @@
             this.AddressTextBox.Location = new System.Drawing.Point(414, 298);
             this.AddressTextBox.Name = "AddressTextBox";
             this.AddressTextBox.Size = new System.Drawing.Size(145, 27);
-            this.AddressTextBox.TabIndex = 84;
+            this.AddressTextBox.TabIndex = 7;
             // 
             // TitleTextBox
             // 
@@ -773,7 +773,7 @@
             this.TitleTextBox.Location = new System.Drawing.Point(414, 204);
             this.TitleTextBox.Name = "TitleTextBox";
             this.TitleTextBox.Size = new System.Drawing.Size(145, 27);
-            this.TitleTextBox.TabIndex = 83;
+            this.TitleTextBox.TabIndex = 5;
             this.TitleTextBox.TextChanged += new System.EventHandler(this.TitleTextBox_TextChanged);
             // 
             // StateLabel
@@ -844,7 +844,7 @@
             "Dr.",
             "Sir."});
             this.PrefixComboBoxEdit.Size = new System.Drawing.Size(145, 26);
-            this.PrefixComboBoxEdit.TabIndex = 77;
+            this.PrefixComboBoxEdit.TabIndex = 4;
             // 
             // LastNameTextBox
             // 
@@ -852,7 +852,7 @@
             this.LastNameTextBox.Location = new System.Drawing.Point(414, 107);
             this.LastNameTextBox.Name = "LastNameTextBox";
             this.LastNameTextBox.Size = new System.Drawing.Size(145, 27);
-            this.LastNameTextBox.TabIndex = 76;
+            this.LastNameTextBox.TabIndex = 3;
             this.LastNameTextBox.TextChanged += new System.EventHandler(this.LastNameTextBox_TextChanged);
             // 
             // FirstNameTextBox
@@ -861,7 +861,7 @@
             this.FirstNameTextBox.Location = new System.Drawing.Point(414, 58);
             this.FirstNameTextBox.Name = "FirstNameTextBox";
             this.FirstNameTextBox.Size = new System.Drawing.Size(145, 27);
-            this.FirstNameTextBox.TabIndex = 75;
+            this.FirstNameTextBox.TabIndex = 2;
             this.FirstNameTextBox.TextChanged += new System.EventHandler(this.FirstNameTextBox_TextChanged);
             // 
             // LastNameLabel
@@ -894,7 +894,7 @@
             this.UserPictureEdit.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.UserPictureEdit.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
             this.UserPictureEdit.Size = new System.Drawing.Size(273, 327);
-            this.UserPictureEdit.TabIndex = 1;
+            this.UserPictureEdit.TabIndex = 0;
             // 
             // PictureEditContextMenuStrip
             // 
