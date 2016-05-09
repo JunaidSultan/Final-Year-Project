@@ -1,4 +1,4 @@
-﻿Build started 4/9/2016 3:35:43 AM.
+﻿Build started 5/9/2016 4:36:40 PM.
      1>Project "D:\Eighth Semester\Wrapper\clrOpenCV\clrOpenCV.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\\" /AI"C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral" /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\\" /Zi /clr /nologo /W3 /WX- /Od /D WIN32 /D _DEBUG /D _WINDLL /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"x64\Debug\clrOpenCV.pch" /Fo"x64\Debug\\" /Fd"x64\Debug\vc120.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\mscorlib.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Xml.dll" /errorReport:prompt /clr:nostdlib clrOpenCV.cpp
@@ -7,8 +7,8 @@
      1>d:\eighth semester\wrapper\clropencv\clrOpenCV.h(6): warning C4067: unexpected tokens following preprocessor directive - expected a newline
      1>clrOpenCV.cpp(10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
      1>clrOpenCV.cpp(11): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-     1>clrOpenCV.cpp(54): warning C4267: '=' : conversion from 'size_t' to 'int', possible loss of data
-     1>clrOpenCV.cpp(81): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>clrOpenCV.cpp(46): warning C4267: '=' : conversion from 'size_t' to 'int', possible loss of data
+     1>clrOpenCV.cpp(68): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
      1>c:\opencv\build\include\opencv2\core\types_c.h(311): warning C4793: 'cvRound' : function compiled as native :
          	Found an intrinsic not supported in managed code
      1>c:\opencv\build\include\opencv2\core\types_c.h(311): warning C4793: 'cvRound' : function compiled as native :
@@ -31,4 +31,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:02.14
+Time Elapsed 00:00:02.29
