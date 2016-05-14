@@ -23,8 +23,13 @@ namespace HandVeinPattern
 
             LoginPictureEdit.ContextMenuStrip = new ContextMenuStrip();     // Empty Context Menu Strip For The Picture Edit Box
 
-            errorprovider();                                                // Checks For The TextBox Errors
+            errorprovider();                                                // Checks For The TextBox Errors    
+
+            //ArduinoSerialPort.PortName = "COM4";
+
+            //ArduinoSerialPort.BaudRate = 9600;
         }
+
 
         #region Error Provider
 
@@ -115,15 +120,30 @@ namespace HandVeinPattern
                 }
                 switch (Details.AdminLoginID)
                 {
-                    case "":
+                    case "-1":
+                            
+                        //ArduinoSerialPort.WriteLine("0");
+
                         MessageBox.Show("Invalid Username Or Password", "Authentication Failed", MessageBoxButtons.OK);
+                        
                         clear();
+
                         break;
+                    
                     default:
+                        
                         clear();
+
+                        //ArduinoSerialPort.WriteLine("1");
+
                         Dashboard dashboard = new Dashboard();
+
                         dashboard.Show();
+
+                        //ArduinoSerialPort.Close();
+
                         this.Hide();
+
                         break;
                 }
             }
@@ -132,12 +152,21 @@ namespace HandVeinPattern
         private void CancelSimpleButton_Click(object sender, EventArgs e)
         {
             clear();
+
             MainForm mainform = new MainForm();
+
             mainform.Show();
+
             this.Hide();
         }
         
         #endregion
+
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+            //ArduinoSerialPort.Open();
+        }
 
     }
 }

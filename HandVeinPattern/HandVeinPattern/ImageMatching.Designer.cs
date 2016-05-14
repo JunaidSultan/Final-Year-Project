@@ -29,11 +29,16 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ImageMatching));
             this.ImageMatchingRibbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.ProcessImageBarButtonItem = new DevExpress.XtraBars.BarButtonItem();
             this.MatchBarButtonItem = new DevExpress.XtraBars.BarButtonItem();
+            this.CancelBarButtonItem = new DevExpress.XtraBars.BarButtonItem();
+            this.ClearBarButtonItem = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.MatchingRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ActionsRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ActionsRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.OriginalImageContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.PasteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -44,6 +49,7 @@
             this.ImageMatchingProgressBarControl = new DevExpress.XtraEditors.ProgressBarControl();
             this.DetailsPanelControl = new DevExpress.XtraEditors.PanelControl();
             this.ResultGroupControl = new DevExpress.XtraEditors.GroupControl();
+            this.ViewDetailsSimpleButton = new DevExpress.XtraEditors.SimpleButton();
             this.UserTitleResultLabel = new System.Windows.Forms.Label();
             this.UserTitleLabel = new System.Windows.Forms.Label();
             this.UserIDResultLabel = new System.Windows.Forms.Label();
@@ -53,8 +59,10 @@
             this.ProcessedImagePictureEdit = new DevExpress.XtraEditors.PictureEdit();
             this.ProcessedImageLabel = new System.Windows.Forms.Label();
             this.OriginalImagePanelControl = new DevExpress.XtraEditors.PanelControl();
+            this.LoadImageSimpleButton = new DevExpress.XtraEditors.SimpleButton();
             this.OriginalImagePictureEdit = new DevExpress.XtraEditors.PictureEdit();
             this.OriginalImageLabel = new System.Windows.Forms.Label();
+            this.ArduinoSerialPort = new System.IO.Ports.SerialPort(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ImageMatchingRibbonControl)).BeginInit();
             this.OriginalImageContextMenuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ImageMatchingGroupControl)).BeginInit();
@@ -79,14 +87,17 @@
             this.ImageMatchingRibbonControl.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ImageMatchingRibbonControl.ExpandCollapseItem,
             this.ProcessImageBarButtonItem,
-            this.MatchBarButtonItem});
+            this.MatchBarButtonItem,
+            this.CancelBarButtonItem,
+            this.ClearBarButtonItem});
             this.ImageMatchingRibbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ImageMatchingRibbonControl.MaxItemId = 3;
+            this.ImageMatchingRibbonControl.MaxItemId = 5;
             this.ImageMatchingRibbonControl.Name = "ImageMatchingRibbonControl";
             this.ImageMatchingRibbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
-            this.ribbonPage1});
+            this.ribbonPage1,
+            this.ActionsRibbonPage});
             this.ImageMatchingRibbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013;
-            this.ImageMatchingRibbonControl.Size = new System.Drawing.Size(1234, 141);
+            this.ImageMatchingRibbonControl.Size = new System.Drawing.Size(1234, 144);
             // 
             // ProcessImageBarButtonItem
             // 
@@ -106,6 +117,24 @@
             this.MatchBarButtonItem.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.MatchBarButtonItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.MatchBarButtonItem_ItemClick);
             // 
+            // CancelBarButtonItem
+            // 
+            this.CancelBarButtonItem.Caption = "Cancel";
+            this.CancelBarButtonItem.Glyph = global::HandVeinPattern.Properties.Resources.cancel_32x32;
+            this.CancelBarButtonItem.Id = 3;
+            this.CancelBarButtonItem.Name = "CancelBarButtonItem";
+            this.CancelBarButtonItem.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.CancelBarButtonItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.CancelBarButtonItem_ItemClick);
+            // 
+            // ClearBarButtonItem
+            // 
+            this.ClearBarButtonItem.Caption = "Clear";
+            this.ClearBarButtonItem.Glyph = global::HandVeinPattern.Properties.Resources.clear_32x32;
+            this.ClearBarButtonItem.Id = 4;
+            this.ClearBarButtonItem.Name = "ClearBarButtonItem";
+            this.ClearBarButtonItem.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.ClearBarButtonItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.ClearBarButtonItem_ItemClick);
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -118,8 +147,24 @@
             this.MatchingRibbonPageGroup.AllowTextClipping = false;
             this.MatchingRibbonPageGroup.ItemLinks.Add(this.ProcessImageBarButtonItem);
             this.MatchingRibbonPageGroup.ItemLinks.Add(this.MatchBarButtonItem);
+            this.MatchingRibbonPageGroup.ItemLinks.Add(this.ClearBarButtonItem);
             this.MatchingRibbonPageGroup.Name = "MatchingRibbonPageGroup";
             this.MatchingRibbonPageGroup.Text = "Matching";
+            // 
+            // ActionsRibbonPage
+            // 
+            this.ActionsRibbonPage.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ActionsRibbonPageGroup});
+            this.ActionsRibbonPage.Image = global::HandVeinPattern.Properties.Resources.technology_16x16;
+            this.ActionsRibbonPage.Name = "ActionsRibbonPage";
+            this.ActionsRibbonPage.Text = "Actions";
+            // 
+            // ActionsRibbonPageGroup
+            // 
+            this.ActionsRibbonPageGroup.AllowTextClipping = false;
+            this.ActionsRibbonPageGroup.ItemLinks.Add(this.CancelBarButtonItem);
+            this.ActionsRibbonPageGroup.Name = "ActionsRibbonPageGroup";
+            this.ActionsRibbonPageGroup.Text = "Actions";
             // 
             // OriginalImageContextMenuStrip
             // 
@@ -181,12 +226,11 @@
             // 
             // ImageMatchingProgressBarControl
             // 
-            this.ImageMatchingProgressBarControl.EditValue = 100;
             this.ImageMatchingProgressBarControl.Location = new System.Drawing.Point(6, 402);
             this.ImageMatchingProgressBarControl.MenuManager = this.ImageMatchingRibbonControl;
             this.ImageMatchingProgressBarControl.Name = "ImageMatchingProgressBarControl";
-            this.ImageMatchingProgressBarControl.Properties.Minimum = 100;
             this.ImageMatchingProgressBarControl.Properties.ShowTitle = true;
+            this.ImageMatchingProgressBarControl.Properties.Step = 20;
             this.ImageMatchingProgressBarControl.Size = new System.Drawing.Size(308, 18);
             this.ImageMatchingProgressBarControl.TabIndex = 2;
             // 
@@ -200,6 +244,7 @@
             // 
             // ResultGroupControl
             // 
+            this.ResultGroupControl.Controls.Add(this.ViewDetailsSimpleButton);
             this.ResultGroupControl.Controls.Add(this.UserTitleResultLabel);
             this.ResultGroupControl.Controls.Add(this.UserTitleLabel);
             this.ResultGroupControl.Controls.Add(this.UserIDResultLabel);
@@ -210,6 +255,16 @@
             this.ResultGroupControl.Size = new System.Drawing.Size(507, 362);
             this.ResultGroupControl.TabIndex = 0;
             this.ResultGroupControl.Text = "Result";
+            // 
+            // ViewDetailsSimpleButton
+            // 
+            this.ViewDetailsSimpleButton.Image = global::HandVeinPattern.Properties.Resources.contact_16x16;
+            this.ViewDetailsSimpleButton.Location = new System.Drawing.Point(20, 325);
+            this.ViewDetailsSimpleButton.Name = "ViewDetailsSimpleButton";
+            this.ViewDetailsSimpleButton.Size = new System.Drawing.Size(97, 23);
+            this.ViewDetailsSimpleButton.TabIndex = 8;
+            this.ViewDetailsSimpleButton.Text = "View Details";
+            this.ViewDetailsSimpleButton.Click += new System.EventHandler(this.ViewDetailsSimpleButton_Click);
             // 
             // UserTitleResultLabel
             // 
@@ -257,6 +312,9 @@
             this.ResultImagePictureEdit.Location = new System.Drawing.Point(266, 57);
             this.ResultImagePictureEdit.MenuManager = this.ImageMatchingRibbonControl;
             this.ResultImagePictureEdit.Name = "ResultImagePictureEdit";
+            this.ResultImagePictureEdit.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.ResultImagePictureEdit.Properties.Appearance.Options.UseBackColor = true;
+            this.ResultImagePictureEdit.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.ResultImagePictureEdit.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.ResultImagePictureEdit.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
             this.ResultImagePictureEdit.Size = new System.Drawing.Size(226, 257);
@@ -294,12 +352,23 @@
             // 
             // OriginalImagePanelControl
             // 
+            this.OriginalImagePanelControl.Controls.Add(this.LoadImageSimpleButton);
             this.OriginalImagePanelControl.Controls.Add(this.OriginalImagePictureEdit);
             this.OriginalImagePanelControl.Controls.Add(this.OriginalImageLabel);
             this.OriginalImagePanelControl.Location = new System.Drawing.Point(6, 24);
             this.OriginalImagePanelControl.Name = "OriginalImagePanelControl";
             this.OriginalImagePanelControl.Size = new System.Drawing.Size(308, 372);
             this.OriginalImagePanelControl.TabIndex = 0;
+            // 
+            // LoadImageSimpleButton
+            // 
+            this.LoadImageSimpleButton.Image = global::HandVeinPattern.Properties.Resources.open_16x16;
+            this.LoadImageSimpleButton.Location = new System.Drawing.Point(82, 338);
+            this.LoadImageSimpleButton.Name = "LoadImageSimpleButton";
+            this.LoadImageSimpleButton.Size = new System.Drawing.Size(131, 23);
+            this.LoadImageSimpleButton.TabIndex = 2;
+            this.LoadImageSimpleButton.Text = "Load Image";
+            this.LoadImageSimpleButton.Click += new System.EventHandler(this.LoadImageSimpleButton_Click);
             // 
             // OriginalImagePictureEdit
             // 
@@ -330,9 +399,11 @@
             this.ClientSize = new System.Drawing.Size(1234, 581);
             this.Controls.Add(this.ImageMatchingGroupControl);
             this.Controls.Add(this.ImageMatchingRibbonControl);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ImageMatching";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Matching";
+            this.Load += new System.EventHandler(this.ImageMatching_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ImageMatchingRibbonControl)).EndInit();
             this.OriginalImageContextMenuStrip.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ImageMatchingGroupControl)).EndInit();
@@ -385,5 +456,12 @@
         private System.Windows.Forms.Label UserIDLabel;
         private System.Windows.Forms.Label UserTitleResultLabel;
         private DevExpress.XtraBars.BarButtonItem MatchBarButtonItem;
+        private DevExpress.XtraEditors.SimpleButton ViewDetailsSimpleButton;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ActionsRibbonPage;
+        private DevExpress.XtraBars.BarButtonItem CancelBarButtonItem;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ActionsRibbonPageGroup;
+        private System.IO.Ports.SerialPort ArduinoSerialPort;
+        private DevExpress.XtraBars.BarButtonItem ClearBarButtonItem;
+        private DevExpress.XtraEditors.SimpleButton LoadImageSimpleButton;
     }
 }

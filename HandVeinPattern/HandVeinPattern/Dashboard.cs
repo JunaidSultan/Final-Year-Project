@@ -17,71 +17,48 @@ namespace HandVeinPattern
 {
     public partial class Dashboard : DevExpress.XtraBars.Ribbon.RibbonForm
     {
+        int lockTimerCounter = 0;
+
+        Timer timer;
+
         public Dashboard()
         {
             InitializeComponent();
 
-            admin_onlinestatus();
+            timer = new Timer();
 
-            //admin_status_colorchange();
+            timer.Start();
+                        
+            OnTimerTick(null, null);
+
+            this.timer.Tick += new System.EventHandler(this.OnTimerTick);
+
         }
 
-        void admin_onlinestatus()
-        {
-            SqlConnection connection = new SqlConnection(HandVeinPattern.Properties.Settings.Default.HandVeinPatternConnectionString);
-
-            SqlCommand command = new SqlCommand();
-
-            connection.Open();
-
-            try
-            {
-                command = connection.CreateCommand();
-
-                command.CommandType = CommandType.StoredProcedure;
-
-                command.CommandText = "AdminOnlineStatus";
-
-                DataTable datatable = new DataTable();
-
-                SqlDataAdapter adapter = new SqlDataAdapter(command);
-
-                adapter.Fill(datatable);
-
-                OnlineStatusDataGridView.DataSource = datatable;
+        int GetStringLength(string str) {
+            int counter = 0;
+            int pos = 0;
+            while(pos < str.Length) {
+                if(str[pos] != ':')
+                    counter++;
+                pos++;
             }
-            catch (Exception)
-            {
-                throw;
-            }
-            finally
-            {
-                if (connection.State == ConnectionState.Open)
-                {
-                    connection.Close();
-                }
+            return counter;
+        }
+
+        void OnTimerTick(object sender, EventArgs e) {
+            if(lockTimerCounter == 0) {
+                lockTimerCounter++;
+                UpdateTime();
+                lockTimerCounter--;
             }
         }
 
-        void admin_status_colorchange()
-        {
-            for (int i = 0; i < OnlineStatusDataGridView.Rows.Count - 1; i++)
-            {
-                if (OnlineStatusDataGridView.Rows[i].Cells[3].Value.ToString() == "Online")
-                {
-                    OnlineStatusDataGridView.Rows[i].Cells[3].Style.BackColor = Color.GreenYellow;
-                }
-                else
-                {
-                    OnlineStatusDataGridView.Rows[i].Cells[3].Style.BackColor = Color.Red;
-                }
-            }
-        }
-        
-
-        private void ExitBarButtonItem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            Environment.Exit(1);
+        void UpdateTime() {
+            string time = DateTime.Now.ToLongTimeString();
+            if(GetStringLength(time) > ClockDigitalGauge.DigitCount)
+                ClockDigitalGauge.DigitCount = GetStringLength(time);
+            ClockDigitalGauge.Text = time;
         }
 
         private void ImageProcessingBarButtonItem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -131,6 +108,19 @@ namespace HandVeinPattern
             imagematching.Show();
             this.Hide();
         }
-    
+
+        private void ImageProcessingSimpleButton_Click(object sender, EventArgs e)
+        {
+            ImageProcessing imageprocessing = new ImageProcessing();
+            imageprocessing.Show();
+            this.Hide();
+        }
+
+        private void ImageMatchingSimpleButton_Click(object sender, EventArgs e)
+        {
+            ImageMatching imagematching = new ImageMatching();
+            imagematching.Show();
+            this.Hide();
+        }
     }
 }

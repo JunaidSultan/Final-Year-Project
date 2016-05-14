@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using System.Diagnostics;
 
 using DevExpress.XtraEditors.Camera;
 
@@ -19,12 +21,9 @@ using Emgu.CV.XFeatures2D;
 using Emgu.CV.Util;
 using Emgu.CV.Cuda;
 
-using System.IO;
-
 using Wrapper;
 
 using ThinningProcess;
-
 
 
 namespace HandVeinPattern
@@ -104,6 +103,28 @@ namespace HandVeinPattern
                     MessageBox.Show(exception.Message);
                 }
             }
+
+            if (AutoProcessBarToggleSwitchItem.Checked == true)
+            {
+                PreProcessingRibbonPageGroup.Enabled = false;
+                ThresholdingRibbonPageGroup.Enabled = false;
+                WrapperProcessingRibbonPageGroup.Enabled = false;
+                PostProcessingRibbonPageGroup.Enabled = false;
+                SegmentationRibbonPageGroup.Enabled = false;
+                FeaturesExtractionRibbonPageGroup.Enabled = false;
+                ProcessBarButtonItem.Enabled = true;
+            }
+            else
+            {
+                PreProcessingRibbonPageGroup.Enabled = true;
+                ThresholdingRibbonPageGroup.Enabled = true;
+                WrapperProcessingRibbonPageGroup.Enabled = true;
+                PostProcessingRibbonPageGroup.Enabled = true;
+                SegmentationRibbonPageGroup.Enabled = true;
+                FeaturesExtractionRibbonPageGroup.Enabled = true;
+                ProcessBarButtonItem.Enabled = false;
+            }
+
         }
 
 
@@ -120,6 +141,16 @@ namespace HandVeinPattern
         }
 
         private void LoadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog loadimage = new OpenFileDialog();
+            if (loadimage.ShowDialog() == DialogResult.OK)
+            {
+                OriginalImagePictureEdit.Image = Image.FromFile(loadimage.FileName);
+                Details.imagefilepath = loadimage.FileName;
+            }
+        }
+
+        private void LoadImageSimpleButton_Click(object sender, EventArgs e)
         {
             OpenFileDialog loadimage = new OpenFileDialog();
             if (loadimage.ShowDialog() == DialogResult.OK)
@@ -150,6 +181,153 @@ namespace HandVeinPattern
 
 
         #region Image Processing Functions Ribbon Control Click Events
+
+        private void AutoProcessBarToggleSwitchItem_CheckedChanged(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (AutoProcessBarToggleSwitchItem.Checked == true)
+            {
+                PreProcessingRibbonPageGroup.Enabled = false;
+                ThresholdingRibbonPageGroup.Enabled = false;
+                WrapperProcessingRibbonPageGroup.Enabled = false;
+                PostProcessingRibbonPageGroup.Enabled = false;
+                SegmentationRibbonPageGroup.Enabled = false;
+                FeaturesExtractionRibbonPageGroup.Enabled = false;
+                ProcessBarButtonItem.Enabled = true;
+            }
+            else
+            {
+                PreProcessingRibbonPageGroup.Enabled = true;
+                ThresholdingRibbonPageGroup.Enabled = true;
+                WrapperProcessingRibbonPageGroup.Enabled = true;
+                PostProcessingRibbonPageGroup.Enabled = true;
+                SegmentationRibbonPageGroup.Enabled = true;
+                FeaturesExtractionRibbonPageGroup.Enabled = true;
+                ProcessBarButtonItem.Enabled = false;
+            }
+        }
+
+        private void ProcessBarButtonItem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Details.sourceimagehand = new Mat(Details.imagefilepath, LoadImageType.Grayscale);
+
+            Step1PictureEdit.Image = Details.sourceimagehand.Bitmap;
+
+            ImageProcessingProgressBarControl.PerformStep();
+
+            ImageProcessingProgressBarControl.Update();
+
+            Details.whitebalance = new Mat();
+
+            CvInvoke.BalanceWhite(Details.sourceimagehand, Details.whitebalance, WhiteBalanceMethod.Simple, 0f, 255f, 0f, 255f);
+
+            Step2PictureEdit.Image = Details.whitebalance.Bitmap;
+
+            ImageProcessingProgressBarControl.PerformStep();
+
+            ImageProcessingProgressBarControl.Update();
+
+            Directory.CreateDirectory(@"D:\Eighth Semester\HandVeinPattern\\RuntimeDirectory");
+
+            Details.adaptivethreshold = new Mat();
+
+            CvInvoke.AdaptiveThreshold(Details.whitebalance, Details.adaptivethreshold, 255, AdaptiveThresholdType.GaussianC, ThresholdType.Binary, 11, -3);
+
+            Step3PictureEdit.Image = Details.adaptivethreshold.Bitmap;
+
+            CvInvoke.Imwrite(@"D:\Eighth Semester\HandVeinPattern\RuntimeDirectory\AdaptiveThreshold.jpg", Details.adaptivethreshold);
+
+            ImageProcessingProgressBarControl.PerformStep();
+
+            ImageProcessingProgressBarControl.Update();
+
+            opencvwrapper.process();
+
+            Details.maskedimage = new Mat();
+
+            Details.maskedimage = new Mat(@"D:\Eighth Semester\HandVeinPattern\RuntimeDirectory\ResultImage.jpg", LoadImageType.Grayscale);
+
+            Step4PictureEdit.Image = Details.maskedimage.Bitmap;
+
+            ImageProcessingProgressBarControl.PerformStep();
+
+            ImageProcessingProgressBarControl.Update();
+
+            Details.erode_step1 = new Mat();
+
+            Details.erode_step2 = new Mat();
+
+            CvInvoke.MorphologyEx(Details.maskedimage, Details.erode_step1, MorphOp.Erode, CvInvoke.GetStructuringElement(ElementShape.Ellipse, new Size(3, 3), new Point(-1, -1)), new Point(-1, -1), 9, BorderType.Constant, new MCvScalar(0));
+
+            CvInvoke.MorphologyEx(Details.erode_step1, Details.erode_step2, MorphOp.Erode, CvInvoke.GetStructuringElement(ElementShape.Ellipse, new Size(3, 3), new Point(-1, -1)), new Point(-1, -1), 7, BorderType.Constant, new MCvScalar(0));
+
+            Step5PictureEdit.Image = Details.erode_step2.Bitmap;
+
+            ImageProcessingProgressBarControl.PerformStep();
+
+            ImageProcessingProgressBarControl.Update();
+
+            Details.laplacian = new Mat();
+
+            CvInvoke.Laplacian(Details.sourceimagehand, Details.laplacian, DepthType.Cv8U, 11, 1.0, 0.0, BorderType.Constant);
+
+            Step6PictureEdit.Image = Details.laplacian.Bitmap;
+
+            ImageProcessingProgressBarControl.PerformStep();
+
+            ImageProcessingProgressBarControl.Update();
+
+            Details.multipliedimage = new Mat();
+
+            Mat _newFilteredImage = new Mat();
+
+            CvInvoke.Multiply(Details.laplacian, Details.maskedimage, _newFilteredImage, 1.0, DepthType.Cv8U);
+
+            Step7PictureEdit.Image = _newFilteredImage.Bitmap;
+
+            ImageProcessingProgressBarControl.PerformStep();
+
+            ImageProcessingProgressBarControl.Update();
+
+            CvInvoke.Multiply(Details.laplacian, Details.erode_step2, Details.multipliedimage, 1.0, DepthType.Cv8U);
+
+            Step8PictureEdit.Image = Details.multipliedimage.Bitmap;
+
+            ImageProcessingProgressBarControl.PerformStep();
+
+            ImageProcessingProgressBarControl.Update();
+
+            Mat newsource = new Mat();
+
+            newsource = Details.multipliedimage.Clone();
+
+            Details.thinnedimage = new Mat();
+
+            CvInvoke.Threshold(newsource, Details.thinnedimage, 10, 255, ThresholdType.Binary);
+
+            CvInvoke.Imwrite(@"D:\Eighth Semester\HandVeinPattern\RuntimeDirectory\MultipliedImage.jpg", Details.thinnedimage);
+
+            thinningopencvwrapper.process();
+
+            Details.thinnedimage = new Mat();
+
+            Details.thinnedimage = new Mat(@"D:\Eighth Semester\HandVeinPattern\RuntimeDirectory\ThinnedImage.jpg", LoadImageType.Grayscale);
+
+            Step9PictureEdit.Image = Details.thinnedimage.Bitmap;
+
+            ImageProcessingProgressBarControl.PerformStep();
+
+            ImageProcessingProgressBarControl.Update();
+
+            Details.keypointsimage = new Mat();
+
+            Details.keypointsimage = PutFeaturesOnImage();
+
+            ProcessedImagePictureEdit.Image = Details.keypointsimage.Bitmap;
+
+            ImageProcessingProgressBarControl.PerformStep();
+
+            ImageProcessingProgressBarControl.Update();
+        }
 
         private void GrayScaleBarButtonItem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
@@ -314,8 +492,6 @@ namespace HandVeinPattern
 
             ProcessedImagePictureEdit.Image = Details.keypointsimage.Bitmap;
 
-            //CvInvoke.Imwrite(@"D:\Eighth Semester\HandVeinPattern\RuntimeDirectory\FinalImage.jpg", Details.thinnedimage);
-
             ImageProcessingProgressBarControl.PerformStep();
 
             ImageProcessingProgressBarControl.Update();
@@ -453,12 +629,14 @@ namespace HandVeinPattern
             aboutform.Show();
         }
 
-        private void ExitBarButtonItem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Cancel_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Environment.Exit(1);
+            Dashboard dashboard = new Dashboard();
+            dashboard.Show();
+            this.Hide();
         }
 
-        #endregion
+        #endregion     
 
     }
 }

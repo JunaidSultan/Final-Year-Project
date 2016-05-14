@@ -30,12 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AboutForm));
             this.HeaderPanelControl = new DevExpress.XtraEditors.PanelControl();
-            this.NameLabel = new System.Windows.Forms.Label();
             this.VersionLabel = new System.Windows.Forms.Label();
+            this.NameLabel = new System.Windows.Forms.Label();
+            this.LogoPictureEdit = new DevExpress.XtraEditors.PictureEdit();
             this.DevelopedByLabel = new System.Windows.Forms.Label();
             this.Developer2PictureEdit = new DevExpress.XtraEditors.PictureEdit();
             this.Developer1PictureEdit = new DevExpress.XtraEditors.PictureEdit();
-            this.LogoPictureEdit = new DevExpress.XtraEditors.PictureEdit();
             this.Developer1InfoLabel = new System.Windows.Forms.Label();
             this.Developer2InfoLabel = new System.Windows.Forms.Label();
             this.HorizontalRowLabel = new System.Windows.Forms.Label();
@@ -44,9 +44,9 @@
             this.CopyRightLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.HeaderPanelControl)).BeginInit();
             this.HeaderPanelControl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LogoPictureEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Developer2PictureEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Developer1PictureEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.LogoPictureEdit.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // HeaderPanelControl
@@ -61,6 +61,16 @@
             this.HeaderPanelControl.Size = new System.Drawing.Size(796, 195);
             this.HeaderPanelControl.TabIndex = 0;
             // 
+            // VersionLabel
+            // 
+            this.VersionLabel.AutoSize = true;
+            this.VersionLabel.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.VersionLabel.Location = new System.Drawing.Point(322, 106);
+            this.VersionLabel.Name = "VersionLabel";
+            this.VersionLabel.Size = new System.Drawing.Size(78, 19);
+            this.VersionLabel.TabIndex = 2;
+            this.VersionLabel.Text = "Version 1.0";
+            // 
             // NameLabel
             // 
             this.NameLabel.AutoSize = true;
@@ -71,15 +81,17 @@
             this.NameLabel.TabIndex = 1;
             this.NameLabel.Text = "Hand Vein Pattern";
             // 
-            // VersionLabel
+            // LogoPictureEdit
             // 
-            this.VersionLabel.AutoSize = true;
-            this.VersionLabel.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.VersionLabel.Location = new System.Drawing.Point(322, 106);
-            this.VersionLabel.Name = "VersionLabel";
-            this.VersionLabel.Size = new System.Drawing.Size(78, 19);
-            this.VersionLabel.TabIndex = 2;
-            this.VersionLabel.Text = "Version 1.0";
+            this.LogoPictureEdit.EditValue = global::HandVeinPattern.Properties.Resources.cooltext175955690174147;
+            this.LogoPictureEdit.Location = new System.Drawing.Point(5, 19);
+            this.LogoPictureEdit.Name = "LogoPictureEdit";
+            this.LogoPictureEdit.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.LogoPictureEdit.Properties.Appearance.Options.UseBackColor = true;
+            this.LogoPictureEdit.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.LogoPictureEdit.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.LogoPictureEdit.Size = new System.Drawing.Size(247, 154);
+            this.LogoPictureEdit.TabIndex = 0;
             // 
             // DevelopedByLabel
             // 
@@ -117,23 +129,11 @@
             this.Developer1PictureEdit.Size = new System.Drawing.Size(185, 167);
             this.Developer1PictureEdit.TabIndex = 4;
             // 
-            // LogoPictureEdit
-            // 
-            this.LogoPictureEdit.EditValue = global::HandVeinPattern.Properties.Resources.cooltext175955690174147;
-            this.LogoPictureEdit.Location = new System.Drawing.Point(5, 19);
-            this.LogoPictureEdit.Name = "LogoPictureEdit";
-            this.LogoPictureEdit.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.LogoPictureEdit.Properties.Appearance.Options.UseBackColor = true;
-            this.LogoPictureEdit.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.LogoPictureEdit.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.LogoPictureEdit.Size = new System.Drawing.Size(247, 154);
-            this.LogoPictureEdit.TabIndex = 0;
-            // 
             // Developer1InfoLabel
             // 
             this.Developer1InfoLabel.AutoSize = true;
             this.Developer1InfoLabel.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Developer1InfoLabel.Location = new System.Drawing.Point(203, 270);
+            this.Developer1InfoLabel.Location = new System.Drawing.Point(203, 344);
             this.Developer1InfoLabel.Name = "Developer1InfoLabel";
             this.Developer1InfoLabel.Size = new System.Drawing.Size(168, 84);
             this.Developer1InfoLabel.TabIndex = 6;
@@ -211,9 +211,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.HeaderPanelControl)).EndInit();
             this.HeaderPanelControl.ResumeLayout(false);
             this.HeaderPanelControl.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LogoPictureEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Developer2PictureEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Developer1PictureEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.LogoPictureEdit.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminPasswordChange));
             this.PasswordChangeRibbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.ChangeBarButtonItem = new DevExpress.XtraBars.BarButtonItem();
             this.CloseBarButtonItem = new DevExpress.XtraBars.BarButtonItem();
+            this.ResetBarButtonItem = new DevExpress.XtraBars.BarButtonItem();
             this.ActionsRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ActionsRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ChangePasswordGroupControl = new DevExpress.XtraEditors.GroupControl();
@@ -42,7 +44,6 @@
             this.NewPasswordLabel = new System.Windows.Forms.Label();
             this.OldPasswordLabel = new System.Windows.Forms.Label();
             this.AdminIDLabel = new System.Windows.Forms.Label();
-            this.ResetBarButtonItem = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.PasswordChangeRibbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChangePasswordGroupControl)).BeginInit();
             this.ChangePasswordGroupControl.SuspendLayout();
@@ -81,6 +82,15 @@
             this.CloseBarButtonItem.Name = "CloseBarButtonItem";
             this.CloseBarButtonItem.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.CloseBarButtonItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.CloseBarButtonItem_ItemClick);
+            // 
+            // ResetBarButtonItem
+            // 
+            this.ResetBarButtonItem.Caption = "Reset";
+            this.ResetBarButtonItem.Glyph = global::HandVeinPattern.Properties.Resources.reset_32x32;
+            this.ResetBarButtonItem.Id = 3;
+            this.ResetBarButtonItem.Name = "ResetBarButtonItem";
+            this.ResetBarButtonItem.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.ResetBarButtonItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.ResetBarButtonItem_ItemClick);
             // 
             // ActionsRibbonPage
             // 
@@ -190,15 +200,6 @@
             this.AdminIDLabel.TabIndex = 0;
             this.AdminIDLabel.Text = "ID";
             // 
-            // ResetBarButtonItem
-            // 
-            this.ResetBarButtonItem.Caption = "Reset";
-            this.ResetBarButtonItem.Glyph = global::HandVeinPattern.Properties.Resources.reset_32x32;
-            this.ResetBarButtonItem.Id = 3;
-            this.ResetBarButtonItem.Name = "ResetBarButtonItem";
-            this.ResetBarButtonItem.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
-            this.ResetBarButtonItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.ResetBarButtonItem_ItemClick);
-            // 
             // AdminPasswordChange
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -206,6 +207,7 @@
             this.ClientSize = new System.Drawing.Size(446, 446);
             this.Controls.Add(this.ChangePasswordGroupControl);
             this.Controls.Add(this.PasswordChangeRibbonControl);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "AdminPasswordChange";
             this.Ribbon = this.PasswordChangeRibbonControl;

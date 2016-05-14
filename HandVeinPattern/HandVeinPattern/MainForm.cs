@@ -23,5 +23,10 @@ namespace HandVeinPattern
             loginform.Show();
             this.Hide();
         }
+
+        private void ExitSimpleButton_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(1);
+        }
     }
 }

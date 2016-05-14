@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.ContinueSimpleButton = new DevExpress.XtraEditors.SimpleButton();
+            this.ExitSimpleButton = new DevExpress.XtraEditors.SimpleButton();
             this.SuspendLayout();
             // 
             // ContinueSimpleButton
@@ -41,6 +43,16 @@
             this.ContinueSimpleButton.Text = "Continue";
             this.ContinueSimpleButton.Click += new System.EventHandler(this.ContinueSimpleButton_Click);
             // 
+            // ExitSimpleButton
+            // 
+            this.ExitSimpleButton.Image = global::HandVeinPattern.Properties.Resources.close_16x16;
+            this.ExitSimpleButton.Location = new System.Drawing.Point(12, 526);
+            this.ExitSimpleButton.Name = "ExitSimpleButton";
+            this.ExitSimpleButton.Size = new System.Drawing.Size(111, 23);
+            this.ExitSimpleButton.TabIndex = 1;
+            this.ExitSimpleButton.Text = "Exit";
+            this.ExitSimpleButton.Click += new System.EventHandler(this.ExitSimpleButton_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -48,7 +60,9 @@
             this.BackgroundImage = global::HandVeinPattern.Properties.Resources.Main_Form_Background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(984, 561);
+            this.Controls.Add(this.ExitSimpleButton);
             this.Controls.Add(this.ContinueSimpleButton);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hand Vein Pattern";
@@ -59,5 +73,6 @@
         #endregion
 
         private DevExpress.XtraEditors.SimpleButton ContinueSimpleButton;
+        private DevExpress.XtraEditors.SimpleButton ExitSimpleButton;
     }
 }

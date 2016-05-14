@@ -993,6 +993,7 @@
             this.ClientSize = new System.Drawing.Size(984, 697);
             this.Controls.Add(this.RegistrationGroupControl);
             this.Controls.Add(this.ribbonControl1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RegisterForm_User_";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Register (User)";

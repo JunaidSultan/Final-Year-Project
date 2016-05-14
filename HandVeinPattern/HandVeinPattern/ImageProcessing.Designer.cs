@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ImageProcessing));
             this.ImageProcessingRibbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.GrayScaleBarButtonItem = new DevExpress.XtraBars.BarButtonItem();
             this.WhiteBalanceBarButtonItem = new DevExpress.XtraBars.BarButtonItem();
@@ -43,7 +44,12 @@
             this.CancelBarButtonItem = new DevExpress.XtraBars.BarButtonItem();
             this.ThinningBarButtonItem = new DevExpress.XtraBars.BarButtonItem();
             this.FeaturesExtractionBarButtonItem = new DevExpress.XtraBars.BarButtonItem();
+            this.AboutBarButtonItem = new DevExpress.XtraBars.BarButtonItem();
+            this.AutoProcessBarToggleSwitchItem = new DevExpress.XtraBars.BarToggleSwitchItem();
+            this.ProcessBarButtonItem = new DevExpress.XtraBars.BarButtonItem();
+            this.Cancel = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.AutoProcessingRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.PreProcessingRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ThresholdingRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.WrapperProcessingRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -89,6 +95,7 @@
             this.ProcessedImageLabel = new System.Windows.Forms.Label();
             this.ProcessedImagePictureEdit = new DevExpress.XtraEditors.PictureEdit();
             this.OriginalImagePanelControl = new DevExpress.XtraEditors.PanelControl();
+            this.LoadImageSimpleButton = new DevExpress.XtraEditors.SimpleButton();
             this.OriginalImagePictureEdit = new DevExpress.XtraEditors.PictureEdit();
             this.OriginalImageContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.CopyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -99,8 +106,6 @@
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.DeleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.OriginalImageLabel = new System.Windows.Forms.Label();
-            this.AboutBarButtonItem = new DevExpress.XtraBars.BarButtonItem();
-            this.ExitBarButtonItem = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ImageProcessingRibbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImageProcessingGroupControl)).BeginInit();
             this.ImageProcessingGroupControl.SuspendLayout();
@@ -153,9 +158,11 @@
             this.ThinningBarButtonItem,
             this.FeaturesExtractionBarButtonItem,
             this.AboutBarButtonItem,
-            this.ExitBarButtonItem});
+            this.AutoProcessBarToggleSwitchItem,
+            this.ProcessBarButtonItem,
+            this.Cancel});
             this.ImageProcessingRibbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ImageProcessingRibbonControl.MaxItemId = 17;
+            this.ImageProcessingRibbonControl.MaxItemId = 24;
             this.ImageProcessingRibbonControl.Name = "ImageProcessingRibbonControl";
             this.ImageProcessingRibbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -278,9 +285,47 @@
             this.FeaturesExtractionBarButtonItem.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.FeaturesExtractionBarButtonItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.FeaturesExtractionBarButtonItem_ItemClick);
             // 
+            // AboutBarButtonItem
+            // 
+            this.AboutBarButtonItem.Caption = "About";
+            this.AboutBarButtonItem.Glyph = global::HandVeinPattern.Properties.Resources.about_32x32;
+            this.AboutBarButtonItem.Id = 15;
+            this.AboutBarButtonItem.Name = "AboutBarButtonItem";
+            this.AboutBarButtonItem.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.AboutBarButtonItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.AboutBarButtonItem_ItemClick);
+            // 
+            // AutoProcessBarToggleSwitchItem
+            // 
+            this.AutoProcessBarToggleSwitchItem.BindableChecked = true;
+            this.AutoProcessBarToggleSwitchItem.Caption = "Auto Process";
+            this.AutoProcessBarToggleSwitchItem.Checked = true;
+            this.AutoProcessBarToggleSwitchItem.Id = 20;
+            this.AutoProcessBarToggleSwitchItem.Name = "AutoProcessBarToggleSwitchItem";
+            this.AutoProcessBarToggleSwitchItem.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.AutoProcessBarToggleSwitchItem.CheckedChanged += new DevExpress.XtraBars.ItemClickEventHandler(this.AutoProcessBarToggleSwitchItem_CheckedChanged);
+            // 
+            // ProcessBarButtonItem
+            // 
+            this.ProcessBarButtonItem.Caption = "Process";
+            this.ProcessBarButtonItem.Glyph = global::HandVeinPattern.Properties.Resources.properties_32x32;
+            this.ProcessBarButtonItem.Id = 21;
+            this.ProcessBarButtonItem.Name = "ProcessBarButtonItem";
+            this.ProcessBarButtonItem.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.ProcessBarButtonItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.ProcessBarButtonItem_ItemClick);
+            // 
+            // Cancel
+            // 
+            this.Cancel.Caption = "Cancel";
+            this.Cancel.Glyph = global::HandVeinPattern.Properties.Resources.cancel_32x32;
+            this.Cancel.Id = 23;
+            this.Cancel.Name = "Cancel";
+            this.Cancel.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.Cancel.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Cancel_ItemClick);
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.AutoProcessingRibbonPageGroup,
             this.PreProcessingRibbonPageGroup,
             this.ThresholdingRibbonPageGroup,
             this.WrapperProcessingRibbonPageGroup,
@@ -291,6 +336,14 @@
             this.ribbonPage1.Name = "ribbonPage1";
             this.ribbonPage1.Text = "Image Processing";
             // 
+            // AutoProcessingRibbonPageGroup
+            // 
+            this.AutoProcessingRibbonPageGroup.AllowTextClipping = false;
+            this.AutoProcessingRibbonPageGroup.ItemLinks.Add(this.AutoProcessBarToggleSwitchItem);
+            this.AutoProcessingRibbonPageGroup.ItemLinks.Add(this.ProcessBarButtonItem);
+            this.AutoProcessingRibbonPageGroup.Name = "AutoProcessingRibbonPageGroup";
+            this.AutoProcessingRibbonPageGroup.Text = "Auto Process";
+            // 
             // PreProcessingRibbonPageGroup
             // 
             this.PreProcessingRibbonPageGroup.ItemLinks.Add(this.GrayScaleBarButtonItem);
@@ -300,12 +353,14 @@
             // 
             // ThresholdingRibbonPageGroup
             // 
+            this.ThresholdingRibbonPageGroup.AllowTextClipping = false;
             this.ThresholdingRibbonPageGroup.ItemLinks.Add(this.AdaptiveThresholdingBarButtonItem);
             this.ThresholdingRibbonPageGroup.Name = "ThresholdingRibbonPageGroup";
             this.ThresholdingRibbonPageGroup.Text = "Thresholding";
             // 
             // WrapperProcessingRibbonPageGroup
             // 
+            this.WrapperProcessingRibbonPageGroup.AllowTextClipping = false;
             this.WrapperProcessingRibbonPageGroup.ItemLinks.Add(this.WrapperProcessingBarButtonItem);
             this.WrapperProcessingRibbonPageGroup.Name = "WrapperProcessingRibbonPageGroup";
             this.WrapperProcessingRibbonPageGroup.Text = "Wrapper Processing";
@@ -360,7 +415,7 @@
             // 
             this.ActionsRibbonPageGroup.AllowTextClipping = false;
             this.ActionsRibbonPageGroup.ItemLinks.Add(this.AboutBarButtonItem);
-            this.ActionsRibbonPageGroup.ItemLinks.Add(this.ExitBarButtonItem);
+            this.ActionsRibbonPageGroup.ItemLinks.Add(this.Cancel);
             this.ActionsRibbonPageGroup.Name = "ActionsRibbonPageGroup";
             this.ActionsRibbonPageGroup.Text = "Actions";
             // 
@@ -687,12 +742,23 @@
             // 
             // OriginalImagePanelControl
             // 
+            this.OriginalImagePanelControl.Controls.Add(this.LoadImageSimpleButton);
             this.OriginalImagePanelControl.Controls.Add(this.OriginalImagePictureEdit);
             this.OriginalImagePanelControl.Controls.Add(this.OriginalImageLabel);
             this.OriginalImagePanelControl.Location = new System.Drawing.Point(5, 23);
             this.OriginalImagePanelControl.Name = "OriginalImagePanelControl";
             this.OriginalImagePanelControl.Size = new System.Drawing.Size(313, 462);
             this.OriginalImagePanelControl.TabIndex = 0;
+            // 
+            // LoadImageSimpleButton
+            // 
+            this.LoadImageSimpleButton.Image = global::HandVeinPattern.Properties.Resources.open_16x16;
+            this.LoadImageSimpleButton.Location = new System.Drawing.Point(90, 423);
+            this.LoadImageSimpleButton.Name = "LoadImageSimpleButton";
+            this.LoadImageSimpleButton.Size = new System.Drawing.Size(131, 23);
+            this.LoadImageSimpleButton.TabIndex = 4;
+            this.LoadImageSimpleButton.Text = "Load Image";
+            this.LoadImageSimpleButton.Click += new System.EventHandler(this.LoadImageSimpleButton_Click);
             // 
             // OriginalImagePictureEdit
             // 
@@ -717,47 +783,47 @@
             this.toolStripSeparator3,
             this.DeleteToolStripMenuItem});
             this.OriginalImageContextMenuStrip.Name = "OriginalImageContextMenuStrip";
-            this.OriginalImageContextMenuStrip.Size = new System.Drawing.Size(108, 110);
+            this.OriginalImageContextMenuStrip.Size = new System.Drawing.Size(153, 132);
             this.OriginalImageContextMenuStrip.Opening += new System.ComponentModel.CancelEventHandler(this.OriginalImageContextMenuStrip_Opening);
             // 
             // CopyToolStripMenuItem
             // 
             this.CopyToolStripMenuItem.Image = global::HandVeinPattern.Properties.Resources.copy;
             this.CopyToolStripMenuItem.Name = "CopyToolStripMenuItem";
-            this.CopyToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.CopyToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.CopyToolStripMenuItem.Text = "Copy";
             this.CopyToolStripMenuItem.Click += new System.EventHandler(this.CopyToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(104, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
             // 
             // PasteToolStripMenuItem
             // 
             this.PasteToolStripMenuItem.Image = global::HandVeinPattern.Properties.Resources.paste;
             this.PasteToolStripMenuItem.Name = "PasteToolStripMenuItem";
-            this.PasteToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.PasteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.PasteToolStripMenuItem.Text = "Paste";
             this.PasteToolStripMenuItem.Click += new System.EventHandler(this.PasteToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(104, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(149, 6);
             // 
             // LoadToolStripMenuItem
             // 
             this.LoadToolStripMenuItem.Image = global::HandVeinPattern.Properties.Resources.folder_PNG8773;
             this.LoadToolStripMenuItem.Name = "LoadToolStripMenuItem";
-            this.LoadToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.LoadToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.LoadToolStripMenuItem.Text = "Load";
             this.LoadToolStripMenuItem.Click += new System.EventHandler(this.LoadToolStripMenuItem_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(104, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(149, 6);
             // 
             // DeleteToolStripMenuItem
             // 
@@ -777,24 +843,6 @@
             this.OriginalImageLabel.TabIndex = 1;
             this.OriginalImageLabel.Text = "Original Image";
             // 
-            // AboutBarButtonItem
-            // 
-            this.AboutBarButtonItem.Caption = "About";
-            this.AboutBarButtonItem.Glyph = global::HandVeinPattern.Properties.Resources.about_32x32;
-            this.AboutBarButtonItem.Id = 15;
-            this.AboutBarButtonItem.Name = "AboutBarButtonItem";
-            this.AboutBarButtonItem.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
-            this.AboutBarButtonItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.AboutBarButtonItem_ItemClick);
-            // 
-            // ExitBarButtonItem
-            // 
-            this.ExitBarButtonItem.Caption = "Exit";
-            this.ExitBarButtonItem.Glyph = global::HandVeinPattern.Properties.Resources.close_32x32;
-            this.ExitBarButtonItem.Id = 16;
-            this.ExitBarButtonItem.Name = "ExitBarButtonItem";
-            this.ExitBarButtonItem.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
-            this.ExitBarButtonItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.ExitBarButtonItem_ItemClick);
-            // 
             // ImageProcessing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -802,6 +850,7 @@
             this.ClientSize = new System.Drawing.Size(1234, 692);
             this.Controls.Add(this.ImageProcessingGroupControl);
             this.Controls.Add(this.ImageProcessingRibbonControl);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "ImageProcessing";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -917,6 +966,10 @@
         private DevExpress.XtraBars.Ribbon.RibbonPage ActionsRibbonPage;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ActionsRibbonPageGroup;
         private DevExpress.XtraBars.BarButtonItem AboutBarButtonItem;
-        private DevExpress.XtraBars.BarButtonItem ExitBarButtonItem;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup AutoProcessingRibbonPageGroup;
+        private DevExpress.XtraBars.BarToggleSwitchItem AutoProcessBarToggleSwitchItem;
+        private DevExpress.XtraBars.BarButtonItem ProcessBarButtonItem;
+        private DevExpress.XtraEditors.SimpleButton LoadImageSimpleButton;
+        private DevExpress.XtraBars.BarButtonItem Cancel;
     }
 }

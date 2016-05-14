@@ -457,6 +457,7 @@
             this.ClientSize = new System.Drawing.Size(938, 497);
             this.Controls.Add(this.RegisterAdminGroupControl);
             this.Controls.Add(this.ribbonControl1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Register_Form__Admin_";
             this.Ribbon = this.ribbonControl1;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

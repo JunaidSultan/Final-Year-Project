@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.ImageProcessingBarButtonItem = new DevExpress.XtraBars.BarButtonItem();
             this.SkinRibbonGalleryBarItem = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
-            this.ExitBarButtonItem = new DevExpress.XtraBars.BarButtonItem();
             this.ProfileManagementBarButtonItem = new DevExpress.XtraBars.BarButtonItem();
             this.ChangePasswordBarButtonItem = new DevExpress.XtraBars.BarButtonItem();
             this.LogoutBarButtonItem = new DevExpress.XtraBars.BarButtonItem();
@@ -50,30 +50,37 @@
             this.SkinRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ActionsRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.DashboardPanelControl2 = new DevExpress.XtraEditors.PanelControl();
-            this.AdminStatusTabPane = new DevExpress.XtraBars.Navigation.TabPane();
-            this.OnlineStatusTabNavigationPage = new DevExpress.XtraBars.Navigation.TabNavigationPage();
-            this.OnlineStatusDataGridView = new System.Windows.Forms.DataGridView();
-            this.DashboardPanelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.PerformanceTabPane = new DevExpress.XtraBars.Navigation.TabPane();
-            this.PerformanceTabNavigationPage = new DevExpress.XtraBars.Navigation.TabNavigationPage();
+            this.ClockTabNavigationPage = new DevExpress.XtraBars.Navigation.TabNavigationPage();
+            this.ClockGaugeControl = new DevExpress.XtraGauges.Win.GaugeControl();
+            this.ClockDigitalGauge = new DevExpress.XtraGauges.Win.Gauges.Digital.DigitalGauge();
+            this.ClockdigitalBackgroundLayerComponent = new DevExpress.XtraGauges.Win.Gauges.Digital.DigitalBackgroundLayerComponent();
             this.AdminManagementTabPane = new DevExpress.XtraBars.Navigation.TabPane();
             this.AddAdminTabNavigationPage = new DevExpress.XtraBars.Navigation.TabNavigationPage();
             this.AddAdminSimpleButton = new DevExpress.XtraEditors.SimpleButton();
-            this.RemoveAdminTabNavigationPage = new DevExpress.XtraBars.Navigation.TabNavigationPage();
-            this.RemoveAdminSimpleButton = new DevExpress.XtraEditors.SimpleButton();
+            this.DashboardPanelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.ImageProcessingGroupControl = new DevExpress.XtraEditors.GroupControl();
+            this.ImageProcessingSimpleButton = new DevExpress.XtraEditors.SimpleButton();
+            this.digitalBackgroundLayerComponent1 = new DevExpress.XtraGauges.Win.Gauges.Digital.DigitalBackgroundLayerComponent();
+            this.ImageMatchingGroupControl = new DevExpress.XtraEditors.GroupControl();
+            this.ImageMatchingSimpleButton = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPictureEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DashboardPanelControl2)).BeginInit();
             this.DashboardPanelControl2.SuspendLayout();
-            this.AdminStatusTabPane.SuspendLayout();
-            this.OnlineStatusTabNavigationPage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.OnlineStatusDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DashboardPanelControl1)).BeginInit();
-            this.DashboardPanelControl1.SuspendLayout();
             this.PerformanceTabPane.SuspendLayout();
+            this.ClockTabNavigationPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ClockDigitalGauge)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ClockdigitalBackgroundLayerComponent)).BeginInit();
             this.AdminManagementTabPane.SuspendLayout();
             this.AddAdminTabNavigationPage.SuspendLayout();
-            this.RemoveAdminTabNavigationPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DashboardPanelControl1)).BeginInit();
+            this.DashboardPanelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ImageProcessingGroupControl)).BeginInit();
+            this.ImageProcessingGroupControl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.digitalBackgroundLayerComponent1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImageMatchingGroupControl)).BeginInit();
+            this.ImageMatchingGroupControl.SuspendLayout();
             this.SuspendLayout();
             // 
             // ribbonControl1
@@ -83,7 +90,6 @@
             this.ribbonControl1.ExpandCollapseItem,
             this.ImageProcessingBarButtonItem,
             this.SkinRibbonGalleryBarItem,
-            this.ExitBarButtonItem,
             this.ProfileManagementBarButtonItem,
             this.ChangePasswordBarButtonItem,
             this.LogoutBarButtonItem,
@@ -121,15 +127,6 @@
             this.SkinRibbonGalleryBarItem.Gallery.ShowItemText = true;
             this.SkinRibbonGalleryBarItem.Id = 3;
             this.SkinRibbonGalleryBarItem.Name = "SkinRibbonGalleryBarItem";
-            // 
-            // ExitBarButtonItem
-            // 
-            this.ExitBarButtonItem.Caption = "Exit";
-            this.ExitBarButtonItem.Glyph = global::HandVeinPattern.Properties.Resources.close_32x32;
-            this.ExitBarButtonItem.Id = 4;
-            this.ExitBarButtonItem.Name = "ExitBarButtonItem";
-            this.ExitBarButtonItem.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
-            this.ExitBarButtonItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.ExitBarButtonItem_ItemClick);
             // 
             // ProfileManagementBarButtonItem
             // 
@@ -187,7 +184,7 @@
             // MatchingBarButtonItem
             // 
             this.MatchingBarButtonItem.Caption = "Matching";
-            this.MatchingBarButtonItem.Glyph = global::HandVeinPattern.Properties.Resources.CulpepperJobMatchingIcon;
+            this.MatchingBarButtonItem.Glyph = global::HandVeinPattern.Properties.Resources.findcustomers_32x32;
             this.MatchingBarButtonItem.Id = 11;
             this.MatchingBarButtonItem.Name = "MatchingBarButtonItem";
             this.MatchingBarButtonItem.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
@@ -260,89 +257,79 @@
             // 
             this.ActionsRibbonPageGroup.AllowTextClipping = false;
             this.ActionsRibbonPageGroup.ItemLinks.Add(this.AboutBarButtonItem);
-            this.ActionsRibbonPageGroup.ItemLinks.Add(this.ExitBarButtonItem);
             this.ActionsRibbonPageGroup.Name = "ActionsRibbonPageGroup";
             this.ActionsRibbonPageGroup.Text = "Actions";
             // 
             // DashboardPanelControl2
             // 
-            this.DashboardPanelControl2.Controls.Add(this.AdminStatusTabPane);
+            this.DashboardPanelControl2.Controls.Add(this.PerformanceTabPane);
+            this.DashboardPanelControl2.Controls.Add(this.AdminManagementTabPane);
             this.DashboardPanelControl2.Location = new System.Drawing.Point(422, 168);
             this.DashboardPanelControl2.Name = "DashboardPanelControl2";
             this.DashboardPanelControl2.Size = new System.Drawing.Size(390, 325);
             this.DashboardPanelControl2.TabIndex = 1;
             // 
-            // AdminStatusTabPane
-            // 
-            this.AdminStatusTabPane.Controls.Add(this.OnlineStatusTabNavigationPage);
-            this.AdminStatusTabPane.Location = new System.Drawing.Point(5, 15);
-            this.AdminStatusTabPane.Name = "AdminStatusTabPane";
-            this.AdminStatusTabPane.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] {
-            this.OnlineStatusTabNavigationPage});
-            this.AdminStatusTabPane.RegularSize = new System.Drawing.Size(380, 305);
-            this.AdminStatusTabPane.SelectedPage = this.OnlineStatusTabNavigationPage;
-            this.AdminStatusTabPane.SelectedPageIndex = 0;
-            this.AdminStatusTabPane.Size = new System.Drawing.Size(380, 305);
-            this.AdminStatusTabPane.TabIndex = 0;
-            this.AdminStatusTabPane.Text = "Admin Status";
-            // 
-            // OnlineStatusTabNavigationPage
-            // 
-            this.OnlineStatusTabNavigationPage.Caption = "Online Status";
-            this.OnlineStatusTabNavigationPage.Controls.Add(this.OnlineStatusDataGridView);
-            this.OnlineStatusTabNavigationPage.Name = "OnlineStatusTabNavigationPage";
-            this.OnlineStatusTabNavigationPage.Size = new System.Drawing.Size(362, 260);
-            // 
-            // OnlineStatusDataGridView
-            // 
-            this.OnlineStatusDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.OnlineStatusDataGridView.Location = new System.Drawing.Point(3, 3);
-            this.OnlineStatusDataGridView.Name = "OnlineStatusDataGridView";
-            this.OnlineStatusDataGridView.Size = new System.Drawing.Size(356, 246);
-            this.OnlineStatusDataGridView.TabIndex = 0;
-            // 
-            // DashboardPanelControl1
-            // 
-            this.DashboardPanelControl1.Controls.Add(this.PerformanceTabPane);
-            this.DashboardPanelControl1.Controls.Add(this.AdminManagementTabPane);
-            this.DashboardPanelControl1.Location = new System.Drawing.Point(12, 168);
-            this.DashboardPanelControl1.Name = "DashboardPanelControl1";
-            this.DashboardPanelControl1.Size = new System.Drawing.Size(382, 325);
-            this.DashboardPanelControl1.TabIndex = 3;
-            // 
             // PerformanceTabPane
             // 
-            this.PerformanceTabPane.Controls.Add(this.PerformanceTabNavigationPage);
-            this.PerformanceTabPane.Location = new System.Drawing.Point(14, 151);
+            this.PerformanceTabPane.Controls.Add(this.ClockTabNavigationPage);
+            this.PerformanceTabPane.Location = new System.Drawing.Point(5, 141);
             this.PerformanceTabPane.Name = "PerformanceTabPane";
             this.PerformanceTabPane.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] {
-            this.PerformanceTabNavigationPage});
-            this.PerformanceTabPane.RegularSize = new System.Drawing.Size(354, 169);
-            this.PerformanceTabPane.SelectedPage = this.PerformanceTabNavigationPage;
+            this.ClockTabNavigationPage});
+            this.PerformanceTabPane.RegularSize = new System.Drawing.Size(380, 179);
+            this.PerformanceTabPane.SelectedPage = this.ClockTabNavigationPage;
             this.PerformanceTabPane.SelectedPageIndex = 0;
-            this.PerformanceTabPane.Size = new System.Drawing.Size(354, 169);
+            this.PerformanceTabPane.Size = new System.Drawing.Size(380, 179);
             this.PerformanceTabPane.TabIndex = 1;
-            this.PerformanceTabPane.Text = "tabPane1";
+            this.PerformanceTabPane.Text = "System Performance";
             // 
-            // PerformanceTabNavigationPage
+            // ClockTabNavigationPage
             // 
-            this.PerformanceTabNavigationPage.Caption = "CPU Performance";
-            this.PerformanceTabNavigationPage.Name = "PerformanceTabNavigationPage";
-            this.PerformanceTabNavigationPage.Size = new System.Drawing.Size(336, 124);
+            this.ClockTabNavigationPage.Caption = "Clock";
+            this.ClockTabNavigationPage.Controls.Add(this.ClockGaugeControl);
+            this.ClockTabNavigationPage.Name = "ClockTabNavigationPage";
+            this.ClockTabNavigationPage.Size = new System.Drawing.Size(362, 134);
+            // 
+            // ClockGaugeControl
+            // 
+            this.ClockGaugeControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ClockGaugeControl.Gauges.AddRange(new DevExpress.XtraGauges.Base.IGauge[] {
+            this.ClockDigitalGauge});
+            this.ClockGaugeControl.Location = new System.Drawing.Point(0, 0);
+            this.ClockGaugeControl.Name = "ClockGaugeControl";
+            this.ClockGaugeControl.Size = new System.Drawing.Size(362, 134);
+            this.ClockGaugeControl.TabIndex = 0;
+            // 
+            // ClockDigitalGauge
+            // 
+            this.ClockDigitalGauge.AppearanceOff.ContentBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:#0FFF5000");
+            this.ClockDigitalGauge.AppearanceOn.ContentBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:#FF5000");
+            this.ClockDigitalGauge.BackgroundLayers.AddRange(new DevExpress.XtraGauges.Win.Gauges.Digital.DigitalBackgroundLayerComponent[] {
+            this.ClockdigitalBackgroundLayerComponent});
+            this.ClockDigitalGauge.Bounds = new System.Drawing.Rectangle(6, 6, 350, 122);
+            this.ClockDigitalGauge.DigitCount = 5;
+            this.ClockDigitalGauge.Name = "ClockDigitalGauge";
+            this.ClockDigitalGauge.Text = "00,000";
+            // 
+            // ClockdigitalBackgroundLayerComponent
+            // 
+            this.ClockdigitalBackgroundLayerComponent.BottomRight = new DevExpress.XtraGauges.Core.Base.PointF2D(259.8125F, 99.9625F);
+            this.ClockdigitalBackgroundLayerComponent.Name = "digitalBackgroundLayerComponent7";
+            this.ClockdigitalBackgroundLayerComponent.ShapeType = DevExpress.XtraGauges.Core.Model.DigitalBackgroundShapeSetType.Style3;
+            this.ClockdigitalBackgroundLayerComponent.TopLeft = new DevExpress.XtraGauges.Core.Base.PointF2D(20F, 0F);
+            this.ClockdigitalBackgroundLayerComponent.ZOrder = 1000;
             // 
             // AdminManagementTabPane
             // 
             this.AdminManagementTabPane.Controls.Add(this.AddAdminTabNavigationPage);
-            this.AdminManagementTabPane.Controls.Add(this.RemoveAdminTabNavigationPage);
             this.AdminManagementTabPane.Location = new System.Drawing.Point(5, 5);
             this.AdminManagementTabPane.Name = "AdminManagementTabPane";
             this.AdminManagementTabPane.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] {
-            this.AddAdminTabNavigationPage,
-            this.RemoveAdminTabNavigationPage});
-            this.AdminManagementTabPane.RegularSize = new System.Drawing.Size(372, 130);
+            this.AddAdminTabNavigationPage});
+            this.AdminManagementTabPane.RegularSize = new System.Drawing.Size(380, 130);
             this.AdminManagementTabPane.SelectedPage = this.AddAdminTabNavigationPage;
-            this.AdminManagementTabPane.SelectedPageIndex = 1;
-            this.AdminManagementTabPane.Size = new System.Drawing.Size(372, 130);
+            this.AdminManagementTabPane.SelectedPageIndex = 0;
+            this.AdminManagementTabPane.Size = new System.Drawing.Size(380, 130);
             this.AdminManagementTabPane.TabIndex = 0;
             this.AdminManagementTabPane.Text = "New Admin";
             // 
@@ -351,7 +338,7 @@
             this.AddAdminTabNavigationPage.Caption = "Add Admin";
             this.AddAdminTabNavigationPage.Controls.Add(this.AddAdminSimpleButton);
             this.AddAdminTabNavigationPage.Name = "AddAdminTabNavigationPage";
-            this.AddAdminTabNavigationPage.Size = new System.Drawing.Size(354, 85);
+            this.AddAdminTabNavigationPage.Size = new System.Drawing.Size(362, 85);
             // 
             // AddAdminSimpleButton
             // 
@@ -363,30 +350,68 @@
             this.AddAdminSimpleButton.Text = "Add Admin";
             this.AddAdminSimpleButton.Click += new System.EventHandler(this.AddAdminSimpleButton_Click);
             // 
-            // RemoveAdminTabNavigationPage
+            // DashboardPanelControl1
             // 
-            this.RemoveAdminTabNavigationPage.Caption = "Remove Admin";
-            this.RemoveAdminTabNavigationPage.Controls.Add(this.RemoveAdminSimpleButton);
-            this.RemoveAdminTabNavigationPage.Name = "RemoveAdminTabNavigationPage";
-            this.RemoveAdminTabNavigationPage.Size = new System.Drawing.Size(354, 85);
+            this.DashboardPanelControl1.Controls.Add(this.ImageProcessingGroupControl);
+            this.DashboardPanelControl1.Location = new System.Drawing.Point(12, 168);
+            this.DashboardPanelControl1.Name = "DashboardPanelControl1";
+            this.DashboardPanelControl1.Size = new System.Drawing.Size(382, 325);
+            this.DashboardPanelControl1.TabIndex = 3;
             // 
-            // RemoveAdminSimpleButton
+            // ImageProcessingGroupControl
             // 
-            this.RemoveAdminSimpleButton.Image = global::HandVeinPattern.Properties.Resources.delete_16x16;
-            this.RemoveAdminSimpleButton.Location = new System.Drawing.Point(104, 30);
-            this.RemoveAdminSimpleButton.Name = "RemoveAdminSimpleButton";
-            this.RemoveAdminSimpleButton.Size = new System.Drawing.Size(116, 33);
-            this.RemoveAdminSimpleButton.TabIndex = 1;
-            this.RemoveAdminSimpleButton.Text = "Remove Admin";
+            this.ImageProcessingGroupControl.Controls.Add(this.ImageProcessingSimpleButton);
+            this.ImageProcessingGroupControl.Location = new System.Drawing.Point(5, 5);
+            this.ImageProcessingGroupControl.Name = "ImageProcessingGroupControl";
+            this.ImageProcessingGroupControl.Size = new System.Drawing.Size(372, 147);
+            this.ImageProcessingGroupControl.TabIndex = 0;
+            // 
+            // ImageProcessingSimpleButton
+            // 
+            this.ImageProcessingSimpleButton.Image = global::HandVeinPattern.Properties.Resources.technology_32x32;
+            this.ImageProcessingSimpleButton.Location = new System.Drawing.Point(68, 58);
+            this.ImageProcessingSimpleButton.Name = "ImageProcessingSimpleButton";
+            this.ImageProcessingSimpleButton.Size = new System.Drawing.Size(172, 52);
+            this.ImageProcessingSimpleButton.TabIndex = 0;
+            this.ImageProcessingSimpleButton.Text = "Image Processing";
+            this.ImageProcessingSimpleButton.Click += new System.EventHandler(this.ImageProcessingSimpleButton_Click);
+            // 
+            // digitalBackgroundLayerComponent1
+            // 
+            this.digitalBackgroundLayerComponent1.BottomRight = new DevExpress.XtraGauges.Core.Base.PointF2D(265.8125F, 99.9625F);
+            this.digitalBackgroundLayerComponent1.Name = "digitalBackgroundLayerComponent1";
+            this.digitalBackgroundLayerComponent1.ShapeType = DevExpress.XtraGauges.Core.Model.DigitalBackgroundShapeSetType.Style25;
+            this.digitalBackgroundLayerComponent1.TopLeft = new DevExpress.XtraGauges.Core.Base.PointF2D(26F, 0F);
+            this.digitalBackgroundLayerComponent1.ZOrder = 1000;
+            // 
+            // ImageMatchingGroupControl
+            // 
+            this.ImageMatchingGroupControl.Controls.Add(this.ImageMatchingSimpleButton);
+            this.ImageMatchingGroupControl.Location = new System.Drawing.Point(17, 326);
+            this.ImageMatchingGroupControl.Name = "ImageMatchingGroupControl";
+            this.ImageMatchingGroupControl.Size = new System.Drawing.Size(372, 162);
+            this.ImageMatchingGroupControl.TabIndex = 1;
+            // 
+            // ImageMatchingSimpleButton
+            // 
+            this.ImageMatchingSimpleButton.Image = global::HandVeinPattern.Properties.Resources.findcustomers_32x32;
+            this.ImageMatchingSimpleButton.Location = new System.Drawing.Point(68, 66);
+            this.ImageMatchingSimpleButton.Name = "ImageMatchingSimpleButton";
+            this.ImageMatchingSimpleButton.Size = new System.Drawing.Size(172, 52);
+            this.ImageMatchingSimpleButton.TabIndex = 1;
+            this.ImageMatchingSimpleButton.Text = "Image Matching";
+            this.ImageMatchingSimpleButton.Click += new System.EventHandler(this.ImageMatchingSimpleButton_Click);
             // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(825, 504);
+            this.Controls.Add(this.ImageMatchingGroupControl);
             this.Controls.Add(this.DashboardPanelControl1);
             this.Controls.Add(this.DashboardPanelControl2);
             this.Controls.Add(this.ribbonControl1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Dashboard";
             this.Ribbon = this.ribbonControl1;
@@ -396,15 +421,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPictureEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DashboardPanelControl2)).EndInit();
             this.DashboardPanelControl2.ResumeLayout(false);
-            this.AdminStatusTabPane.ResumeLayout(false);
-            this.OnlineStatusTabNavigationPage.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.OnlineStatusDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DashboardPanelControl1)).EndInit();
-            this.DashboardPanelControl1.ResumeLayout(false);
             this.PerformanceTabPane.ResumeLayout(false);
+            this.ClockTabNavigationPage.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ClockDigitalGauge)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ClockdigitalBackgroundLayerComponent)).EndInit();
             this.AdminManagementTabPane.ResumeLayout(false);
             this.AddAdminTabNavigationPage.ResumeLayout(false);
-            this.RemoveAdminTabNavigationPage.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.DashboardPanelControl1)).EndInit();
+            this.DashboardPanelControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ImageProcessingGroupControl)).EndInit();
+            this.ImageProcessingGroupControl.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.digitalBackgroundLayerComponent1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImageMatchingGroupControl)).EndInit();
+            this.ImageMatchingGroupControl.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -417,15 +446,11 @@
         private DevExpress.XtraBars.BarButtonItem ImageProcessingBarButtonItem;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ImageProcessingBibbonPageGroup;
         private DevExpress.XtraBars.SkinRibbonGalleryBarItem SkinRibbonGalleryBarItem;
-        private DevExpress.XtraBars.BarButtonItem ExitBarButtonItem;
         private DevExpress.XtraBars.Ribbon.RibbonPage ActionsRibbonPage;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup SkinRibbonPageGroup;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ActionsRibbonPageGroup;
         private DevExpress.XtraEditors.PanelControl DashboardPanelControl2;
         private DevExpress.XtraEditors.PanelControl DashboardPanelControl1;
-        private DevExpress.XtraBars.Navigation.TabPane AdminStatusTabPane;
-        private DevExpress.XtraBars.Navigation.TabNavigationPage OnlineStatusTabNavigationPage;
-        private System.Windows.Forms.DataGridView OnlineStatusDataGridView;
         private DevExpress.XtraBars.Navigation.TabPane AdminManagementTabPane;
         private DevExpress.XtraBars.Navigation.TabNavigationPage AddAdminTabNavigationPage;
         private DevExpress.XtraBars.Ribbon.RibbonPage AccountRibbonPage;
@@ -439,11 +464,17 @@
         private DevExpress.XtraBars.RibbonGalleryBarItem ribbonGalleryBarItem1;
         private DevExpress.XtraBars.BarButtonItem AboutBarButtonItem;
         private DevExpress.XtraEditors.SimpleButton AddAdminSimpleButton;
-        private DevExpress.XtraBars.Navigation.TabPane PerformanceTabPane;
-        private DevExpress.XtraBars.Navigation.TabNavigationPage PerformanceTabNavigationPage;
-        private DevExpress.XtraBars.Navigation.TabNavigationPage RemoveAdminTabNavigationPage;
-        private DevExpress.XtraEditors.SimpleButton RemoveAdminSimpleButton;
         private DevExpress.XtraBars.BarButtonItem MatchingBarButtonItem;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ImageMatchingRibbonPageGroup;
+        private DevExpress.XtraBars.Navigation.TabPane PerformanceTabPane;
+        private DevExpress.XtraBars.Navigation.TabNavigationPage ClockTabNavigationPage;
+        private DevExpress.XtraGauges.Win.Gauges.Digital.DigitalBackgroundLayerComponent digitalBackgroundLayerComponent1;
+        private DevExpress.XtraEditors.GroupControl ImageProcessingGroupControl;
+        private DevExpress.XtraEditors.GroupControl ImageMatchingGroupControl;
+        private DevExpress.XtraEditors.SimpleButton ImageProcessingSimpleButton;
+        private DevExpress.XtraEditors.SimpleButton ImageMatchingSimpleButton;
+        private DevExpress.XtraGauges.Win.GaugeControl ClockGaugeControl;
+        private DevExpress.XtraGauges.Win.Gauges.Digital.DigitalGauge ClockDigitalGauge;
+        private DevExpress.XtraGauges.Win.Gauges.Digital.DigitalBackgroundLayerComponent ClockdigitalBackgroundLayerComponent;
     }
 }

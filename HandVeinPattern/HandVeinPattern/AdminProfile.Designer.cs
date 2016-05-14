@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminProfile));
             this.ProfileGroupControl = new DevExpress.XtraEditors.GroupControl();
             this.EmailDBLabel = new System.Windows.Forms.Label();
             this.GenderDBLabel = new System.Windows.Forms.Label();
@@ -182,6 +183,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(705, 346);
             this.Controls.Add(this.ProfileGroupControl);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AdminProfile";
             this.Text = "Profile (Details)";
             ((System.ComponentModel.ISupportInitialize)(this.ProfileGroupControl)).EndInit();

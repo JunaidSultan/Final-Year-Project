@@ -40,6 +40,7 @@
             this.LoginPictureEdit = new DevExpress.XtraEditors.PictureEdit();
             this.UsernameErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.PasswordErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ArduinoSerialPort = new System.IO.Ports.SerialPort(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.LoginGroupControl)).BeginInit();
             this.LoginGroupControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LoginPictureEdit.Properties)).BeginInit();
@@ -160,6 +161,7 @@
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.LoginForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.LoginGroupControl)).EndInit();
             this.LoginGroupControl.ResumeLayout(false);
             this.LoginGroupControl.PerformLayout();
@@ -182,6 +184,7 @@
         private DevExpress.XtraEditors.PictureEdit LoginPictureEdit;
         private System.Windows.Forms.ErrorProvider UsernameErrorProvider;
         private System.Windows.Forms.ErrorProvider PasswordErrorProvider;
+        private System.IO.Ports.SerialPort ArduinoSerialPort;
 
     }
 }

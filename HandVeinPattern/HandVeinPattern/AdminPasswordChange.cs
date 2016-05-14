@@ -16,6 +16,7 @@ namespace HandVeinPattern
         public AdminPasswordChange()
         {
             InitializeComponent();
+            IDTextBox.Text = Details.AdminLoginID;
         }
 
         // Button Click Event To Change The Administrator's Password
