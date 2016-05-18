@@ -25,9 +25,9 @@ namespace HandVeinPattern
 
             errorprovider();                                                // Checks For The TextBox Errors    
 
-            //ArduinoSerialPort.PortName = "COM4";
+            ArduinoSerialPort.PortName = "COM4";
 
-            //ArduinoSerialPort.BaudRate = 9600;
+            ArduinoSerialPort.BaudRate = 9600;
         }
 
 
@@ -122,7 +122,7 @@ namespace HandVeinPattern
                 {
                     case "-1":
                             
-                        //ArduinoSerialPort.WriteLine("0");
+                        ArduinoSerialPort.WriteLine("0");
 
                         MessageBox.Show("Invalid Username Or Password", "Authentication Failed", MessageBoxButtons.OK);
                         
@@ -134,13 +134,13 @@ namespace HandVeinPattern
                         
                         clear();
 
-                        //ArduinoSerialPort.WriteLine("1");
+                        ArduinoSerialPort.WriteLine("1");
 
                         Dashboard dashboard = new Dashboard();
 
                         dashboard.Show();
 
-                        //ArduinoSerialPort.Close();
+                        ArduinoSerialPort.Close();
 
                         this.Hide();
 
@@ -148,6 +148,7 @@ namespace HandVeinPattern
                 }
             }
         }
+
 
         private void CancelSimpleButton_Click(object sender, EventArgs e)
         {
@@ -165,7 +166,7 @@ namespace HandVeinPattern
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
-            //ArduinoSerialPort.Open();
+            ArduinoSerialPort.Open();
         }
 
     }
