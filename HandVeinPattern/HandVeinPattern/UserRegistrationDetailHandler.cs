@@ -26,20 +26,20 @@ namespace HandVeinPattern
             return photo;
         }
 
-        static byte[] GetHandPhoto(string filepath)
-        {
-            FileStream stream = new FileStream(filepath, FileMode.Open, FileAccess.Read);
+        ////static byte[] GetHandPhoto(string filepath)
+        //{
+        //    FileStream stream = new FileStream(filepath, FileMode.Open, FileAccess.Read);
 
-            BinaryReader reader = new BinaryReader(stream);
+        //    BinaryReader reader = new BinaryReader(stream);
 
-            byte[] photo = reader.ReadBytes((int)stream.Length);
+        //    byte[] photo = reader.ReadBytes((int)stream.Length);
 
-            reader.Close();
+        //    reader.Close();
 
-            stream.Close();
+        //    stream.Close();
 
-            return photo;
-        }
+        //    return photo;
+        //}
 
         public static void recordentry()
         {
@@ -51,8 +51,6 @@ namespace HandVeinPattern
 
             try
             {
-                RegisterForm_User_ register_user = new RegisterForm_User_();
-
                 byte[] photo = GetPhoto(Details.UserImageFilePath);
 
                 command = connection.CreateCommand();

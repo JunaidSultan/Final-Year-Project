@@ -125,8 +125,6 @@ namespace HandVeinPattern
 
             Details.AdditionalNotes = AdditionalNotesRichTextBox.Text;
 
-            //Details.ProcessedHandImage = @"D:\Eighth Semester\HandVeinPattern\RuntimeDirectory\FinalImage.jpg";
-
             UserRegistrationDetailHandler.recordentry();
 
             RegistrationProgressBarControl.PerformStep();
@@ -140,8 +138,6 @@ namespace HandVeinPattern
             RegistrationProgressBarControl.PerformStep();
 
             RegistrationProgressBarControl.Update();
-
-            //UserRegistrationDetailHandler.handimageentry();
 
             DialogResult messageboxresult = MessageBox.Show("User Successfully Registered", "User Registration", MessageBoxButtons.OK, MessageBoxIcon.Information);
 

@@ -358,7 +358,7 @@ namespace HandVeinPattern
             Directory.CreateDirectory(@"D:\Eighth Semester\HandVeinPattern\\RuntimeDirectory");
 
             Details.adaptivethreshold = new Mat();
-
+            
             CvInvoke.AdaptiveThreshold(Details.whitebalance, Details.adaptivethreshold, 255, AdaptiveThresholdType.GaussianC, ThresholdType.Binary, 11, -3);
 
             Step3PictureEdit.Image = Details.adaptivethreshold.Bitmap;

@@ -57,9 +57,9 @@ namespace HandVeinPattern
 
             ProcessedImagePictureEdit.ContextMenu = new ContextMenu();
 
-            ArduinoSerialPort.PortName = "COM4";
+            //ArduinoSerialPort.PortName = "COM4";
 
-            ArduinoSerialPort.BaudRate = 9600;
+            //ArduinoSerialPort.BaudRate = 9600;
 
         }
 
@@ -462,7 +462,7 @@ namespace HandVeinPattern
 
                     displayResult(_userID);
 
-                    ArduinoSerialPort.WriteLine("1");
+                    //ArduinoSerialPort.WriteLine("1");
 
                     ImageMatchingProgressBarControl.PerformStep();
                     
@@ -476,7 +476,7 @@ namespace HandVeinPattern
             {
                 MessageBox.Show("User Doesn't Exists.", "No Records Found", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
-                ArduinoSerialPort.WriteLine("0");
+                //ArduinoSerialPort.WriteLine("0");
             }
 
             ImageMatchingProgressBarControl.PerformStep();
@@ -509,14 +509,14 @@ namespace HandVeinPattern
 
         private void ImageMatching_Load(object sender, EventArgs e)
         {
-            if (ArduinoSerialPort.IsOpen)
-            {
-                ArduinoSerialPort.Close();
-            }
-            else
-            {
-                ArduinoSerialPort.Open();
-            }
+            //if (ArduinoSerialPort.IsOpen)
+            //{
+            //    ArduinoSerialPort.Close();
+            //}
+            //else
+            //{
+            //    ArduinoSerialPort.Open();
+            //}
         }
 
 
@@ -533,6 +533,9 @@ namespace HandVeinPattern
             UserTitleResultLabel.Text = "-";
 
             ImageMatchingProgressBarControl.Position = 0;
+
+            non_matched_userid_count = 0;
+
         }
 
     }

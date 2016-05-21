@@ -111,7 +111,7 @@
             // MatchBarButtonItem
             // 
             this.MatchBarButtonItem.Caption = "Match";
-            this.MatchBarButtonItem.Glyph = global::HandVeinPattern.Properties.Resources.CulpepperJobMatchingIcon;
+            this.MatchBarButtonItem.Glyph = global::HandVeinPattern.Properties.Resources.findcustomers_32x32;
             this.MatchBarButtonItem.Id = 2;
             this.MatchBarButtonItem.Name = "MatchBarButtonItem";
             this.MatchBarButtonItem.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
